@@ -682,6 +682,8 @@ ok
 Delayed for 1 second.
 Delayed for 0 second.
 -----------------------------------------------------------------------------------------------------------------------
+```javascript
+
 console.log('ok')
 setTimeout(() => {
   console.log("Delayed for 1 second.");
@@ -690,30 +692,16 @@ setTimeout(() => {
 setTimeout(() => {
   console.log("Delayed for 0 second.");
 }, 0);
-
+```
 op:
+
 ok
 Delayed for 0 second.
 Delayed for 1 second.
 
 
-----------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+______________________________________________________________________________________________________________________________________________
+```javascript
 
 function resolveAfter2Seconds() {
     setTimeout(() => {
@@ -726,30 +714,17 @@ async function asyncCall() {
   console.log(result);
 }
 asyncCall();
+```
 
 op:
 calling
 undefined
 ok
 
--------------------------------------------------------------------------------------------------------------------
+_______________________________________________________________________________________________________________________________
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```javascript
 
 
 function resolveAfter2Seconds() {
@@ -763,6 +738,8 @@ async function asyncCall() {
   console.log(result);
 }
 asyncCall();
+```
+
 OP:
 calling
 Timeout {
@@ -782,12 +759,8 @@ Timeout {
 Ok
 
 
------------------------------------------------------------------------------------------------
-
-
-
-
-
+____________________________________________________________________________________________________________________________________________
+```javascript
 
 
 function resolveAfter2Seconds() {
@@ -802,6 +775,7 @@ async function asyncCall() {
   console.log(result);
 }
 asyncCall();
+```
 
 OP:
 
@@ -809,25 +783,10 @@ calling
 1
 Ok
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+________________________________________________________________________________________________________________________________________
 SORTING
+```javascript
+
 function bubbleSort(arr) {
   const n = arr.length;
 
@@ -852,6 +811,7 @@ const sortedArray = bubbleSort(unsortedArray);
 
 console.log("Unsorted Array:", unsortedArray);
 console.log("Sorted Array:", sortedArray);
+```
 
 op:
 node /tmp/PWwobtYZif.js
@@ -864,13 +824,17 @@ Sorted Array: [
   34, 64, 90
 ]
 
+____________________________________________________________________________________________________________________________________
 Inbuild method  for sort
+```javascript
+
 // Example usage:
 const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
 const sortedArray = unsortedArray.slice().sort((a, b) => a - b);
 
 console.log("Unsorted Array:", unsortedArray);
 console.log("Sorted Array:", sortedArray);
+```
 
 op:
 Unsorted Array: [
@@ -883,7 +847,9 @@ Sorted Array: [
 ]
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+________________________________________________________________________________________________________________________________________________________________
+```javascript
+
 // Example array of numbers
 const numbers = [5, 2, 9, 1, 5, 6];
 
@@ -904,6 +870,8 @@ const persons = [
 
 const sortByAge = persons.slice().sort((a, b) => a.age - b.age);
 console.log("Sorted by Age:", sortByAge);
+```
+
 op:
 node /tmp/PWwobtYZif.js
 Ascending Order: [ 1, 2, 5, 5, 6, 9 ]
@@ -915,7 +883,8 @@ Sorted by Age: [
 ]
 
 
-
+_________________________________________________________________________________________________________
+```javascript
 
 
 const reverseString = function (str) {
@@ -929,10 +898,14 @@ const reverseString = function (str) {
 let string = "Bhavik";
 let reversedString = reverseString(string);
 console.log(reversedString);
+```
+
 op:
 kivahB
-
+___________________________________________________________________________________________________________________
 inbuild method
+```javascript
+
 const reverseString = function (str) {
     // Convert the string to an array, reverse it, and then join it back into a string
     return str.split('').reverse().join('');
@@ -941,13 +914,12 @@ let string = "Bhavik";
 let reversedString = reverseString(string);
 console.log(reversedString);
 
-
-
-
-
-
+```
+___________________________________________________________________________________________________________________________________________
 
 searching
+```javascript
+
         let data =[20,40,60,5,10,70,80,99];
         let item=20;
         let index=undefined;
@@ -961,43 +933,12 @@ searching
         }
         console.log(index);
 
+```
 
 
+_______________________________________________________________________________________________________________
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```javascript
 function sayHi() {
   console.log(name);
   console.log(age);
@@ -1006,6 +947,8 @@ function sayHi() {
 }
 //  
 sayHi();
+```
+
 op:
 undefined
 ERROR!
@@ -1015,6 +958,7 @@ ReferenceError: Cannot access 'age' before initialization
 
 
 ---------------------------------------------------------------------------------------------------------------------------------- 
+```javascript
 
 const myPromise = Promise.resolve(Promise.resolve('Promise'));
  
@@ -1024,6 +968,8 @@ function funcOne() {
   console.log('Last line 1!');
 }
 funcOne();
+```
+
 op:
 Last line 1!
 Promise 1!
@@ -1033,20 +979,23 @@ Timeout 1!
 
 
 
-
+_____________________________________________________________________________________________________________________
 
 //const arr = [1, 2, 2 , 3 , 4 , 5, 5, 6]
 //output [1, 2, 3, 4, 5 , 6]
 
+```javascript
 
 const arr = [1, 2, 2, 3, 4, 5, 5, 6];
 // Use a Set to eliminate duplicates
 const uniqueArr = [...new Set(arr)];
 console.log(uniqueArr);
 
+```
 
-
+_______________________________________________________________________________________________________________________________
 Provide an example of closure in JavaScript.
+```javascript
 
 function outerFunction() {
   let outerVariable = "I am from the outer function";
@@ -1064,14 +1013,12 @@ let closureExample = outerFunction();
 // Call the inner function, which still has access to outerVariable
 closureExample();
  // Output: "I am from the outer function"
+```
 
-
-
-
-
-
+_____________________________________________________________________________________________________________
 
 ● What some function returns in js
+```javascript
 
 const numbers = [1, 2, 3, 4, 5];
 // Check if at least one element is greater than 3
@@ -1079,9 +1026,13 @@ const hasElementGreaterThanThree = numbers.some(function (element) {
   return element > 3;
 });
 console.log(hasElementGreaterThanThree);
+```
+
  // Output: true
 
 ____________________________________________________________________________________________________________________
+```javascript
+
 What ‘every’ function returns in js
 
 const numbers = [1, 2, 3, 4, 5];
@@ -1091,6 +1042,8 @@ const allLessThanTen = numbers.every(function (num) {
 });
 
 console.log(allLessThanTen); 
+```javascript
+
 // Output: true
 
 
@@ -1106,12 +1059,7 @@ sevenBoom([8, 6, 33, 100]) ➞ "there is no 7 in the array"
 sevenBoom([2, 55, 60, 97, 86]) ➞ "Boom!"
 // 97 contains the number seven.
 
-
-
-
-
-
-
+```javascript
 
 >>function sevenBoom(arr) {
   // Convert array elements to strings and join them to create a single string
@@ -1131,6 +1079,7 @@ console.log(sevenBoom([8, 6, 33, 100]));       // Output: "there is no 7 in the 
 console.log(sevenBoom([2, 55, 60, 97, 86]));    // Output: "Boom!"
 
 
+```
 
 op
 Boom!
@@ -1139,24 +1088,7 @@ Boom!
 
 
 
-
-_______________________________________________________________________________________________
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_____________________________________________________________________________________________________________________________________________________________________
 
 const arr1 = [
 { "score": 0, "text": "pizza" },
@@ -1170,6 +1102,8 @@ Result paneer
 Return elements of arr2 which are not present in arr1.text
 
 >>
+```javascript
+
 const arr1 = [
   { "score": 0, "text": "pizza" },
   { "score": 0, "text": "burger" },
@@ -1184,15 +1118,15 @@ const arr2 = ["pizza", "burger", "paratha", "samosa", "paneer"];
 const result = arr2.filter(item => !arr1.some(obj => obj.text === item));
 
 console.log(result);
+```
+
 // Output: ["paneer"]
 
 
 
+________________________________________________________________________________________________
 
-
-
-
-
+```javascript
 
 function f1(i) {
   if (i !== 4 && i !== 5) return; // Check if i is neither 4 nor 5, if true, exit the function
@@ -1202,6 +1136,7 @@ function f1(i) {
 f1(3);  // Call the function with argument 3
 f1(4);  // Call the function with argument 4
 f1(5);  // Call the function with argument 5
+```
 
 op
 hello world
@@ -1214,8 +1149,7 @@ hello world
 __________________________________________________________________________
 
 
-
-
+```javascript
 
 function FirstFactorial(num) { 
  if (num === 0 || num === 1) {
@@ -1228,19 +1162,16 @@ function FirstFactorial(num) {
 // keep this function call here 
 console.log(FirstFactorial(4)); // Output: 24
 console.log(FirstFactorial(8));
+```
 
 
 op:
 24
 40320
 
+__________________________________________________________________________________________________________________
 
-
-
-
-
-
-
+```javascript
 
 console.log(typeof undefined); // Output: 'undefined'
 console.log(typeof null);      // Output: 'object'
@@ -1252,20 +1183,23 @@ console.log(typeof function(){}); // Output: 'function'
 
 // Example of an object
 console.log(typeof {});        // Output: 'object'
+```
 
 ______________________________________________________________________________________
+```javascript
 
 function FirstReverse(str) { 
 return str.split('').reverse().join('');
 }
 // Test cases
-console.log(FirstReverse("coderbyte")); 
+console.log(FirstReverse("coderbyte"));
+```
+
 // Output: etybredoc
 
-
-
-
+_______________________________________________________________________________________________________________________________
 Write a JavaScript function to calculate the sum of two numbers.  
+```javascript
 
 function addTwoNumbers(num1, num2) {
   return num1 + num2;
@@ -1274,16 +1208,11 @@ function addTwoNumbers(num1, num2) {
 console.log(addTwoNumbers(5, 3)); // Output: 8
 console.log(addTwoNumbers(-2, 7)); // Output: 5
 console.log(addTwoNumbers(0, 0)); // Output: 0
+```
 
-
-
-
-
-
-
-
-
+________________________________________________________________________________________________________________________________
 Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers. 
+```javascript
 
 function getEvenNumbers(numbers) {
   return numbers.filter(number => number % 2 === 0);
@@ -1293,12 +1222,11 @@ const numbers = [1, 4, 7, 8, 10, 13];
 const evenNumbers = getEvenNumbers(numbers);
 console.log("Original array:", numbers);
 console.log("Even numbers:", evenNumbers);
+```
 
-
-
-
-
+_____________________________________________________________________________________________________
 Write a JavaScript function to check if a given number is prime. 
+```javascript
 
 
 function isPrime(num) {
@@ -1312,12 +1240,15 @@ function isPrime(num) {
 console.log(isPrime(7));  // Output: true
 console.log(isPrime(12)); // Output: false
 console.log(isPrime(1));  // Output: false
+```
 
 
 
-
+_______________________________________________________________________________________________________________________________________________________________
 
 Implement a function that flattens a nested array in JavaScript, converting it into a single-level array.
+```javascript
+
 function flattenArray(arr) {
   let result = [];
 
@@ -1339,18 +1270,11 @@ const flattenedArray = flattenArray(nestedArray);
 console.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
 
 
+```
 
-
-
-
-
-
-
-
-
-
-
+_______________________________________________________________________________________________________________________
 Given an array of numbers, write a function to find the largest and smallest numbers in the array. 
+```javascript
 
 function findMinMax(numbers) {
   if (numbers.length === 0) return "Array is empty";
@@ -1366,9 +1290,11 @@ const numbersArray = [3, 8, 2, 5, 1, 7, 9, 4];
 const result = findMinMax(numbersArray);
 console.log(result); // Output: { smallest: 1, largest: 9 }
 
+```javascript
 
- 
+ _______________________________________________________________________________________________________________________________________
  Write a function that takes an array of integers as input and returns a new array with only the unique elements. 
+```javascript
 
 function getUniqueElements(arr) {
   return [...new Set(arr)];
@@ -1378,10 +1304,12 @@ function getUniqueElements(arr) {
 const inputArray = [1, 2, 3, 4, 2, 3, 5];
 const uniqueArray = getUniqueElements(inputArray);
 console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
+```
 
-
+___________________________________________________________________________________________________________________________________________
 
 Implement a function to find the factorial of a given number.
+```javascript
 
 function factorial(num) {
   return num <= 1 ? 1 : num * factorial(num - 1);
@@ -1390,9 +1318,11 @@ function factorial(num) {
 console.log(factorial(4)); // Output: 24
 console.log(factorial(8)); // Output: 40320
 
+```
 
-
+________________________________________________________________________________________________________________________________________
 Implement a function to find the sum of all the numbers in an array. 
+```javascript
 
 function arraySum(arr) {
   return arr.reduce((sum, num) => sum + num, 0);
@@ -1402,11 +1332,14 @@ function arraySum(arr) {
 const numbersArray = [1, 2, 3, 4, 5];
 const sum = arraySum(numbersArray);
 console.log(sum); // Output: 15
+```
 
 
 
-
+______________________________________________________________________________________________________________________________________
 Given a string, write a function to count the occurrences of each character in the string. 
+```javascript
+
 function countCharacters(str) {
   const charCount = {};
 
@@ -1421,10 +1354,13 @@ function countCharacters(str) {
 const inputString = "programming";
 const occurrences = countCharacters(inputString);
 console.log(occurrences);
+```
 
 ______________________________________________________________________________________________________________
 
 Implement a function to remove duplicates from an array
+```javascript
+
 function removeDuplicates(arr) {
   return [...new Set(arr)];
 }
@@ -1434,9 +1370,13 @@ const arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
 const arrayWithoutDuplicates = removeDuplicates(arrayWithDuplicates);
 console.log(arrayWithoutDuplicates);
 
+```
 
- 
+ __________________________________________________________________________________________________________________________
 10. Write a function that sorts an array of numbers in ascending order. 
+```javascript
+
+
 function sortArrayAscending(arr) {
   return arr.slice().sort((a, b) => a - b);
 }
@@ -1445,10 +1385,13 @@ function sortArrayAscending(arr) {
 const unsortedArray = [5, 2, 8, 1, 7];
 const sortedArray = sortArrayAscending(unsortedArray);
 console.log(sortedArray);
+```
 
 
-
+_____________________________________________________________________________________________________________________________________________
 Implement a function that finds the second smallest element in an array of integers. 
+```javascript
+
 function findSecondSmallest(arr) {
     // Check if the array has at least two elements
     if (arr.length < 2) {
@@ -1466,8 +1409,13 @@ function findSecondSmallest(arr) {
 const array = [5,  8, 1, 3];
 const secondSmallest = findSecondSmallest(array);
 console.log("Second Smallest Element:", secondSmallest); 
+```
 
+______________________________________________________________________________________________________________________________
 Implement a function that returns the average value of numbers in an array. 
+
+```javascript
+
 function calculateAverage(arr) {
   if (arr.length === 0) {
     return "Array is empty";
@@ -1481,8 +1429,12 @@ function calculateAverage(arr) {
 const numbersArray = [5, 2, 8, 1, 7];
 const average = calculateAverage(numbersArray);
 console.log(average);
- 
+```
+
+ ____________________________________________________________________________________________________________________
 Write a function that sorts an array of strings in alphabetical order. 
+```javascript
+
 function sortStringsAlphabetically(arr) {
   return arr.slice().sort();
 }
@@ -1491,17 +1443,20 @@ function sortStringsAlphabetically(arr) {
 const stringsArray = ['apple', 'orange', 'banana', 'grape'];
 const sortedArray = sortStringsAlphabetically(stringsArray);
 console.log(sortedArray);
+```
 
 
 _______________________________________________________________________
 
 
 
+```javascript
 
 
 (function() {
   var a = b = 5;
 })();
+```
 
 console.log(b);
 op:5
@@ -1509,6 +1464,7 @@ op:5
 
 _____________________________________________________________________________________________________________________
 
+```javascript
 
 let abc = {
 name: "bhavik",
@@ -1521,13 +1477,15 @@ console.log(abc.name)
 }
 func(abc)
 console.log(abc)
+```
 
 op
 bhavik"
 > Object { name: "bhavik", age: 27 }
-
+_____________________________________________________________________________________________________________________________
 
 // Write a function that performs binary search on a sorted array.
+```javascript
 
 function binarySearch(arr, target) {
     let left = 0;
@@ -1559,7 +1517,10 @@ if (resultIndex !== -1) {
 } else {
     console.log(`Element ${targetElement} not found in the array.`);
 }
+```
 
+______________________________________________________________________________________________________________
+```javascript
 
 Fibonacci Series js
 
@@ -1578,11 +1539,10 @@ function generateFibonacci(n) {
 const result = generateFibonacci(10);
 console.log(result); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
+```
 
-
-
-
-
+____________________________________________________________________________
+```javascript
 
 let a=10
 let b=new Number(10)
@@ -1593,17 +1553,13 @@ op:
 true
 false
 
+```
 
 
 ________________________________________________________________________________________________
 
-
-
-
-
-
-
 Map
+```javascript
 
 const numbers =[1,2,3,4,5]
 const squares= numbers.map(square)
@@ -1613,6 +1569,7 @@ console.log(squares)
 function square(element){
     return Math.pow(element ,2)
 }
+```
 
 op:
 [ 1, 4, 9, 16, 25 ]
@@ -1621,6 +1578,8 @@ op:
 
 ________________________________________________________________________
 Filter
+```javascript
+
 const number =[1,2,3,4,5]
 const evenNums= number.filter(isEven)
 const oddNums= number.filter(isodd)
@@ -1634,7 +1593,12 @@ function isEven(element ){
 function isodd(element){
     return element % 2 !==0;
 }
+```
+
+_____________________________________________________________________________________________
 reduce
+```javascript
+
 const price =[1,2,3]
 const total= price.reduce(sum)
 console.log(total)
@@ -1648,6 +1612,8 @@ function func2(){
 }
 }
 func2();
+```
+
 
 op:
 3
@@ -1655,6 +1621,8 @@ op:
 3
 
 ____________________________________________________________________________________________________________________
+```javascript
+
 function func1(){
  setTimeout(()=>{
   console.log(x);
@@ -1665,20 +1633,15 @@ function func1(){
 }
 func1();
 console.log(2+'-2'+2);
+```
+
 op:
 2-22
 
-
-
-
-
-
-
-
-
-
-
+_____________________________________________________________________________________________________________________________________________________________________
 This
+```javascript
+
 function Person(name, age) {
   this.name = name;
   this.age = age;
@@ -1692,6 +1655,7 @@ console.log(person.age);  // Output: 25 (or whatever age you provide)
 
 console.log(myage.name);  // Output: Alice
 console.log(myage.age);   // Output: 32
+```
 
 
 op
@@ -1701,6 +1665,8 @@ John
 Alice
 32
 
+______________________________________________________________________________________________
+```javascript
 
 Call()
 function greet(name) {
@@ -1711,10 +1677,13 @@ const person = { name: 'John' };
 
 greet.call(person, 'Alice');
 // Output: Hello, Alice! My name is John.
+```
+
 _____________________________________________________________________________________________________________________
 
-
 Apply()
+```javascript
+
 function greet(name) {
     console.log(`Hello, ${name}! My name is ${this.name}.`);
 }
@@ -1723,9 +1692,12 @@ const person = { name: 'John' };
 
 greet.apply(person, ['Alice']);
 // Output: Hello, Alice! My name is John.
+```
 
-
+____________________________________________________________________________________________________________
 BIND()
+```javascript
+
 function greet(name) {
     console.log(`Hello, ${name}! My name is ${this.name}.`);
 }
@@ -1736,19 +1708,11 @@ const greetPerson = greet.bind(person, 'Alice');
 greetPerson();
 // Output: Hello, Alice! My name is John.
 
+```
 
 __________________________________________________________________________________________________________________
 
-
-
-
-
-
-
-
-
-
-
+```javascript
 
 const salesData = [
   { salesperson: 'John', amount: 100 },
@@ -1769,9 +1733,12 @@ for (let i = 0; i < salesData.length; i++) {
  arr.sort((a,b) => {return b[1] - a[1]})
 const sortedSale = Object.fromEntries(arr);
 console.log(sortedSale)
+```
 
 
 __________________________________________________________
+```javascript
+
 let arr = [100, 400, 300, 500, 50];
 arr.sort((a, b) => {
     return b - a;
@@ -1782,11 +1749,15 @@ let max2 = arr[1];
 let result = max1 + max2;
 console.log("Max Numbers:", max1, "and", max2);
 console.log("Sum of Max Numbers:", result);
+```
+
 OP:
 
 Max Numbers: 500 and 400
 Sum of Max Numbers: 900
 
+______________________________________________________________________________________________________________________________
+```javascript
 
 // Example variable
 let myVariable = null;
@@ -1799,30 +1770,11 @@ if (myVariable === null || myVariable === undefined) {
 
 // Use the variable
 console.log(myVariable);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+______________________________________________________________________________________________________________________________________________
 Class
+```javascript
+
 class Animal {
   // Constructor method is called when an object is instantiated
   constructor(name, species) {
@@ -1843,23 +1795,16 @@ const lion = new Animal("Leo", "Lion");
 console.log(lion.name);     // Output: Leo
 console.log(lion.species);  // Output: Lion
 console.log(lion.getInfo()); // Output: Leo is a Lion
+```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+____________________________________________________________________________________________________________________________________
 
 Inheritance
 // Parent class
+```javascript
+
 class Animal {
   constructor(name, species) {
     this.name = name;
@@ -1891,9 +1836,12 @@ const fluffy = new Cat("Fluffy", "Persian");
 // Accessing methods from both parent and child classes
 console.log(fluffy.getInfo()); // Output: Fluffy is a Persian cat
 console.log(fluffy.meow());     // Output: Meow!
+```
 
-
+__________________________________________________________________________________________________________________________________________________________
 Encapsulation in js
+```javascript
+
 class Car {
   constructor(make, model) {
     // Private properties
@@ -1940,44 +1888,14 @@ myCar.setMake("Honda");
 myCar.setModel("Accord");
 
 console.log(myCar.getInfo());      // Output: Honda Accord
+```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+____________________________________________________________________________________________________________________________
 
 Polymorphism in JavaScript
+```javascript
+
 class Shape {
   constructor() {
     this.type = "Shape";
@@ -2011,11 +1929,18 @@ const shapes = [new Circle(5), new Square(8)];
 shapes.forEach(shape => {
   console.log(shape.draw());
 })
+```
+
+___________________________________________________________________________________________
+```javascript
+
 function a () { 
     var b = 10; 
 } 
 a(); 
 console.log(b);
+```
+
 op:
 node /tmp/6yM2QTsCHI.js
 ERROR!
@@ -2027,27 +1952,19 @@ ReferenceError: b is not defined
 
 
 _____________________________________________________________________________________
+
+```javascript
+
 var a = 10; 
 const b= 10; 
 console.log(a === b);
+```
+
 op
 true
 
 ____________________________________________________________________________________________________
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```javascript
 
 
 function c () 
@@ -2062,6 +1979,7 @@ function c ()
     
 } 
 c();
+```
 
 op
 20
@@ -2075,20 +1993,10 @@ ________________________________________________________________________________
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 input: "this is a TseT" 
 output: "shit si a TesT"
+```javascript
+
 function reverseWords(input) {
     // Split the input string into an array of words
     var words = input.split(' ');
@@ -2108,22 +2016,15 @@ function reverseWords(input) {
 var input = "this is a TseT";
 var output = reverseWords(input);
 console.log(output);
+```
 
 
-
-
-
-
-
-
-
-
-
-
+___________________________________________________________________________________________________________________________________
 
 // teststring
 // t-3
 // g-1
+```javascript
 
 function getFrequency(string) {
 var freq = {};
@@ -2141,23 +2042,14 @@ return freq;
 
 let a = getFrequency('teststring');
 console.log("a :",a)
+```
 
 OP
 
 a : { t: 3, e: 1, s: 2, r: 1, i: 1, n: 1, g: 1 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+__________________________________________________________________________
+```javascript
 
 
 // Code 1:
@@ -2170,7 +2062,11 @@ function runFunc() {
 }
 
 runFunc(); // This will execute the function
+```
+
 ________________________________________________________________
+```javascript
+
 // Code 3:
 let a = 0;
 let b = 'farge'; // Assuming 'farge' is a string
@@ -2178,13 +2074,16 @@ console.log(a == b);  // false
 console.log(a === b); // false
 
 
+```
 
 ______________________________________________________________________________________
+
 1 Write a function in JavaScript that takes an array of numbers as input and returns the sum of all the numbers in the array.
 2 Your task is to implement this function. You can assume that the input array will always contain numbers.
 
-and findmax 
+and find max 
 
+```javascript
 
 function calculateSum(numbers) {
   if (!Array.isArray(numbers)) {
@@ -2198,11 +2097,17 @@ function calculateSum(numbers) {
 const numbersArray = [1, 2, 3, 4, 5];
 const result = calculateSum(numbersArray);
 console.log(result); // Output: 15
+```
 
 
+_________________________________________________________________________________________________________________________________________
 add(2)(4)(5);
 output
 total 11 
+
+
+```javascript
+
 function add(x) {
   // Inner function takes the next number (y) and returns a new function
   const innerFunction = function(y) {
@@ -2223,6 +2128,7 @@ const result = add(2)(4)(5);
 
 console.log(result.valueOf()); // Output: 11
 
+```
 
 
 
@@ -2231,8 +2137,9 @@ console.log(result.valueOf()); // Output: 11
 
 
 
+_____________________________________________________________________________________________________________________________________
 
-
+```javascript
 
 
 const myArray = [2, 7, 1, 8, 4, 5];
@@ -2256,16 +2163,16 @@ if (hasPairWithSum(myArray, targetSum)) {
   console.log("No pair with the sum of 9 found.");
 }
 
+```
 
 Output
 OP:
 There is a pair with the sum of 9.
 
-
-
-
-
+___________________________________________________________________________________________________________
 Inbuild function
+```javascript
+
 function isSumEqualToTarget(arr, target) {
     // Use the reduce method to calculate the sum of the array elements
     const sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue);
@@ -2284,20 +2191,12 @@ if (isSumEqualToTarget(numbersArray, targetValue)) {
     console.log('The sum of the numbers in the array is NOT equal to the target value.');
 }
 
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
+________________________________________________________________________________________________________________________________
 Sort this object
+```javascript
+
 const dataObjects = [
   { id: 1, name: 'John', age: 25 },
   { id: 2, name: 'Jane', age: 30 },
@@ -2331,6 +2230,10 @@ function bubbleSort(arr) {
 // Sort the dataObjects array using the custom bubble sort function
 const sortedDataObjects = bubbleSort(dataObjects);
 console.log(sortedDataObjects);
+```
+
+____________________________________________________________________________________________________________________________________________________________________
+```javascript
 
 const dataObjects = [
   { id: 1, name: 'John', age: 25 },
@@ -2350,34 +2253,11 @@ const sortedDataObjects = dataObjects.slice().sort((a, b) => a.age - b.age);
 
 console.log(sortedDataObjects);
 
+```
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+______________________________________________________________________________________________________________________________________________________
 
 Count the occurrence of keys and convert the result into array of objects where each object belongs to one key and it's occurrence (count). - ---  
 [
@@ -2390,6 +2270,7 @@ SHOULD BE CONVERTED TO =
 { language: 'GoLang', count: 3 },
 { language: 'TypeScript', count: 1 },
 ]
+```javascript
 
 var arr = [
     { language: 'JavaScript' },
@@ -2418,6 +2299,9 @@ var resultArr = Object.keys(languageCount).map(language => ({
     count: languageCount[language]
 }));
 console.log(resultArr);
+```
+
+
 op:
 node /tmp/rXE6MjKX2A.js
 [
@@ -2427,46 +2311,8 @@ node /tmp/rXE6MjKX2A.js
 ]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+_______________________________________________________________________________________________________________
+```javascript
 
 let arr = [1, 2, 3, 4, 5, 6, 2, 3, 4, 5];
 //let arr= ["a","a","b","b","c","c","c"]
@@ -2478,10 +2324,14 @@ for (let i = 0; i < arr.length; i++) {
     duplicate[arr[i]] = count + 1;
 }
 console.log(duplicate);
+```
+
 op
 { '1': 1, '2': 2, '3': 2, '4': 2, '5': 2, '6': 1 }
-
+_________________________________________________________________________________________
 inbuild method
+```javascript
+
 let arr = [1, 2, 3, 4, 5, 6, 2, 3, 4, 5];
 
 let duplicate = arr.reduce((acc, value) => {
@@ -2492,17 +2342,13 @@ let duplicate = arr.reduce((acc, value) => {
 console.log(duplicate);
 
 
+```
 
-
-
-
-
-
-
-
-
+____________________________________________________________________________________________________________________________________________________________________
 
 5. Implement a function that takes two sorted arrays and merges them into a single sorted array without using any built-in sorting functions. 
+```javascript
+
 function mergeSortedArrays(arr1, arr2) {
   const mergedArray = [];
   let i = 0;
@@ -2541,10 +2387,13 @@ const mergedArray = mergeSortedArrays(sortedArray1, sortedArray2);
 console.log('Merged and sorted array:', mergedArray);
 
 
+```
 
-
+_____________________________________________________________________________________________________________________________________________
 
 Write a function that takes an array of integers as input and returns a new array with only the unique elements. 
+```javascript
+
 function getUniqueElements(arr) {
   // Using a Set to store unique elements
   const uniqueSet = new Set(arr);
@@ -2559,11 +2408,14 @@ function getUniqueElements(arr) {
 const inputArray = [1, 2, 3, 4, 2, 5, 1, 6];
 const uniqueArray = getUniqueElements(inputArray);
 console.log('Array with unique elements:', uniqueArray);
+```
 
 
 
-
+_____________________________________________________________________________________________________________________________________
 How to Check the No of Occurrence of Character in String| in js
+```javascript
+
 function countOccurrences(str, char) {
   let count = 0;
 
@@ -2582,6 +2434,8 @@ const charToCount = "d";
 const result = countOccurrences(myString, charToCount);
 
 console.log(`The character '${charToCount}' occurs ${result} times in the string.`);
+```
+
 op
 The character 'd' occurs 3 times in the string.
 
@@ -2589,9 +2443,11 @@ The character 'd' occurs 3 times in the string.
 
 
 
+_____________________________________________________________________________________________________________________
 
+How to compare two Arrays are Equal or Not in JavaScript
+```javascript
 
-How to compare two Arrays are Equal or Not in JavaScript| 
 function arraysAreEqual(arr1, arr2) {
   return JSON.stringify(arr1) === JSON.stringify(arr2);
 }
@@ -2603,12 +2459,15 @@ const result = arraysAreEqual(array1, array2);
 
 console.log(`Arrays are equal: ${result}`);
 
+```
 
 
 
-
+_______________________________________________________________________________________________________
  
 how to swap two variables without using the third|Javascript Coding Interview Question #14
+```javascript
+
 let a = 5;
 let b = 10;
 
@@ -2618,10 +2477,13 @@ console.log(`Before swapping: a = ${a}, b = ${b}`);
 
 console.log(`After swapping: a = ${a}, b = ${b}`);
 
+```
 
 
-
+_________________________________________________________________________________________________
 how to find even or odd numbers in array in javascript 
+```javascript
+
 function findEvenOrOddNumbers(arr, type) {
   // type should be 'even' or 'odd'
   const result = arr.filter(number => type === 'even' ? number % 2 === 0 : number % 2 !== 0);
@@ -2635,15 +2497,22 @@ const oddNumbers = findEvenOrOddNumbers(numbersArray, 'odd');
 
 console.log('Even numbers:', evenNumbers);
 console.log('Odd numbers:', oddNumbers);
-++++++++++++++++++++++++++++++++++++++++
+```
+
+______________________________________________________________________________________
+```javascript
+
 let a =5
 if(a % 2 == 0) {
     console.log("even")
 }else {
     console.log("odd")
 }
+```
 
+___________________________________________________________________________________________________
 How to Find missing elements in a given Array 1 to 10
+```javascript
 
 const givenArray = [1, 2, 3, 5, 7, 8, 10];
 let arr = [];
@@ -2653,7 +2522,10 @@ for(let i=1; i <= 10; i++) {
     }
 }
 console.log(arr);
+```
+
 ______________________________________________________________________________________________
+```javascript
 
 setTimeout(()=>
 console.log(1),0);  
@@ -2665,6 +2537,8 @@ new Promise( res => {
 	res();  
 }).then(() => console.log(4));
 console.log(5);
+```
+
 op
 node /tmp/pO4kziiDQU.js
 2
@@ -2674,10 +2548,11 @@ node /tmp/pO4kziiDQU.js
 1
 
 
-
+_______________________________________________________________________________________________________________________________________________
 input strs = ["eat","tea","tan","ate","nat","bat"] 
 output [["bat"],["nat","tan"],["ate","eat","tea"]]
 group anagrams together.
+```javascript
 
 function groupAnagrams(strs) {
     const anagramsMap = {};
@@ -2703,6 +2578,7 @@ function groupAnagrams(strs) {
 const strs = ["eat","tea","tan","ate","nat","bat"];
 const output = groupAnagrams(strs);
 console.log(output);
+```
 
 op
 [["eat","tea","ate"],["tan","nat"],["bat"]]
@@ -2711,7 +2587,8 @@ op
 
 
 
-
+__________________________________________________________________________________________________
+```javascript
 
 s = "A man, a plan, a canal: 
 Panama palindrom or not check js code
@@ -2726,13 +2603,16 @@ if(s===resultval){
 }
 // Output: true
 
+```
 
 
 
 
-
+__________________________________________________________________________________________________________
 
 Without inbuild method
+```javascript
+
 let a = 'mom';
 let newstr = ''
 for(let i=a.length -1; i >= 0; i--) {
@@ -2743,20 +2623,32 @@ if(newstr === a) {
 } else {
     console.log("not palindrom");
 }}
+```
+
 _________________________________
 
 Q: How do you access the last element of an array?
+```javascript
+
 const arr = [1,2,3,4,5,6,7]
 const newarr = arr[arr.length-1]
 console.log(newarr)
+```
+
 ___________________________________________________
 display name single char if it is more then one bhavikdoshi not display "i" word from bhavik write a code in js 
+```javascript
+
 const name = "bhavikdoshi";
 const result = name.split("").filter(char => char !== "i").join("");
 console.log(result);
+```
+
 op
 bhavkdosh
-++++++++++++++++++++++++++++++++++++++++++++
+_______________________________________________________
+```javascript
+
 let str = "bhavikdoshi";
 let newstr = "";
 for (let i = 0; i < str.length; i++) {
@@ -2764,7 +2656,10 @@ for (let i = 0; i < str.length; i++) {
         newstr += str[i];
     }}
 console.log(newstr)
+```
+
 _____________________________________
+```javascript
 
 let employees = [{
     id: 1001,
@@ -2784,10 +2679,12 @@ function getAdminEmployeeIds(employeesArray) {
 }
 
 console.log(getAdminEmployeeIds(employees)); // Output: [1002, 1003]
+```
 
+_____________________________________________________________________________________________________________________________________________________________
 write a function which will return an array of empty functions and accept an input as length. Use es5.
 -> input -> 4 , output -> [f,f,f,f]
-
+```javascript
 function createEmptyFunctions(length) {
   var arr = [];
   for (var i = 0; i < length; i++) {
@@ -2800,6 +2697,7 @@ function createEmptyFunctions(length) {
 var result = createEmptyFunctions(4);
 console.log(result); // Output: ['f', 'f', 'f', 'f']
 
+```
 
 
 
@@ -2829,9 +2727,11 @@ function test(y){
 }
 
 test(x);
+```
 
 output x
 _________________________________________________________________________________________________________________________________________________________________
+```javascript
 
 pass by value pass by ref code
 function changeValue(x) {
@@ -2842,6 +2742,7 @@ function changeValue(x) {
 var num = 5;
 changeValue(num);
 console.log("Outside function: ", num); // Output: Outside function: 5
+```
 
 
 ___________________________________________________________________________________________________________________________________________________________________
@@ -2855,6 +2756,7 @@ var person = { name: "Alice" };
 changeProperty(person);
 console.log("Outside function: ", person); // Output: Outside function: { name: "John" }
 
+```
 
 
 
@@ -2883,6 +2785,7 @@ const target = 10;
 
 const output = findPair(arr, target);
 console.log(output); // Output: [0, 2]
+```
 
 
 
@@ -2906,6 +2809,7 @@ for(let i=0; i< arr.length; i++) {
 }
 arr=arr.join('')
 console.log(arr)
+```
 
 
 
@@ -2933,6 +2837,7 @@ for(let p =0; p < Math.max(positive.length,negative.length); p++) {
         newArr.push(negative[p])
 }
 console.log(newArr);
+```
 
 
 
@@ -2953,6 +2858,7 @@ newArr.sort(function (a,b) {
 });
 let index = Math.floor(newArr.length/2);
 console.log(newArr[index]);
+```
 
 
 ____________________________________________________________________________________________________________________________________________
@@ -2964,6 +2870,7 @@ let arr=[1,2,3]
  arr= arr.join("").split("").reverse();
  arr =arr.join("")
  console.log(arr)
+```
 
 
 __________________________________________________________________________________________________________________________________________________
@@ -2985,6 +2892,7 @@ function getFrequency(string) {
 let a = getFrequency('abcabcbb');
 // let a = getFrequency('pwwkew');
 console.log(`The answer is ${Object.keys(a).join('')}, with a length of ${Object.keys(a).length}`);
+```
 
 Input: x = 121
 Output: true
@@ -2993,6 +2901,7 @@ Explanation: 121 reads as 121 from left to right and from right to left.
 
 _______________________________________________________________________________________________________________________________________
 ```javascript
+
 var isPalindrome = function(x) {
     let a = x.toString(); // Convert the number to a string
     let newstr = '';
@@ -3011,6 +2920,7 @@ var isPalindrome = function(x) {
 // Test case
 let x = 121;
 console.log(isPalindrome(x)); // Output: true
+```
 
 
 
