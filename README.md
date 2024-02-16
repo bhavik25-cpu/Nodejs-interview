@@ -1026,10 +1026,9 @@ console.log(hasElementGreaterThanThree);
  // Output: true
 
 ____________________________________________________________________________________________________________________
-```javascript
 
 What ‘every’ function returns in js
-
+```javascript
 const numbers = [1, 2, 3, 4, 5];
 // Check if all numbers are less than 10
 const allLessThanTen = numbers.every(function (num) {
@@ -1037,7 +1036,7 @@ const allLessThanTen = numbers.every(function (num) {
 });
 
 console.log(allLessThanTen); 
-```javascript
+```
 
 // Output: true
 
@@ -1285,7 +1284,7 @@ const numbersArray = [3, 8, 2, 5, 1, 7, 9, 4];
 const result = findMinMax(numbersArray);
 console.log(result); // Output: { smallest: 1, largest: 9 }
 
-```javascript
+```
 
  _______________________________________________________________________________________________________________________________________
  Write a function that takes an array of integers as input and returns a new array with only the unique elements. 
@@ -1425,8 +1424,7 @@ const numbersArray = [5, 2, 8, 1, 7];
 const average = calculateAverage(numbersArray);
 console.log(average);
 ```
-
- ____________________________________________________________________________________________________________________
+______________________________________________________________________________________________
 Write a function that sorts an array of strings in alphabetical order. 
 ```javascript
 
