@@ -25,7 +25,7 @@ doSomethingAsync(callbackFunction);
 
 ________________________________________________________________________________________________________________________________
 
-
+ ```javascript
 2  promises
 // Function that returns a promise
 function asyncFunction(value) {
@@ -53,7 +53,8 @@ asyncFunction('Hello')
     console.log('Promise completed');
   });
 
-
+ ```
+_____________________________________________________________________________________________________________________________________________________
 asynchronous code
 
 // Function that returns a Promise to simulate an asynchronous operation
