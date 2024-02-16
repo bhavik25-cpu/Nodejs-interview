@@ -25,8 +25,9 @@ doSomethingAsync(callbackFunction);
 
 ________________________________________________________________________________________________________________________________
 
- ```javascript
+
 2  promises
+ ```javascript
 // Function that returns a promise
 function asyncFunction(value) {
   return new Promise((resolve, reject) => {
