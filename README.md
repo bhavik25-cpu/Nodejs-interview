@@ -2950,8 +2950,7 @@ console.log(result);
 
 __________________________________________________________________________________________________________________________________________________
 ```javascript
-input 
-const jsonData = {
+let jsonData = {
   object1: {
     key1: 10,
     key2: 20,
@@ -2969,27 +2968,20 @@ const jsonData = {
   }
 };
 
-// Function to count the sum of values in an object
-function countValues(object) {
+let obj = {};
+
+for (let object in jsonData) {
   let sum = 0;
-  for (let key in object) {
-    if (typeof object[key] === 'number') {
-      sum += object[key];
-    }
+  for (let key in jsonData[object]) {
+    sum += jsonData[object][key];
   }
-  return sum;
+  obj[object] = sum;
 }
 
-// Counting sum for each object
-const object1Sum = countValues(jsonData.object1);
-const object2Sum = countValues(jsonData.object2);
-const object3Sum = countValues(jsonData.object3);
-
-// Output
-console.log("object1", object1Sum);
-console.log("object2", object2Sum);
-console.log("object3", object3Sum);
+console.log(obj);
 ```
+op
+{ object1: 40, object2: 60, object3: 100 }
 
 _____________________________________________________________________________________________________________________________________________________
 Given an integer array nums, find the contiguous subarray within the array (containing at least one number) that has the largest product, and print the numbers and the product(a * b). 
