@@ -3004,8 +3004,8 @@ for(let i=0; i < nums1.length; i++) {
 }
  arr.pop()
 console.log(Math.max(...arr))
-
+```
 op
 6
-```
+
 
