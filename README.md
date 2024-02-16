@@ -57,6 +57,7 @@ asyncFunction('Hello')
  ```
 _____________________________________________________________________________________________________________________________________________________
 asynchronous code
+```javascript
 
 // Function that returns a Promise to simulate an asynchronous operation
 function fetchData() {
@@ -83,10 +84,14 @@ async function fetchDataAsync() {
 
 // Call the asynchronous function
 fetchDataAsync();
+```
 
-
+__________________________________________________________________________________________________________________________________________________________
 
 How To find duplicate elements in array in javascript|
+
+```javascript
+
 // Function to find duplicate elements in an array
 function findDuplicates(arr) {
   // Array to store the found duplicate elements
@@ -114,6 +119,12 @@ var myArray = [1, 2, 3, 4, 2, 5, 6, 3, 7, 8, 9, 4];
 var duplicateElements = findDuplicates(myArray);
 // Print the result to the console
 console.log("Duplicate elements: ", duplicateElements);
+```
+________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+```javascript
+
 hosting
 fun();
 
@@ -126,35 +137,21 @@ fun(); // This would result in an error
 const fun = function() {
   console.log("x");
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                      Array 
+```
+_______________________________________________________________________________________________________________________________________________________________________
+```javascript
 
 
 const nestedArray = [1, [2, 3], [4, [5, 6]]];
 const flattenedArray = nestedArray.flat(2);
 console.log(flattenedArray); 
+```javascript
+
 op : [ 1, 2, 3, 4, 5, 6 ]
 
-
+________________________________________________________________________________________________________________________________
 without any inbuild method
+```javascript
 
 function flattenArray(arr) {
   let result = [];
@@ -174,14 +171,18 @@ function flattenArray(arr) {
 const arr = [1, 2, [3, 4], 5, [6, 7], 8];
 const output = flattenArray(arr);
 console.log(output)
+```
 
-
+__________________________________________________________________________________________________________________________________________________________________
+```javascript
 
 const arr = [1, 2, 3, 4];
 const rotatedArr = arr.slice(2).concat(arr.slice(0, 2));
 console.log(rotatedArr);op: [ 3, 4, 1, 2 ]
-
+```
+_______________________________________________________________________________________________________________________________________________________________
 without inbuild function
+```javascript
 
 const arr = [1, 2, 3, 4];
 const rotations = 2; // Number of rotation
@@ -193,63 +194,36 @@ for (let i = 0; i < rotations; i++) {
   arr[arr.length - 1] = firstElement;
 }
 console.log(arr); // Output: [3, 4, 1, 2]
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+________________________________________________________________________________________________________________________________________________________
+```javascript
 
 const a = [1,2,3,4]
 const b = a;
 a[0] = 8;
 console.log('a is : ', a);
 console.log('b is : ', b)
+```
+
 op:
 a is :  [ 8, 2, 3, 4 ]
 b is :  [ 8, 2, 3, 4 ]
+___________________________________________________________________________________________________________________________________________________________
 
-
-
-
-
-
-
+```javascript
 
 var a = [1,2,3,4]
 var b = a;
 a = [7,8]
 console.log(a);
 console.log(b)
+
+```
 op
 [ 7, 8 ]
 [ 1, 2, 3, 4 ]
-
-
-
-
-
-
-
-
-
-
-
+___________________________________________________________________________________________________________________________________________________________
 
 
 You are given a string S and its length n and you need to sort its characters based on their frequency. The characters in the output will be ordered based on their frequency in S, characters with higher frequency come first.
@@ -259,6 +233,7 @@ Output: llllaaahheeuj
 Input: S = "aaaabeebccccc"
 Output: cccccaaaabbee
 
+```javascript
 
 const sortCharsByFrequency = str => {
   const charCount = {};
@@ -283,6 +258,11 @@ const input2 = "aaaabeebccccc";
 
 console.log(sortCharsByFrequency(input1)); // Output: llllaaahheeuj
 console.log(sortCharsByFrequency(input2)); // Output: cccccaaaabbee
+```
+____________________________________________________________________________________________________________________________________________________
+```javascript
+
+
 Input:  { 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }
 Output: Subarray with zero-sum exists
 The subarrays with a sum of 0 are:
@@ -311,24 +291,25 @@ if (hasZeroSumSubarray(inputArray)) {
 }
 
 
-
-
-
-
-
-
-
+```
+____________________________________________________________________________________________________________________________________________________
 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 do in ascending order in js use sort method
 output  0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 20
 To sort the array [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1] in ascending order in JavaScript using the sort method, you can use the following
+
+```javascript
+
 var array = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1];
 // Use the sort method with a custom comparator function
 array.sort(function(a, b) {
   return a - b;
 });
 console.log(array);
-
+```
+_________________________________________________________________________________________________________________________________________________________
 without any inbuild method
+```javascript
+
 function bubbleSort(arr) {
     var len = arr.length;
     for (var i = 0; i < len; i++) {
@@ -346,9 +327,12 @@ function bubbleSort(arr) {
 var array = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1];
 console.log("Before sorting:", array);
 console.log("After sorting:", bubbleSort(array));
+```
+
 op: [  0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2]
 
-
+_____________________________________________________________________________________________________________________________________
+```javascript
 
 function func2(){
 
@@ -361,6 +345,8 @@ function func2(){
 }
 
 func2();
+```
+
 OP:
 
 3
@@ -368,6 +354,7 @@ OP:
 3
 
 _____________________________________________________________________________________________
+```javascript
 
 const a = "india is my country";
 // Function to capitalize the first letter of each word
@@ -397,23 +384,10 @@ const secondLargest = findSecondLargest(myArray);
 
 console.log("Second Largest Element:", secondLargest);
 
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 without inbuild method
-
-
-
+```javascript
 
 function findSecondLargest(arr) {
   let largest = -Infinity;
@@ -437,14 +411,11 @@ const secondLargest = findSecondLargest(myArray);
 
 console.log("Second Largest Element:", secondLargest);
 
-
-
-
-
-
-
+```
+_________________________________________________________________________________________________________________________________________________________________________
 
 Find the Largest & Smallest Elem in an Array in JavaScript
+```javascript
 
 function findLargest(arr) {
   const max = Math.max(...arr);
@@ -461,12 +432,16 @@ const {max,min} = findLargest(myArray);
 
 console.log("Largest Element:", max);
 console.log("Largest Element:", min);
+```
+
 op:
 
 Largest Element: 20
 Largest Element: 3
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+_____________________________________________________________________________________________________________________________________________________
+```javascript
+
 const person = {
   name: 'Lydia',
   age: 21,
@@ -475,42 +450,42 @@ const person = {
 for (const item in person) {
   console.log(item);
 }
+```
+
 op: 
 name
 age
+______________________________________________________________________________________________________________________________________________________
+```javascript
 
 let a = "25"
 let b = 25
 console.log(a == b);
 console.log( 99 + 1 + "10")
+```
+
 op:
 true
 10010
 
--------------------------------------------------------------------------------------------
+___________________________________________________________________________________________________________________________________________
+```javascript
+
 setTimeout(function() {
      console.log('First Line');
 }, 0);
 
 console.log('Second Line');
 console.log('Third Line');
+```
+
 op:
 Second Line
 Third Line
 First Line
 
-------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
+______________________________________________________________________________________________________________________________________________
+```javascript
 
 function Person(firstName, lastName) {
   this.firstName = firstName;
@@ -520,13 +495,16 @@ const lydia = new Person('Lydia', 'Hallie');
 const sarah = Person('Sarah', 'Smith');
 console.log(lydia.name);
 console.log(sarah.name);
+```
 
 op:
 console.log(sarah.lastName
 TypeError: Cannot read properties of undefined (reading 'lastName')
 
 
---------------------------------------------------------------------------------
+_____________________________________________________________________________________________________________________________
+```javascript
+
 function Person(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
@@ -536,16 +514,13 @@ const lydia = new Person('Lydia', 'Hallie');
 const sarah = new Person('Sarah', 'Smith'); // Use 'new' here
 console.log(lydia.firstName); 
 console.log(sarah.lastName);
+```
 
 op:
 Lydia
 Smith
-
-
-
-
-
-
+_______________________________________________________________________________________________________________________________
+```javascript
 
 const user = {
     name: 'Raj',
@@ -556,34 +531,40 @@ const user = {
 };
 user.location.zipcode=401107
 console.log(user)
+```
+
 op:
 { name: 'Raj', location: { city: 'NY', state: 'NY', zipcode: 401107 } }
 
 -------------------------------------------------------------------------------------------------------------
+```javascript
+
 const c = [1,2,3,4,5];
 c = [...c, 6]
 console.log(c)
+```
+
 op:
 
 TypeError: Assignment to constant variable.
 use let and var
-----------------------------------------------------------------------------------------------------
+__________________________________________________________________________________________________________
+```javascript
 
 let a = 12;
 --a;
 console.log(a++);
 console.log(a)
+```
 
 op:
 11
 12
 
-----------------------------------------------------------------------------------------------------------------------
-
-
-
+______________________________________________________________________________________________________
 
 Look at this series: 12, 11, 13, 12, 14, 13, 15,...
+```javascript
 
 function generateSeries(n) {
   const series = [12];
@@ -602,6 +583,7 @@ function generateSeries(n) {
 const n = 10; // You can change this value to generate more or fewer terms
 const result = generateSeries(n);
 console.log(result);
+```
 
 op:
 [
@@ -609,8 +591,9 @@ op:
   13, 15, 14, 16, 15
 ]
 
----------------------------------------------------------------------------------------------------
+__________________________________________________________________________________________________________________________________________
 with inbuild function
+```javascript
 
 op:
 [12, 11, 13, 12, 14,  13, 15, 14, 16, 15]
@@ -618,16 +601,26 @@ op:
 const arr = [1, 2, [3, 4], 5, [6, 7], 8];
 const output = arr.flat(2);
 console.log(output); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
+
+________________________________________________________________________________________________________________________________________________
+
+```javascript
 const a;
 console.log(a);
 op:
 SyntaxError: Missing initializer in const declaration
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
+
+_________________________________________________________________________________________________________________________________________________
+```javascript
+
 console.log([] === []);
 op:
-False|
+False|```
+
 _________________________________________________________________________________________________________
+```javascript
 
 
 const obj = {
@@ -636,10 +629,14 @@ b: 2
 }
 obj.a = 3
 console.log(obj)
+```
+
 op:
 { a: 3, b: 2 }
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------’
+______________________________________________________________________________________________________________________________
+```javascript
+
 const obj = {
  a: 1,
 b: 2
@@ -649,10 +646,15 @@ obj = obj2
 console.log(obj)
 op:
 obj = obj2
+```
+
 op:
 TypeError: Assignment to constant variable.
-
 resolve
+
+______________________________________________________________________________________________________________________________________________________________________________
+```javascript
+
 const obj = {
   a: 1,
   b: 2
@@ -660,8 +662,10 @@ const obj = {
 const obj2 = {};
 Object.assign(obj, obj2);
 console.log(obj);
+```
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+______________________________________________________________________________________________________________________________________________________________________________
+```javascript
 
 console.log('ok')
 setTimeout(() => {
@@ -671,6 +675,7 @@ setTimeout(() => {
 setTimeout(() => {
   console.log("Delayed for 0 second.");
 }, 0);
+```
 
 op:
 ok
@@ -2798,21 +2803,12 @@ console.log(result); // Output: ['f', 'f', 'f', 'f']
 
 
 
-
-
-
-
-
-
-
-
-
-
+____________________________________________________________________________________________________________________________________________________________________________________
 
 Given a string which includes only letters, write a function that produces the outputs below. 
 input = 'abcd'; // 'A-Bb-Ccc-Dddd' 
 input = 'cwAt'; // 'C-Ww-Aaa-Tttt'
-
+```javascript
 function transformString(input) {
   return input.split('').map((char, index) => char.toUpperCase() + char.toLowerCase().repeat(index)).join('-');
 }
@@ -2820,7 +2816,10 @@ function transformString(input) {
 // Test cases
 console.log(transformString('abcd')); // Output: 'A-Bb-Ccc-Dddd'
 console.log(transformString('cwAt')); // Output: 'C-Ww-Aaa-Tttt'
+```
 __________________________________________________________________________
+
+```javascript
 const x = () => {
   console.log("x");
 }
@@ -2832,7 +2831,7 @@ function test(y){
 test(x);
 
 output x
-
+_________________________________________________________________________________________________________________________________________________________________
 
 pass by value pass by ref code
 function changeValue(x) {
@@ -2845,8 +2844,8 @@ changeValue(num);
 console.log("Outside function: ", num); // Output: Outside function: 5
 
 
-
-_______________________________________
+___________________________________________________________________________________________________________________________________________________________________
+```javascript
 function changeProperty(obj) {
     obj.name = "John";
     console.log("Inside function: ", obj); // Output: Inside function: { name: "John" }
@@ -2862,12 +2861,12 @@ console.log("Outside function: ", person); // Output: Outside function: { name: 
 
 
 
-
+____________________________________________________________________________________________________________________________________________________________________________________________
 arr = [6,,2,4,8,7,3]
 target = 10;
 show index number
 output : [0,2]
-
+```javascript
 function findPair(arr, target) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = i + 1; j < arr.length; j++) {
@@ -2888,11 +2887,12 @@ console.log(output); // Output: [0, 2]
 
 
 
-
+_____________________________________________________________________________________________________________________________________________________________________________________________
 inpupt [3, 30, 34, 5, 9]
 output 9534330
-create the largest number by sorting the array in a custom way. Here's how you can implement it in JavaScript:
 
+create the largest number by sorting the array in a custom way. Here's how you can implement it in JavaScript:
+```javascript
 let arr=[3, 30, 34, 5, 9]
  arr= arr.join("").split("");
 for(let i=0; i< arr.length; i++) {
@@ -2909,15 +2909,11 @@ console.log(arr)
 
 
 
-
-
-
-
-
-
+_________________________________________________________________________________________________________________________________________________________________________________________
 
 Rearrange Array Elements by Sign
 Input: nums = [3,1,-2,-5,2,-4]
+```javascript
 Output: [3,-2,1,-5,2,-4]
 
 let nums = [3, 1, -2, -5, 2, -4];
@@ -2940,12 +2936,12 @@ console.log(newArr);
 
 
 
-
+___________________________________________________________________________________________________________________________________________________________
 
 
 
 Median of Two Sorted Arrays
-
+```javascript
 Input: nums1 = [1,3], nums2 = [2]
 Output: 2.00000
 Explanation: merged array = [1,2,3] and median is 2.
@@ -2959,18 +2955,8 @@ let index = Math.floor(newArr.length/2);
 console.log(newArr[index]);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+____________________________________________________________________________________________________________________________________________
+```javascript
 Reverse Integer
 Input: x = 123
 Output: 321
@@ -2980,9 +2966,10 @@ let arr=[1,2,3]
  console.log(arr)
 
 
+__________________________________________________________________________________________________________________________________________________
 
-
-3. Longest Substring Without Repeating Characters 
+ Longest Substring Without Repeating Characters 
+ ```javascript
 function getFrequency(string) {
   var freq = {};
   for (var i = 0; i < string.length; i++) {
@@ -3003,6 +2990,9 @@ Input: x = 121
 Output: true
 Explanation: 121 reads as 121 from left to right and from right to left.
 
+
+_______________________________________________________________________________________________________________________________________
+```javascript
 var isPalindrome = function(x) {
     let a = x.toString(); // Convert the number to a string
     let newstr = '';
