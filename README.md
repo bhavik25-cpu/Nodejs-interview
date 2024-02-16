@@ -1,7 +1,7 @@
 # Nodejs-interview
 
 1 Call back code 
-
+ ```javascript
 function doSomethingAsync(callback) {
   console.log("Doing something asynchronously...");
   
@@ -21,7 +21,7 @@ function callbackFunction() {
 
 // Call the main function with the callback
 doSomethingAsync(callbackFunction);
-
+```
 
 ________________________________________________________________________________________________________________________________
 
