@@ -3023,7 +3023,7 @@ console.log(isPalindrome(x)); // Output: true
 
 
 
-
+______________________________________________________________________________________________________________________________________________________
 
 "https://www.google.com/search?q=sdsd&rlz=1C1GCCU_en&oq=sdsd&gs_lcrp=EgZjaHJvbWUyEggAEEUYOR";
 
@@ -3034,6 +3034,7 @@ console.log(isPalindrome(x)); // Output: true
 //     "gs_lcrp": "EgZjaHJvbWUyEggAEEUYOR"
 // }
 
+```javascript
 
 var x = "https://www.google.com/search?q=sdsd&rlz=1C1GCCU_en&oq=sdsd&gs_lcrp=EgZjaHJvbWUyEggAEEUYOR";
 
@@ -3050,10 +3051,10 @@ function parseURLParams(url) {
 
 var result = parseURLParams(x);
 console.log(result);
+```
 
-
-
-
+__________________________________________________________________________________________________________________________________________________
+```javascript
 input 
 const jsonData = {
   object1: {
@@ -3093,12 +3094,11 @@ const object3Sum = countValues(jsonData.object3);
 console.log("object1", object1Sum);
 console.log("object2", object2Sum);
 console.log("object3", object3Sum);
-
-
-
+```
 
 _____________________________________________________________________________________________________________________________________________________
 Given an integer array nums, find the contiguous subarray within the array (containing at least one number) that has the largest product, and print the numbers and the product(a * b). 
+```javascript
 let nums1 = [2, 3, -2, 4];
 
 
@@ -3112,5 +3112,5 @@ console.log(Math.max(...arr))
 
 op
 6
-
+```
 
