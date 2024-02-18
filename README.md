@@ -2985,9 +2985,8 @@ op
 
 _____________________________________________________________________________________________________________________________________________________
 Given an integer array nums, find the contiguous subarray within the array (containing at least one number) that has the largest product, and print the numbers and the product(a * b). 
-```javascript
 let nums1 = [2, 3, -2, 4];
-
+```javascript
 
 let nums1 = [2, 3, -2, 4];
 let arr = [];
