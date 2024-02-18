@@ -1,4 +1,4 @@
-# Nodejs-interview
+# Nodejs-interview-coding
 
 1 Call back code 
  ```javascript
@@ -2999,5 +2999,56 @@ console.log(Math.max(...arr))
 ```
 op
 6
+______________________________________________________________________________________________________________
+Merge k Sorted Lists
+Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
+Explanation: The linked-lists are:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+merging them into one sorted list:
+1->1->2->3->4->4->5->
+
+```javascript
+let num1 = "2", num2 = "3";
+let result = Number(num1) * Number(num2);
+result = result.toString()
+console.log(result);
+
+```
+op
+6
+_______________________________________________________________________________________________________________________
+Merge k Sorted Lists
+Input: lists = [[1,4,5],[1,3,4],[2,6]]
+Output: [1,1,2,3,4,4,5,6]
+Explanation: The linked-lists are:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+merging them into one sorted list:
+1->1->2->3->4->4->5->6
+
+```javascript
 
 
+et lists = [[1,4,5],[1,3,4],[2,6]];
+let arr = Array.prototype.concat.apply([], lists);
+arr.sort(function (a,b) {
+    return a-b;
+})
+console.log(arr)
+
+```
+op
+
+node /tmp/vTvtkdPEeu.js
+[
+  1, 1, 2, 3,
+  4, 4, 5, 6
+]
