@@ -3013,7 +3013,8 @@ merging them into one sorted list:
 1->1->2->3->4->4->5->
 
 ```javascript
-let num1 = "2", num2 = "3";
+let num1 = "2", 
+    num2 = "3";
 let result = Number(num1) * Number(num2);
 result = result.toString()
 console.log(result);
