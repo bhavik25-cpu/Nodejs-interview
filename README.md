@@ -2855,10 +2855,10 @@ console.log(newArr[index]);
 
 
 ________________________________________________________________________________________________________________________________________Reverse Integer
-```javascript
 
 Input: x = 123
 Output: 321
+```javascript
 let arr=[1,2,3]
  arr= arr.join("").split("").reverse();
  arr =arr.join("")
