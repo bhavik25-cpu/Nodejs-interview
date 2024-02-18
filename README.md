@@ -3037,7 +3037,7 @@ merging them into one sorted list:
 ```javascript
 
 
-et lists = [[1,4,5],[1,3,4],[2,6]];
+let lists = [[1,4,5],[1,3,4],[2,6]];
 let arr = Array.prototype.concat.apply([], lists);
 arr.sort(function (a,b) {
     return a-b;
