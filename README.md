@@ -1514,9 +1514,9 @@ if (resultIndex !== -1) {
 ```
 
 ______________________________________________________________________________________________________________
-```javascript
 
 Fibonacci Series js
+```javascript
 
 function generateFibonacci(n) {
     let fibonacciSeries = [0, 1];
