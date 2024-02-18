@@ -1663,9 +1663,10 @@ Alice
 32
 
 ______________________________________________________________________________________________
-```javascript
 
 Call()
+```javascript
+
 function greet(name) {
     console.log(`Hello, ${name}! My name is ${this.name}.`);
 }
