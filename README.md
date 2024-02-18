@@ -1,4 +1,4 @@
-# Nodejs-interview-coding
+# javascript-interview-coding
 
 1 Call back code 
  ```javascript
