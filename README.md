@@ -3052,3 +3052,13 @@ node /tmp/vTvtkdPEeu.js
   1, 1, 2, 3,
   4, 4, 5, 6
 ]
+_______________________________________________________________________
+```javascript
+function multiply(i, j) {
+  console.log("i = " + i);
+  console.log("j = " + j);
+  console.log("ij = " + (i * j));
+}
+
+multiply(30, 40);
+```
