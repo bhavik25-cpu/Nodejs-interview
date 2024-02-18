@@ -3004,17 +3004,10 @@ console.log(Math.max(...arr))
 op
 6
 ______________________________________________________________________________________________________________
-Merge k Sorted Lists
-Input: lists = [[1,4,5],[1,3,4],[2,6]]
-Output: [1,1,2,3,4,4,5,6]
-Explanation: The linked-lists are:
-[
-  1->4->5,
-  1->3->4,
-  2->6
-]
-merging them into one sorted list:
-1->1->2->3->4->4->5->
+Multiply Strings
+
+Input: num1 = "2", num2 = "3"
+Output: "6"
 
 ```javascript
 let num1 = "2", 
@@ -3040,7 +3033,6 @@ merging them into one sorted list:
 1->1->2->3->4->4->5->6
 
 ```javascript
-
 
 let lists = [[1,4,5],[1,3,4],[2,6]];
 let arr = Array.prototype.concat.apply([], lists);
