@@ -1506,15 +1506,39 @@ const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const targetElement = 7;
 const resultIndex = binarySearch(sortedArray, targetElement);
 
+
 if (resultIndex !== -1) {
     console.log(`Element ${targetElement} found at index ${resultIndex}.`);
 } else {
     console.log(`Element ${targetElement} not found in the array.`);
 }
 ```
-
 ______________________________________________________________________________________________________________
+short code
+```javascript
 
+function binarySearch(arr, target) {
+    let left = 0, right = arr.length - 1;
+
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (arr[mid] === target) return mid; // Element found, return its index
+        arr[mid] < target ? left = mid + 1 : right = mid - 1; // Adjust search range
+    }
+
+    return -1; // Element not found
+}
+
+// Example usage:
+const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const targetElement = 7;
+const resultIndex = binarySearch(sortedArray, targetElement);
+
+console.log(resultIndex !== -1 ? `Element ${targetElement} found at index ${resultIndex}.` : `Element ${targetElement} not found in the array.`);
+
+```
+
+_________________________________________________________________________________________________________
 Fibonacci Series js
 ```javascript
 
