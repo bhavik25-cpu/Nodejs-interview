@@ -1733,7 +1733,25 @@ const sortedSale = Object.fromEntries(arr);
 console.log(sortedSale)
 ```
 
+________________________________________________________
 
+inbuild 
+```javascript
+const salesData = [
+  { salesperson: 'John', amount: 100 },
+  { salesperson: 'Alice', amount: 150 },
+  { salesperson: 'Bob', amount: 200 },
+  { salesperson: 'Alice', amount: 120 },
+  { salesperson: 'John', amount: 80 },
+];
+
+const sortedSale = salesData.reduce((acc, { salesperson, amount }) => {
+  acc[salesperson] = (acc[salesperson] || 0) + amount;
+  return acc;
+}, {});
+
+console.log(sortedSale);
+```
 __________________________________________________________
 ```javascript
 
