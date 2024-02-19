@@ -2155,11 +2155,10 @@ console.log(result.valueOf()); // Output: 11
 
 _____________________________________________________________________________________________________________________________________
 
-```javascript
-
 
 const myArray = [2, 7, 1, 8, 4, 5];
 const targetSum = 9;
+```javascript
 function hasPairWithSum(arr, target) {
   const numSet = new Set();
   for (let num of arr) {
