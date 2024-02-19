@@ -2856,9 +2856,8 @@ ________________________________________________________________________________
 
 Rearrange Array Elements by Sign
 Input: nums = [3,1,-2,-5,2,-4]
-```javascript
 Output: [3,-2,1,-5,2,-4]
-
+```javascript
 let nums = [3, 1, -2, -5, 2, -4];
 
 let positive = [];
