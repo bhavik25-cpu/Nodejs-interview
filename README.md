@@ -2885,12 +2885,13 @@ ________________________________________________________________________________
 
 
 Median of Two Sorted Arrays
-```javascript
+
 Input: nums1 = [1,3], nums2 = [2]
 Output: 2.00000
 Explanation: merged array = [1,2,3] and median is 2.
-let nums1 = [1,3], nums2 = [2];
+```javascript
 
+let nums1 = [1,3], nums2 = [2];
 let newArr =nums1.concat(nums2);
 newArr.sort(function (a,b) {
     return a-b;
