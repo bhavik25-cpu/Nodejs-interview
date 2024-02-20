@@ -3100,3 +3100,59 @@ function multiply(i, j) {
 
 multiply(30, 40);
 ```
+
+_____________________________________________________________
+
+Input
+Flatten Deeply Nested Array
+arr = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]]
+n = 1
+Output
+[1, 2, 3, 4, 5, 6, 7, 8, [9, 10, 11], 12, 13, 14, 15]
+
+```javascript
+var flat = function (arr, n) {
+return arr.flat(n);
+};
+
+let arr = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]];
+let n = 1;
+let flattenedArr = flat(arr,n)
+console.log(flattenedArr);
+```
+
+_________________________________________________________________________
+Combination Sum
+Input: candidates = [2,3,6,7], target = 7
+Output: [[2,2,3],[7]]
+Explanation:
+2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+7 is a candidate, and 7 = 7.
+These are the only two combinations.
+
+```javascript
+function combinationSum(candidates, target) {
+    const result = [];
+    
+    function backtrack(remaining, path) {
+        if (remaining === 0) {
+            result.push(path);
+            return;
+        }
+        
+        for (let i = 0; i < candidates.length; i++) {
+            if (candidates[i] <= remaining) {
+                backtrack(remaining - candidates[i], [...path, candidates[i]]);
+            }
+        }
+    }
+    
+    backtrack(target, []);
+    return result;
+}
+
+// Example usage:
+const candidates = [2, 3, 6, 7];
+const target = 7;
+console.log(combinationSum(candidates, target));
+```
