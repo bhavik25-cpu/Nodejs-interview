@@ -3173,3 +3173,131 @@ res.send({result : fact});
 })
 app.listen(8080);
 ```
+____________________________________________________________________________________________________________________
+ Longest Common Prefix
+
+ Input: strs = ["flower","flow","flight"]
+Output: "fl"
+```javascript
+
+var longestCommonPrefix = function(strs) {
+    if (strs.length === 0) return ''; // If the array is empty, return an empty string
+    
+    let prefix = strs[0]; // Initialize prefix with the first string
+    
+    // Iterate through the remaining strings
+    for (let i = 1; i < strs.length; i++) {
+        let j = 0;
+        // Compare characters of the current string with the prefix
+        while (j < prefix.length && j < strs[i].length && prefix[j] === strs[i][j]) {
+            j++;
+        }
+        prefix = prefix.slice(0, j); // Update prefix to include only the common characters
+        if (prefix === '') return ''; // If prefix becomes empty, no common prefix exists
+    }
+    
+    return prefix;
+};
+
+// Test case
+const strs = ["flower", "flow", "flight"];
+console.log(longestCommonPrefix(strs)); // Output: "fl"
+```
+Output: "fl"
+_____________________________________________________________________________________________________________________________________
+
+ Roman to Integer
+Input: s = "III"
+Output: 3
+Explanation: III = 3.
+```javascript
+
+function romanToInt(s) {
+    // Create a map of Roman numeral characters to their integer values
+    const romanToIntMap = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    };
+
+    // Initialize the result variable
+    let result = 0;
+
+    // Loop through the Roman numeral string
+    for (let i = 0; i < s.length; i++) {
+        // Get the integer value of the current character
+        const currentValue = romanToIntMap[s[i]];
+
+        // Get the integer value of the next character, if it exists
+        const nextValue = romanToIntMap[s[i + 1]];
+
+        // If the current value is less than the next value, subtract it from the result
+        if (currentValue < nextValue) {
+            result -= currentValue;
+        } else {
+            // Otherwise, add it to the result
+            result += currentValue;
+        }
+    }
+
+    // Return the final result
+    return result;
+}
+
+// Test the function with the given example
+console.log(romanToInt("III")); // Output: 3
+```
+
+_______________________________________________________________________________________________________
+
+Valid Parentheses
+Input: s = "()"
+Output: true
+```javascript
+
+var isValid = function(s) {
+    const stack = [];
+    const map = {
+        '(': ')',
+        '{': '}',
+        '[': ']'
+    };
+
+    for (let char of s) {
+        if (char in map) {
+            stack.push(char); // Push opening brackets onto the stack
+        } else {
+            const last = stack.pop(); // Pop the last opening bracket from the stack
+            if (char !== map[last]) {
+                return false; // If the closing bracket does not match the last opening bracket, return false
+            }
+        }
+    }
+
+    return stack.length === 0; // If the stack is empty, all brackets are valid
+};
+
+// Test the function with the given example
+console.log(isValid("()")); // Output: true
+
+```
+______________________________________________________________________________________________
+ Length of Last Word
+Input: s = "Hello World"
+Output: 5
+Explanation: The last word is "World" with length 5. js 
+```javascript
+
+var lengthOfLastWord = function(s) {
+    const words = s.trim().split(' '); // Trim leading and trailing spaces and split the string into words
+    return words[words.length - 1].length; // Return the length of the last word
+};
+
+// Test the function with the given example
+console.log(lengthOfLastWord("Hello World")); // Output: 5
+```
+
