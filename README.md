@@ -3156,3 +3156,20 @@ const candidates = [2, 3, 6, 7];
 const target = 7;
 console.log(combinationSum(candidates, target));
 ```
+___________________________________________________________________
+
+```javascript
+
+const express = require("express");
+let app = express();
+app.use(express.json());
+app.post("/factorial" ,(req,res) =>{
+let value = req.body.num;
+let fact =1;
+for (let i =1; i <= value; i++) {
+    fact *= i;
+}
+res.send({result : fact});
+})
+app.listen(8080);
+```
