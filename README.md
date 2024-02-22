@@ -3545,18 +3545,21 @@ function reverseWords(str) {
     let reversed = '';
     let word = '';
   
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] === ' ') {
-            reversed = word + ' ' + reversed;
+    for (let i = 0; i <= str.length; i++) {
+        if (i === str.length || str[i] === ' ') {
+            for (let j = word.length - 1; j >= 0; j--) {
+                reversed += word[j];
+            }
+            if (i !== str.length) {
+                reversed += ' ';
+            }
             word = '';
         } else {
             word += str[i];
         }
     }
   
-    reversed = word + ' ' + reversed;
-  
-    return reversed.trim();
+    return reversed;
 }
 
 const input = "I Love Coding";
