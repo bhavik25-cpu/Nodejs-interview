@@ -3547,29 +3547,22 @@ function reverseWords(str) {
   
     for (let i = 0; i < str.length; i++) {
         if (str[i] === ' ') {
-            reversed += reverseWord(word) + ' ';
+            reversed = word + ' ' + reversed;
             word = '';
         } else {
             word += str[i];
         }
     }
   
-    reversed += reverseWord(word);
+    reversed = word + ' ' + reversed;
   
-    return reversed;
-}
-
-function reverseWord(word) {
-    let reversedWord = '';
-    for (let i = word.length - 1; i >= 0; i--) {
-        reversedWord += word[i];
-    }
-    return reversedWord;
+    return reversed.trim();
 }
 
 const input = "I Love Coding";
 const output = reverseWords(input);
 console.log(output); // Output: "I evoL gnidoC"
+
 ```
 _____________________________________________________________________________
 shallowcopy
