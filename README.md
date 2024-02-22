@@ -3444,5 +3444,144 @@ console.log(maxDivScore(nums, divisors));
 ```
 
 // Output: 5
+_________________________________________________________________________________________________________________________
+const input = [1, 0, 3, 0, -1, 0, 6];
+const output = [1, 3, -1, 6, 0, 0, 0];
+js code sfht all 0 left
+```javascript
+
+const input = [1, 0, 3, 0, -1, 0, 6];
+
+function shiftZerosToLeft(arr) {
+    let count = 0;
+  
+    // Iterate through the array
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            // Move non-zero elements to the left
+            arr[count] = arr[i];
+            count++;
+        }
+    }
+  
+    // Fill the remaining positions with zeros
+    while (count < arr.length) {
+        arr[count] = 0;
+        count++;
+    }
+  
+    return arr;
+}
+
+const output = shiftZerosToLeft(input);
+console.log(output); // Output: [1, 3, -1, 6, 0, 0, 0]
+```
+___________________________________________________________________________________________________________
+const input = [9, 9, 9];
+output = [1, 0, 0, 0];
+```javascript
+
+function plusOne(digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+        if (digits[i] < 9) {
+            digits[i]++;
+            return digits;
+        } else {
+            digits[i] = 0;
+        }
+    }
+    // If we're here, it means all digits were 9
+    digits.unshift(1);
+    return digits;
+}
+
+const input = [9, 9, 9];
+const output = plusOne(input);
+console.log(output); // Output: [1, 0, 0, 0]
+```
+without inbuilt
+```javascript
+function plusOne(digits) {
+    let carry = 1;
+    for (let i = digits.length - 1; i >= 0; i--) {
+        const sum = digits[i] + carry;
+        digits[i] = sum % 10;
+        carry = Math.floor(sum / 10);
+        if (carry === 0) {
+            // No need to continue if there's no carry
+            return digits;
+        }
+    }
+    // If we're here, it means all digits were 9
+    digits.unshift(1);
+    return digits;
+}
+
+const input = [9, 9, 9];
+const output = plusOne(input);
+console.log(output); // Output: [1, 0, 0, 0]
+```
+_______________________________________________________________________________________________________________
+const input = "I Love Coding"
+const output = "I evoL gnidoC"
+
+```javascript
+
+function reverseWords(str) {
+    return str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+}
+
+const input = "I Love Coding";
+const output = reverseWords(input);
+console.log(output);
+
+```
+ // Output: "I evoL gnidoC"
+
+without inbuild method
+```javascript
+
+function reverseWords(str) {
+    let reversed = '';
+    let word = '';
+  
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === ' ') {
+            reversed += reverseWord(word) + ' ';
+            word = '';
+        } else {
+            word += str[i];
+        }
+    }
+  
+    reversed += reverseWord(word);
+  
+    return reversed;
+}
+
+function reverseWord(word) {
+    let reversedWord = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+        reversedWord += word[i];
+    }
+    return reversedWord;
+}
+
+const input = "I Love Coding";
+const output = reverseWords(input);
+console.log(output); // Output: "I evoL gnidoC"
+```
+_____________________________________________________________________________
+shallowcopy
+```javascript
+```
+deepcopy
+```javascript
+
+```
+
+
+
+
 
 
