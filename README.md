@@ -3326,4 +3326,33 @@ const nums = [8, 1, 2, 2, 3];
 console.log(smallerNumbersThanCurrent(nums)); // Output: [4, 0, 1, 1, 3]
 
 ```
+_______________________________________________________________________________________________________________________________
+Count Elements With Strictly Smaller and Greater Elements 
+Input: nums = [11,7,2,15]
+Output: 2
+make a short inbuild code js
+```javascript
+
+function countElements(nums) {
+    let count = 0;
+    for (let i = 0; i < nums.length; i++) {
+        let smaller = 0, greater = 0;
+        for (let j = 0; j < nums.length; j++) {
+            if (nums[j] < nums[i]) {
+                smaller++;
+            } else if (nums[j] > nums[i]) {
+                greater++;
+            }
+        }
+        if (smaller > 0 && greater > 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+const nums = [11, 7, 2, 15];
+console.log(countElements(nums)); // Output: 2
+```
+
 
