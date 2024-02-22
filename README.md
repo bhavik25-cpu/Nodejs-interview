@@ -3414,4 +3414,35 @@ const nums = [1, 2, 4, 6];
 const operations = [[1, 3], [4, 7], [6, 1]];
 console.log(replaceElements(nums, operations)); // Output: [3, 2, 7, 1]
 ```
+_________________________________________________________________________________
+Find the Maximum Divisibility Score
+Input: nums = [4,7,9,3,9], divisors = [5,2,3]
+Output: 3
+
+```javascript
+
+var maxDivScore = function(nums, divisors) {
+    let maxScore = 0;
+
+    for (const divisor of divisors) {
+        let score = 0;
+        for (const num of nums) {
+            if (num % divisor === 0) {
+                score++;
+            }
+        }
+        maxScore = Math.max(maxScore, score);
+    }
+
+    return maxScore;
+};
+
+const nums = [4,7,9,3,9]
+const divisors =[5,2,3]
+console.log(maxDivScore(nums, divisors)); 
+
+```
+
+// Output: 5
+
 
