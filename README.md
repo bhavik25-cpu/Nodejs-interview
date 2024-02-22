@@ -3574,14 +3574,55 @@ console.log(output); // Output: "I evoL gnidoC"
 _____________________________________________________________________________
 shallowcopy
 ```javascript
+
+const person = {
+  name: "Akshay",
+  age: 29,
+  amounts: [1000, 1001, 1002],
+};
+// const x = {...person}
+const x = Object.assign({}, person);
+
+x.name ="bhavik"
+console.log(x)
 ```
+
+output
+{ 
+name: 'bhavik', 
+age: 29, a
+mounts: [ 1000, 1001, 1002 ] 
+}
+
+_____________________________________________________________________
 deepcopy
 ```javascript
+const person = {
+  name: "Akshay",
+  age: 29,
+  address:{
+      city:"state",
+      state:"up"
+  },
+  amounts: [1000, 1001, 1002],
+  getName: function () {
+      return "all data"
+  }
+};
 
+const x = JSON.parse(JSON.stringify(person));
+
+x.address.city ="mumbai"
+console.log(x)
 ```
 
-
-
+output
+{
+  name: 'Akshay',
+  age: 29,
+  address: { city: 'mumbai', state: 'up' },
+  amounts: [ 1000, 1001, 1002 ]
+}
 
 
 
