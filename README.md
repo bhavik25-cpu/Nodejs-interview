@@ -3301,3 +3301,29 @@ var lengthOfLastWord = function(s) {
 console.log(lengthOfLastWord("Hello World")); // Output: 5
 ```
 
+____________________________________________________________________________________________________
+, here's a JavaScript code snippet that takes an array nums as input and returns an array where each element represents the number of elements smaller than the current element:
+// Input: nums = [8,1,2,2,3]
+// Output: [4,0,1,1,3]
+// 1<=nums[i]<=100
+```javascript
+
+function smallerNumbersThanCurrent(nums) {
+    const result = [];
+    for (let i = 0; i < nums.length; i++) {
+        let count = 0;
+        for (let j = 0; j < nums.length; j++) {
+            if (nums[j] < nums[i]) {
+                count++;
+            }
+        }
+        result.push(count);
+    }
+    return result;
+}
+
+const nums = [8, 1, 2, 2, 3];
+console.log(smallerNumbersThanCurrent(nums)); // Output: [4, 0, 1, 1, 3]
+
+```
+
