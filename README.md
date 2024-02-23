@@ -3679,4 +3679,60 @@ console.log("The maximum value in the array is:", maxValue);
  ```
 ___________________________________________________________________________________________________
 
+ var words = ['language', 'number', 'developers', 'features', 'browsers’, 'climbing', 'communicate']
+ 
+Please sort this array by the second character of each element.
+For example [‘language’, ‘feature’, ‘developer’, ‘climbing’, 'communicate', 'browsers', 'number'] 
 
+ ```javascript
+
+var words = ['language', 'number', 'developers', 'features', 'browsers', 'climbing', 'communicate'];
+
+words.sort(function(a, b) {
+    // Extract the second characters of each word
+    var charA = a.charAt(1);
+    var charB = b.charAt(1);
+
+    // Compare the second characters
+    if (charA < charB) {
+        return -1;
+    } else if (charA > charB) {
+        return 1;
+    } else {
+        // If the second characters are the same, maintain the original order
+        return 0;
+    }
+});
+
+console.log(words);
+
+ ```
+______________________________________________________________________________________________________________________________________________________
+without inbuild method
+
+ ```javascript
+
+var words = ['language', 'number', 'developers', 'features', 'browsers', 'climbing', 'communicate'];
+
+// Custom sorting function
+function sortBySecondCharacter(arr) {
+    for (var i = 0; i < arr.length - 1; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            // Compare the second characters of the current and next elements
+            var charA = arr[i].charAt(1);
+            var charB = arr[j].charAt(1);
+
+            if (charA > charB) {
+                // Swap elements if the second character of the current element is greater
+                var temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+var sortedWords = sortBySecondCharacter(words);
+console.log(sortedWords);
+ ```
