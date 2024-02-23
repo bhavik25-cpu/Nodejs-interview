@@ -3638,17 +3638,6 @@ console.log(a,b,c)
 op
 10 20 30
 ________________________________________________________________________________________
-Please use (for in) to get the max value from an Array, complete the below function:
- ```javascript
-
-function arrayMax(arr) {
-var max = 
- 
-return max;
-};
-
-```
-___________________________________________________________________________________________
 
 Please use (for in) to get the max value from an Array, complete the below function:
  
