@@ -3634,6 +3634,49 @@ console.log(a,b,c)
 }
 ```
 
+
 op
 10 20 30
+________________________________________________________________________________________
+Please use (for in) to get the max value from an Array, complete the below function:
+ ```javascript
+
+function arrayMax(arr) {
+var max = 
+ 
+return max;
+};
+
+```
+___________________________________________________________________________________________
+
+Please use (for in) to get the max value from an Array, complete the below function:
+ 
+function arrayMax(arr) {
+var max = 
+ 
+return max;
+};
+ ```javascript
+
+function arrayMax(arr) {
+    var max = -Infinity; // Initialize max with negative infinity so that any number in the array will be greater than it
+
+    for (var index in arr) {
+        if (arr[index] > max) {
+            max = arr[index];
+        }
+    }
+
+    return max;
+}
+
+// Example usage:
+var myArray = [5, 10, 3, 8, 15, 2];
+var maxValue = arrayMax(myArray);
+console.log("The maximum value in the array is:", maxValue);
+
+ ```
+___________________________________________________________________________________________________
+
 
