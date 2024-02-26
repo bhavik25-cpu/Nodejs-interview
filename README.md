@@ -3725,3 +3725,19 @@ function sortBySecondCharacter(arr) {
 var sortedWords = sortBySecondCharacter(words);
 console.log(sortedWords);
  ```
+___________________________________________________________________________________
+console.log("1");
+
+ v = (getDetail("2")) 
+
+console.log(v)
+
+console.log("3");
+
+function getDetail(id){
+  setTimeout(async () => {
+    console.log(id)
+    return await id;
+  }, 2000);
+  
+}
