@@ -3726,6 +3726,8 @@ var sortedWords = sortBySecondCharacter(words);
 console.log(sortedWords);
  ```
 ___________________________________________________________________________________
+```javascript
+
 console.log("1");
 
  v = (getDetail("2")) 
@@ -3741,3 +3743,4 @@ function getDetail(id){
   }, 2000);
   
 }
+```
