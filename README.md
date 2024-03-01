@@ -3770,13 +3770,14 @@ console.log('end');
 ____________________________________________________________________________________
 ```javascript
 
-for (var i = 0; i < 3; i++) {
-    setTimeout(((num) {
+for (var i = 0; i < 4; i++) {
+    setTimeout((function (num) {
         return function () {
             console.log(num);
         };
     })(i), i * 1000);
 }
+
 ```
 
 
