@@ -3767,3 +3767,16 @@ const timer1 = setTimeout(() => {
 console.log('end');
 ```
 
+____________________________________________________________________________________
+```javascript
+
+for (var i = 0; i < 3; i++) {
+    setTimeout(((num) {
+        return function () {
+            console.log(num);
+        };
+    })(i), i * 1000);
+}
+```
+
+
