@@ -3807,5 +3807,26 @@ op
 2
 3
 ```
+_______________________________________________________________________________________
+
+const c = "hello world"
+show  "h" in upper case and "w" in uppercase in js use map  in js
+```javascript
+
+const c = "hello world";
+
+const result = c.split('').map(char => {
+  if (char === 'h'){
+    return char.toUpperCase();
+  } else if (char === 'w') {
+    return 'W';
+  } else {
+    return char;
+  }
+}).join('');
+
+console.log(result);
+
+```
 
 
