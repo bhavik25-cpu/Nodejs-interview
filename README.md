@@ -3829,4 +3829,21 @@ console.log(result);
 
 ```
 
+________________________________________________________________________________________________________________
+
+curring in js (1)(2)...(n)
+```javascript
+
+function generateSequence(n) {
+  let sequence = [];
+  for (let i = 1; i <= n; i++) {
+    sequence.push(i);
+  }
+  return sequence;
+}
+
+console.log(generateSequence(5)); // Output: [1, 2, 3, 4, 5]
+```
+
+
 
