@@ -3893,12 +3893,29 @@ var foo = function () {
 }
 ```
 op
-[Function: foo]
+
+/tmp/main.js:2
+console.log(foo)
+            ^
+ReferenceError: foo is not defined
+
+
+undefined
+
+
+undefined
+
+
 1
+
 1
+
 1
-/tmp/main.js:17
+
 foo();
 ^
 
 TypeError: foo is not a function
+    at Object.<anonymous> (/tmp/main.js:4:1)
+
+
