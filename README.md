@@ -3847,5 +3847,58 @@ function generateSequence(n) {
 console.log(generateSequence(5)); // Output: [1, 2, 3, 4, 5]
 ```
 
+__________________________________________________________________________________________________________________________
+```javascript
+
+var Employee = {
+  company: 'XYZ'
+}
+ 
+var emp1 = Object.create(Employee);
+console.log(emp1)
+delete emp1.company;
+console.log(emp1.company)
+```javascript
+op
+{}
+XYZ
+
+___________________________________________________________________________________________________________________________
+
+```javascript
 
 
+console.log(foo)
+foo = 1;
+ 
+console.log(foo)
+var foo = 1;
+ 
+var foo;
+console.log(foo)
+foo = 1;
+ 
+foo = 1;
+console.log(foo)
+var foo;
+ 
+foo();
+function foo() {
+  console.log('1')
+}
+ 
+foo();
+var foo = function () {
+  console.log('1')
+}
+```
+op
+[Function: foo]
+1
+1
+1
+/tmp/main.js:17
+foo();
+^
+
+TypeError: foo is not a function
