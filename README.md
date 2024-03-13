@@ -3931,4 +3931,31 @@ function mysums(num){
 console.log(mysums(5))
 console.log(mysums(10))
 ```
+_______________________________________________________________________________________________________
+```javascript
+
+function removeDuplicates(array) {
+  const uniqueArray = [];
+  for (let i = 0; i < array.length; i++) {
+    let isDuplicate = false;
+    for (let j = 0; j < uniqueArray.length; j++) {
+      if (array[i] === uniqueArray[j]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+    if (!isDuplicate) {
+      uniqueArray.push(array[i]);
+    }
+  }
+  return uniqueArray;
+}
+
+const array = [1, 2, 2, 3, 4, 4, 5];
+const uniqueArray = removeDuplicates(array);
+console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
+``
+
+
+
 
