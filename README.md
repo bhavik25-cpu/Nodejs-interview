@@ -3954,7 +3954,7 @@ function removeDuplicates(array) {
 const array = [1, 2, 2, 3, 4, 4, 5];
 const uniqueArray = removeDuplicates(array);
 console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
-``
+```
 
 
 
