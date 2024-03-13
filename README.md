@@ -3986,6 +3986,7 @@ function countDigits(num) {
     }
 }
 console.log(countDigits(12345)); // Output: The number of digits in 12345 is: 5
+```
 
 
 ```
