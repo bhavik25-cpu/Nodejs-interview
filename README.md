@@ -3917,5 +3917,18 @@ foo();
 
 TypeError: foo is not a function
     at Object.<anonymous> (/tmp/main.js:4:1)
+_____________________________________________________________________________________________
+SUM OF ALL NATURAL NUMBER FROM 1 TO N
+```javascript
 
+function mysums(num){
+   let sum = 0;
+    for(let i=0;i<=num;i++){
+        sum=sum +i
+    }
+    return sum
+}
+console.log(mysums(5))
+console.log(mysums(10))
+```
 
