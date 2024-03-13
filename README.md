@@ -3987,8 +3987,25 @@ function countDigits(num) {
 }
 console.log(countDigits(12345)); // Output: The number of digits in 12345 is: 5
 ```
+_____________________________________________________________________________________________________
+missing number
+
+```javascript
 
 
+var missingNumber = function(nums) {
+    let sum = 0
+    for(let i=0;i<nums.length;i++){
+        sum += nums[i]
+    }
+    return nums.length * ( nums.length+1 )/2-sum
+};
+const myresult = [3,0,1]
+const result = missingNumber(myresult)
+console.log(result)
+
+0p
+2
 ```
 
 
