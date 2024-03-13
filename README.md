@@ -3958,10 +3958,9 @@ console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
 
 
 _______________________________________________________________________________________________
-sum if digits of a number
+sum of digits of a number
 
 ```javascript
-
 
 function sumdigit(num) {
     let sum = 0
@@ -3972,6 +3971,25 @@ function sumdigit(num) {
     return sum
 }
 console.log(sumdigit(1287));
+
+_____________________________________________________________________________________________
+count the number of digits
+```javascript
+function countDigits(num) {
+    num= Math.abs(num)
+    let count = 0;
+    do{
+        count++
+        num= Math.floor(num/10)
+    }while(num > 0){
+        return count
+    }
+}
+console.log(countDigits(12345)); // Output: The number of digits in 12345 is: 5
+
+
+```
+
 
 
 ```
