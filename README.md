@@ -3957,5 +3957,25 @@ console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
 ```
 
 
+_______________________________________________________________________________________________
+sum if digits of a number
+
+```javascript
+
+
+function sumdigit(num) {
+    let sum = 0
+    while(num > 0){
+        sum+= num % 10
+        num = Math.floor(num /10)
+    }
+    return sum
+}
+console.log(sumdigit(1287));
+
+
+```
+
+
 
 
