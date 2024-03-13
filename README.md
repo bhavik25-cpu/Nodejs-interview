@@ -3991,8 +3991,6 @@ ________________________________________________________________________________
 missing number
 
 ```javascript
-
-
 var missingNumber = function(nums) {
     let sum = 0
     for(let i=0;i<nums.length;i++){
@@ -4000,13 +3998,15 @@ var missingNumber = function(nums) {
     }
     return nums.length * ( nums.length+1 )/2-sum
 };
+
 const myresult = [3,0,1]
 const result = missingNumber(myresult)
 console.log(result)
 
+```
+
 0p
 2
-```
 
 
 
