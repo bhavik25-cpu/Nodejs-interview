@@ -3971,6 +3971,7 @@ function sumdigit(num) {
     return sum
 }
 console.log(sumdigit(1287));
+```
 
 _____________________________________________________________________________________________
 count the number of digits
