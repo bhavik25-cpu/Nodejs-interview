@@ -383,7 +383,35 @@ console.log(result);
 ```
 
 OP: IndiaIsMyCountry
+_____________________________________________________________________________________
+```javascript
 
+const a = "india is my country";
+
+function capitalizeWordsAndRemoveSpaces(str) {
+    let result = '';
+    let capitalizeNext = true;
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === ' ') {
+            capitalizeNext = true;
+        } else {
+            if (capitalizeNext) {
+                result += str[i].toUpperCase();
+                capitalizeNext = false;
+            } else {
+                result += str[i];
+            }
+        }
+    }
+
+    return result;
+}
+
+const result = capitalizeWordsAndRemoveSpaces(a);
+console.log(result);
+
+```
 
 ______________________________________________________________________________________
 
