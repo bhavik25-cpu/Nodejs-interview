@@ -170,6 +170,29 @@ const arr = [1, 2, [3, 4], 5, [6, 7], 8];
 const output = flattenArray(arr);
 console.log(output)
 ```
+_____________________________________________________________________________________
+```javascript
+
+function flatArray(arr) {
+    const result = [];
+
+    function flatten(input) {
+        for (let i = 0; i < input.length; i++) {
+            if (Array.isArray(input[i])) {
+                flatten(input[i]);
+            } else {
+                result.push(input[i]);
+            }
+        }
+    }
+
+    flatten(arr);
+    return result;
+}
+
+const arr = [1, 2, [3, 4], 5, [6, 7], 8];
+console.log(flatArray(arr)); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
+```
 
 ______________________________________________________________________________________________________________________
 ```javascript
