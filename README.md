@@ -4059,6 +4059,20 @@ console.log(result)
 
 0p
 2
+____________________________________________________________________________________________________
+```javascript
+
+function myFunction(num) {
+    return num * 2;
+}
+
+const nums = [1, 2, 3, 4, 5];
+const result = nums.map(myFunction);
+console.log(result);
+
+```
+op
+[ 2, 4, 6, 8, 10 ]
 
 
 
