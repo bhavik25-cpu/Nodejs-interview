@@ -1421,6 +1421,7 @@ console.log(arrayWithoutDuplicates);
 
  __________________________________________________________________________________________________________________________
 10. Write a function that sorts an array of numbers in ascending order. 
+Inbuild method
 ```javascript
 
 
@@ -1433,7 +1434,33 @@ const unsortedArray = [5, 2, 8, 1, 7];
 const sortedArray = sortArrayAscending(unsortedArray);
 console.log(sortedArray);
 ```
+_______________________________________________________________________________________________________________________________________________
+without inbuild method
+```javascript
 
+function sortArrayAscending(arr) {
+  const sortedArray = arr.slice(); // Create a copy of the original array
+  const len = sortedArray.length;
+  
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = 0; j < len - 1 - i; j++) {
+      if (sortedArray[j] > sortedArray[j + 1]) {
+        // Swap elements
+        const temp = sortedArray[j];
+        sortedArray[j] = sortedArray[j + 1];
+        sortedArray[j + 1] = temp;
+      }
+    }
+  }
+  
+  return sortedArray;
+}
+
+// Test case
+const unsortedArray = [5, 2, 8, 1, 7];
+const sortedArray = sortArrayAscending(unsortedArray);
+console.log(sortedArray);
+```
 
 _____________________________________________________________________________________________________________________________________________
 Implement a function that finds the second smallest element in an array of integers. 
