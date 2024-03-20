@@ -4187,17 +4187,27 @@ ________________________________________________________________________________
 missing number
 
 ```javascript
-var missingNumber = function(nums) {
-    let sum = 0
-    for(let i=0;i<nums.length;i++){
-        sum += nums[i]
+function findMissingNumber(arr) {
+    // Calculate the expected sum of numbers from 1 to n
+    const n = arr.length + 1;
+    const expectedSum = (n * (n + 1)) / 2;
+    
+    // Calculate the actual sum of numbers in the array
+    let actualSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        actualSum += arr[i];
     }
-    return nums.length * ( nums.length+1 )/2-sum
-};
+    
+    // The missing number is the difference between the expected sum and the actual sum
+    const missingNumber = expectedSum - actualSum;
+    
+    return missingNumber;
+}
 
-const myresult = [3,0,1]
-const result = missingNumber(myresult)
-console.log(result)
+// Example usage:
+const array = [1, 2, 4, 5, 6];
+console.log("Missing number:", findMissingNumber(array)); // Output: 3
+
 
 ```
 
