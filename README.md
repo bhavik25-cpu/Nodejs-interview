@@ -1551,6 +1551,35 @@ const sortedArray = sortStringsAlphabetically(stringsArray);
 console.log(sortedArray);
 ```
 
+__________________________________________________________________________________________
+without inbuild function
+```javascript
+
+function sortStringsAlphabetically(arr) {
+  const sortedArray = arr.slice(); // Create a copy of the original array
+  const len = sortedArray.length;
+  
+  for (let i = 0; i < len - 1; i++) {
+    for (let j = 0; j < len - 1 - i; j++) {
+      if (sortedArray[j] > sortedArray[j + 1]) {
+        // Swap elements
+        const temp = sortedArray[j];
+        sortedArray[j] = sortedArray[j + 1];
+        sortedArray[j + 1] = temp;
+      }
+    }
+  }
+  
+  return sortedArray;
+}
+
+// Test case
+const stringsArray = ['apple', 'orange', 'banana', 'grape'];
+const sortedArray = sortStringsAlphabetically(stringsArray);
+console.log(sortedArray);
+
+
+```
 
 _______________________________________________________________________
 
