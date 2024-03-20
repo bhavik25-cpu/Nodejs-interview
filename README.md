@@ -1484,6 +1484,39 @@ const array = [5,  8, 1, 3];
 const secondSmallest = findSecondSmallest(array);
 console.log("Second Smallest Element:", secondSmallest); 
 ```
+_______________________________________________________________________________________________
+
+without inbuild method
+```javascript
+
+function findSecondSmallest(arr) {
+    // Check if the array has at least two elements
+    if (arr.length < 2) {
+        return "Array should have at least two elements";
+    }
+
+    let smallest = arr[0];
+    let secondSmallest = arr[1];
+
+    // Iterate through the array starting from the third element
+    for (let i = 2; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            secondSmallest = smallest;
+            smallest = arr[i];
+        } else if (arr[i] < secondSmallest && arr[i] !== smallest) {
+            secondSmallest = arr[i];
+        }
+    }
+
+    return secondSmallest;
+}
+
+// Example usage
+const array = [5, 8, 1, 3];
+const secondSmallest = findSecondSmallest(array);
+console.log("Second Smallest Element:", secondSmallest);
+```
+
 
 ______________________________________________________________________________________________________________________________
 Implement a function that returns the average value of numbers in an array. 
