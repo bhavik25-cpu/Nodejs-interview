@@ -488,6 +488,64 @@ op:
 
 Largest Element: 20
 Largest Element: 3
+__________________________________________________________________________________________________________________________
+```javascript
+
+function findLargest(arr) {
+  if (arr.length === 0) {
+    return "Array is empty";
+  }
+
+  let max = arr[0];
+  let min = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+
+  return { max, min };
+}
+
+// Example usage:
+const myArray = [10, 5, 8, 20, 3];
+const { max, min } = findLargest(myArray);
+
+console.log("Largest Element:", max);
+console.log("Smallest Element:", min);
+```
+Op
+function findLargest(arr) {
+  if (arr.length === 0) {
+    return "Array is empty";
+  }
+
+  let max = arr[0];
+  let min = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+
+  return { max, min };
+}
+
+// Example usage:
+const myArray = [10, 5, 8, 20, 3];
+const { max, min } = findLargest(myArray);
+
+console.log("Largest Element:", max);
+console.log("Smallest Element:", min);
+
 
 _____________________________________________________________________________________________________________________________________________________
 ```javascript
