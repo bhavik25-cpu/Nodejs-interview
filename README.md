@@ -4246,4 +4246,50 @@ op
 4
 0
 
+__________________________________________________________________________________________________
+
+
+remove duplicate value and arrange in accending order in one array
+```javascript
+
+
+const arr1 = [1, 3, 5, 6];
+const arr2 = [2, 4, 6];
+
+// Merge and concatenate the arrays
+const mergedArray = arr1.concat(arr2);
+
+// Custom bubble sort
+function bubbleSort(arr) {
+  const length = arr.length;
+
+  for (let i = 0; i < length - 1; i++) {
+    for (let j = 0; j < length - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // Swap elements if they are in the wrong order
+        const temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+
+  return arr;
+}
+
+// Sort the merged array using bubble sort
+const sortedArray = bubbleSort(mergedArray);
+console.log(sortedArray)
+
+// Remove duplicates
+const uniqueArray = sortedArray.filter((value, index, self) => {
+    return self.indexOf(value) === index;
+  });
+  
+  console.log(uniqueArray);
+```
+
+op
+
+[ 1, 2, 3, 4, 5, 6 ]
 
