@@ -3497,6 +3497,41 @@ var lengthOfLastWord = function(s) {
 // Test the function with the given example
 console.log(lengthOfLastWord("Hello World")); // Output: 5
 ```
+__________________________________________________________________________________________
+
+without inbuild method
+```javascript
+
+var lengthOfLastWord = function(s) {
+    // Trim leading and trailing spaces manually
+    let start = 0;
+    let end = s.length - 1;
+    
+    // Find the index of the first non-space character from the beginning
+    while (start <= end && s.charAt(start) === ' ') {
+        start++;
+    }
+    
+    // Find the index of the first non-space character from the end
+    while (end >= start && s.charAt(end) === ' ') {
+        end--;
+    }
+    
+    // Find the length of the last word
+    let length = 0;
+    for (let i = end; i >= start; i--) {
+        if (s.charAt(i) === ' ') {
+            break; // If a space is encountered, it means the last word has ended
+        }
+        length++;
+    }
+    
+    return length;
+};
+
+// Test the function with the given example
+console.log(lengthOfLastWord("Hello World")); // Output: 5
+```
 
 ____________________________________________________________________________________________________
 , here's a JavaScript code snippet that takes an array nums as input and returns an array where each element represents the number of elements smaller than the current element:
