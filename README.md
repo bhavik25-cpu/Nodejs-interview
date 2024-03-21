@@ -4328,3 +4328,54 @@ op
 
 [ 1, 2, 3, 4, 5, 6 ]
 
+_____________________________________________________________________________
+
+const arr = [1,2,3,4]
+const arrys = [1,2,6,8]
+output 
+// 123468
+To achieve this without using built-in functions and to remove duplicates while sorting and merging the arrays,
+
+```javascript
+function mergeAndSortArrays(array1, array2) {
+    // Merged array to hold the elements of both arrays
+    let mergedArray = [];
+    
+    // Merge arrays and remove duplicates
+    for (let i = 0; i < array1.length; i++) {
+        if (!mergedArray.includes(array1[i])) {
+            mergedArray.push(array1[i]);
+        }
+    }
+    for (let i = 0; i < array2.length; i++) {
+        if (!mergedArray.includes(array2[i])) {
+            mergedArray.push(array2[i]);
+        }
+    }
+
+    // Sort merged array
+    for (let i = 0; i < mergedArray.length; i++) {
+        for (let j = i + 1; j < mergedArray.length; j++) {
+            if (mergedArray[i] > mergedArray[j]) {
+                let temp = mergedArray[i];
+                mergedArray[i] = mergedArray[j];
+                mergedArray[j] = temp;
+            }
+        }
+    }
+
+    return mergedArray;
+}
+
+const arr = [1, 2, 3, 4];
+const arrys = [1, 2, 6, 8];
+
+const sortedArray = mergeAndSortArrays(arr, arrys);
+
+// Print the sorted and merged array
+console.log(sortedArray.join('')); // Output: 123468
+
+
+
+
+```
