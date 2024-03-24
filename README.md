@@ -4375,7 +4375,97 @@ const sortedArray = mergeAndSortArrays(arr, arrys);
 // Print the sorted and merged array
 console.log(sortedArray.join('')); // Output: 123468
 
+```
+
+___________________________________________________________________________________________________________________
 
 
+/ Find the first repeating element in an array of integers(*)
+// Input:  [10, 5, 3, 4, 3, 5, 6]
+// Output: 5
+
+
+```javascript
+function findFirstRepeatingElement(arr) {
+    const elementCount = {};
+
+    // Iterate through the array and count occurrences of each element
+    for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        if (elementCount[element]) {
+            // If the element is already encountered, it's the first repeating element
+            return element;
+        } else {
+            // Otherwise, mark the element as encountered
+            elementCount[element] = 1;
+        }
+    }
+
+    // If no repeating element found, return null or appropriate message
+    return null; // Or any other appropriate indication
+}
+
+// Test the function
+const arr = [10, 5, 3, 4, 3, 5, 6];
+const firstRepeatingElement = findFirstRepeatingElement(arr);
+console.log("First repeating element:", firstRepeatingElement);
+
+
+```
+
+_____________________________________________________________________________________________________________________________________________
+
+input : an awesomeJob
+output : na emosewa boJ
+```javascript
+function reverseWords(input) {
+    // Split the input string into an array of words
+    let words = input.split(' ');
+
+    // Iterate through each word in the array
+    let reversedWords = words.map(word => {
+        // Reverse each word
+        return word.split('').reverse().join('');
+    });
+
+    // Join the reversed words back into a single string
+    let reversedString = reversedWords.join(' ');
+
+    return reversedString;
+}
+
+// Example usage:
+let input = "an awesomeJob";
+let output = reverseWords(input);
+console.log(output); // Output: "na emosewa boJ"
+```
+__________________________________________________________________________________________________________
+
+Write a function that finds the longest word in a sentence.
+
+```javascript
+
+function findLongestWord(sentence) {
+    // Split the sentence into an array of words
+    let words = sentence.split(' ');
+
+    // Initialize a variable to store the longest word
+    let longestWord = '';
+
+    // Iterate through each word in the array
+    words.forEach(word => {
+        // If the current word is longer than the longest word found so far, update the longest word
+        if (word.length > longestWord.length) {
+            longestWord = word;
+        }
+    });
+
+    return longestWord;
+}
+
+// Example usage:
+let sentence = "The quick brown fox jumped over the lazy dog";
+let longest = findLongestWord(sentence);
+console.log("Longest word:", longest); // Output: "jumped"
 
 ```
