@@ -4467,5 +4467,21 @@ function findLongestWord(sentence) {
 let sentence = "The quick brown fox jumped over the lazy dog";
 let longest = findLongestWord(sentence);
 console.log("Longest word:", longest); // Output: "jumped"
+```
+_________________________________________________________________________________________
+Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.|
+```javascript
+
+function filterEvenNumbers(numbers) {
+    // Use the filter method to create a new array containing only even numbers
+    let evenNumbers = numbers.filter(number => number % 2 === 0);
+    
+    return evenNumbers;
+}
+
+// Example usage:
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evenNumbers = filterEvenNumbers(numbers);
+console.log("Even numbers:", evenNumbers); // Output: [2, 4, 6, 8, 10]
 
 ```
