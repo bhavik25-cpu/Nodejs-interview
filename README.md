@@ -4439,6 +4439,38 @@ let input = "an awesomeJob";
 let output = reverseWords(input);
 console.log(output); // Output: "na emosewa boJ"
 ```
+___________________________________________________________________________________
+without inbuild
+```javascript
+
+function reverseWords(input) {
+    let reversedString = ''; // Initialize an empty string to store the reversed string
+    let currentWord = ''; // Initialize an empty string to store the current word being built
+    
+    // Iterate through each character in the input string
+    for (let i = 0; i < input.length; i++) {
+        // If the current character is not a space, add it to the current word
+        if (input[i] !== ' ') {
+            currentWord = input[i] + currentWord; // Add the current character at the beginning of the current word
+        } else {
+            // If it's a space, add the current word to the reversed string and reset the current word
+            reversedString += currentWord + ' ';
+            currentWord = ''; // Reset currentWord for the next word
+        }
+    }
+    
+    // Add the last word (if any) to the reversed string
+    reversedString += currentWord;
+
+    return reversedString;
+}
+
+// Example usage:
+let input = "an awesomeJob";
+let output = reverseWords(input);
+console.log(output); // Output: "na emosewa boJ"
+```
+
 __________________________________________________________________________________________________________
 
 Write a function that finds the longest word in a sentence.
