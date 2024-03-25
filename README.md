@@ -4468,6 +4468,42 @@ let sentence = "The quick brown fox jumped over the lazy dog";
 let longest = findLongestWord(sentence);
 console.log("Longest word:", longest); // Output: "jumped"
 ```
+_______________________________________________________________________
+
+without inbuild method
+```javascript
+
+function findLongestWord(sentence) {
+    // Initialize variables
+    let currentWord = '';
+    let longestWord = '';
+
+    // Iterate through each character in the sentence
+    for (let i = 0; i < sentence.length; i++) {
+        // If the current character is not a space, add it to the current word
+        if (sentence[i] !== ' ') {
+            currentWord += sentence[i];
+        } 
+        // If it's a space or the last character in the sentence, check if the current word is longer than the longest word found so far
+        if (sentence[i] === ' ' || i === sentence.length - 1) {
+            if (currentWord.length > longestWord.length) {
+                longestWord = currentWord;
+            }
+            // Reset the current word for the next word
+            currentWord = '';
+        }
+    }
+
+    return longestWord;
+}
+
+// Example usage:
+let sentence = "The quick brown fox jumped over the lazy dog";
+let longest = findLongestWord(sentence);
+console.log("Longest word:", longest); // Output: "jumped"
+```
+
+
 _________________________________________________________________________________________
 Write a JavaScript function that takes an array of numbers and returns a new array with only the even numbers.|
 ```javascript
