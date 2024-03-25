@@ -4521,3 +4521,29 @@ let evenNumbers = filterEvenNumbers(numbers);
 console.log("Even numbers:", evenNumbers); // Output: [2, 4, 6, 8, 10]
 
 ```
+
+______________________________________________________________________________________________
+
+without inbuild
+```javascript
+
+function filterEvenNumbers(numbers) {
+    let evenNumbers = []; // Initialize an empty array to store even numbers
+    
+    // Iterate through each number in the array
+    for (let i = 0; i < numbers.length; i++) {
+        // Check if the number is even
+        if (numbers[i] % 2 === 0) {
+            evenNumbers.push(numbers[i]); // If even, add it to the evenNumbers array
+        }
+    }
+    
+    return evenNumbers; // Return the array containing even numbers
+}
+
+// Example usage:
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evenNumbers = filterEvenNumbers(numbers);
+console.log("Even numbers:", evenNumbers); // Output: [2, 4, 6, 8, 10]
+```
+
