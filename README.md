@@ -4578,4 +4578,14 @@ let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let evenNumbers = filterEvenNumbers(numbers);
 console.log("Even numbers:", evenNumbers); // Output: [2, 4, 6, 8, 10]
 ```
+___________________________________________________________________________
+```javascript
+a = [1,2,3];
+ b= a;
+ c= [...a]
+ b.push(4);
+ console.log(a,b,c)
+```
 
+op
+[ 1, 2, 3, 4 ] [ 1, 2, 3, 4 ] [ 1, 2, 3 ]
