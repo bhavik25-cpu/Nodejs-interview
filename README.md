@@ -3534,6 +3534,7 @@ console.log(lengthOfLastWord("Hello World")); // Output: 5
 ```
 
 ____________________________________________________________________________________________________
+yt link - https://www.youtube.com/watch?v=C5u_hvbq1qQ&ab_channel=NikhilLohia
 , here's a JavaScript code snippet that takes an array nums as input and returns an array where each element represents the number of elements smaller than the current element:
 // Input: nums = [8,1,2,2,3]
 // Output: [4,0,1,1,3]
