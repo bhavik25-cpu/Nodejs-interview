@@ -1755,6 +1755,36 @@ const result = generateFibonacci(10);
 console.log(result); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ```
+___________________________________________________________________________
+Fibonacci Series js
+
+input - 10
+output - [0,1,1,2,3,5,8...]
+default values - [0,1]
+
+```javascript
+function fibonacci(n, defaultValues = [0, 1]) {
+    let sequence = defaultValues.slice(0, n);
+    if (n <= defaultValues.length) {
+        return sequence;
+    }
+    
+    let a = defaultValues[0];
+    let b = defaultValues[1];
+    for (let i = 2; i < n; i++) {
+        let next = a + b;
+        sequence.push(next);
+        a = b;
+        b = next;
+    }
+    return sequence;
+}
+
+// Example usage
+const input = 10;
+const result = fibonacci(input);
+console.log(result); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+```
 
 ____________________________________________________________________________
 ```javascript
