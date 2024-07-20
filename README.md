@@ -4620,3 +4620,56 @@ a = [1,2,3];
 
 op
 [ 1, 2, 3, 4 ] [ 1, 2, 3, 4 ] [ 1, 2, 3 ]
+
+
+
+
+_______________________________________________________________________________________________________________________________________________
+```javascript
+
+https://leetcode.com/problems/longest-palindromic-substring/
+function longestPalindrome(s) {
+    if (s.length === 0) 
+    
+    return "";
+
+    let start = 0;
+    let end = 0;
+
+    function expandAroundCenter(left, right) {
+        while (left >= 0 && right < s.length && s[left] === s[right]) {
+            left--;
+            right++;
+        }
+        return [left + 1, right - 1];
+    }
+
+    for (let i = 0; i < s.length; i++) {
+        let [l1, r1] = expandAroundCenter(i, i);
+        let [l2, r2] = expandAroundCenter(i, i + 1);
+
+        if (r1 - l1 > end - start) {
+            start = l1;
+            end = r1;
+        }
+        if (r2 - l2 > end - start) {
+            start = l2;
+            end = r2;
+        }
+    }
+
+    return s.substring(start, end + 1);
+}
+
+// Example usage:
+console.log(longestPalindrome("babad")); // Output: "bab" or "aba"
+console.log(longestPalindrome("cbbd"));  // Output: "bb"
+
+```
+
+output
+
+bab
+bb
+
+
