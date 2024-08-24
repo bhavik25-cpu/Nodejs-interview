@@ -4236,6 +4236,7 @@ console.log(sumdigit(1287));
 
 _____________________________________________________________________________________________
 count the number of digits
+
 ```javascript
 function countDigits(num) {
     num= Math.abs(num)
