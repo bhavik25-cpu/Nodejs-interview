@@ -4693,3 +4693,34 @@ addTwoPromises(promise1, promise2).then(console.log); // 7
 ```
 
 
+_________________________________________________________________________________________________________
+
+
+// Input [7,3,2,1,3] output [7,3]
+// Targets 10 js code
+```javascript
+
+function findSubarray(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        let sum = 0;
+        for (let j = i; j < arr.length; j++) {
+            sum += arr[j];
+            if (sum === target) {
+                return arr.slice(i, j + 1);
+            }
+        }
+    }
+    return [];
+}
+
+const inputArray = [7, 3, 2, 1, 3];
+const targetSum = 10;
+const result = findSubarray(inputArray, targetSum);
+
+console.log(result); // Output: [7, 3]
+
+```
+
+
+
+
