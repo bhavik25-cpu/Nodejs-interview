@@ -4720,7 +4720,27 @@ const result = findSubarray(inputArray, targetSum);
 console.log(result); // Output: [7, 3]
 
 ```
+_______________________________________________________________________________________
 
+```javascript
 
+var Input = [ 3,7, 2, 1, 3];
+// output [7,3]
+// Targets 10 js code
+var output = [];
+while (output.length < 2) {
+  Input.forEach((element) => {
+    if (output.length < 1) {
+      output.push(element);
+    } else if (output.length < 2) {
+      if (output[0] + element == 10) {
+        output.push(element);
+      }
+    }
+  });
+}
+console.log("Output", output.sort((a, b) => a + b));
+
+```
 
 
