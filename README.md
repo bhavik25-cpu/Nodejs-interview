@@ -4768,3 +4768,27 @@ console.log('End');
 
 ```
 
+______________________________________________________________________
+```javascript
+
+var a = 1
+var a = 2
+console.log(a)
+
+```
+op : 2
+
+____________________________________________________________________
+```javascript
+
+let a = 1
+let a = 2
+console.log(a)
+
+
+```
+op
+SyntaxError: Identifier 'a' has already been declared
+
+
+
