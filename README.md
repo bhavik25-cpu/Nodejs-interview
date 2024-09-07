@@ -4744,3 +4744,27 @@ console.log("Output", output.sort((a, b) => a + b));
 ```
 
 
+_________________________________________________________________________________________________________________
+
+```javascript
+
+console.log('Start');
+
+Promise.resolve().then(() => {
+    console.log('Promise Microtask');
+});
+
+
+async function asyncFunction() {
+    console.log('Async Function Start');
+    await Promise.resolve();
+    console.log('Async Function End');
+}
+
+asyncFunction();
+
+console.log('End');
+ 
+
+```
+
