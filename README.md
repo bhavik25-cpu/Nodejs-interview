@@ -4790,5 +4790,43 @@ console.log(a)
 op
 SyntaxError: Identifier 'a' has already been declared
 
+___________________________________________________________________________
+```javascript
+
+
+console.log("abb" < "ab" == "ab" < "ab"); 
+console.log("abb" > "ab" == "ab" < "ab"); 
+
+```
+true
+false
+
+____________________________________________________________________________
+
+var arr = [2, 3,4,6, 5, 7, 9, 81, 343, 77, 34234]
+find a prime number using js
+
+```javascript
+
+// Function to check if a number is prime
+function isPrime(num) {
+  if (num <= 1) 
+  return false;
+  if (num === 2) 
+  return true;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
+var arr = [2, 3, 4, 6, 5, 7, 9, 81, 343, 77, 34234];
+var primes = arr.filter(isPrime);
+console.log(primes); // Output: [2, 3, 5, 7]
+```
+
 
 
