@@ -243,10 +243,15 @@ ________________________________________________________________________________
 
 
 You are given a string S and its length n and you need to sort its characters based on their frequency. The characters in the output will be ordered based on their frequency in S, characters with higher frequency come first.
+
 For example,
+
 Input: S = "halalelluejah"
+
 Output: llllaaahheeuj
+
 Input: S = "aaaabeebccccc"
+
 Output: cccccaaaabbee
 
 ```javascript
@@ -278,8 +283,11 @@ console.log(sortCharsByFrequency(input2)); // Output: cccccaaaabbee
 ____________________________________________________________________________________________________________________________________________________
 
 Input:  { 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }
+
 Output: Subarray with zero-sum exists
+
 The subarrays with a sum of 0 are:
+
 { 3, 4, -7 }, { 4, -7, 3 }, { -7, 3, 1, 3 }, { 3, 1, -4 }, { 3, 1, 3, 1, -4, -2, -2 }, { 3, 4, -7, 3, 1, 3, 1, -4, -2, -2 }
 ```javascript
 
