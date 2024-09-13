@@ -140,6 +140,7 @@ const fun = function() {
 };
 ```
 ______________________________________________________________________________________________________________________
+
 ```javascript
 
 const nestedArray = [1, [2, 3], [4, [5, 6]]];
@@ -149,6 +150,7 @@ console.log(flattenedArray);
 op : [ 1, 2, 3, 4, 5, 6 ]
 
 _____________________________________________________________________________________________________________________
+
 without any inbuild method
 ```javascript
 function flattenArray(arr) {
@@ -316,8 +318,11 @@ if (hasZeroSumSubarray(inputArray)) {
 
 ```
 ____________________________________________________________________________________________________________________________________________________
+
 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 do in ascending order in js use sort method
+
 output  0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 20
+
 To sort the array [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1] in ascending order in JavaScript using the sort method, you can use the following
 
 ```javascript
@@ -330,6 +335,7 @@ array.sort(function(a, b) {
 console.log(array);
 ```
 _________________________________________________________________________________________________________________________________________________________
+
 without any inbuild method
 ```javascript
 
@@ -895,6 +901,8 @@ calling
 Ok
 
 ________________________________________________________________________________________________________________________________________
+
+
 SORTING
 ```javascript
 
@@ -1308,6 +1316,8 @@ console.log(FirstReverse("coderbyte"));
 // Output: etybredoc
 
 _______________________________________________________________________________________________________________________________
+
+
 Write a JavaScript function to calculate the sum of two numbers.  
 ```javascript
 
@@ -1335,6 +1345,8 @@ console.log("Even numbers:", evenNumbers);
 ```
 
 _____________________________________________________________________________________________________
+
+
 Write a JavaScript function to check if a given number is prime. 
 ```javascript
 
@@ -1383,6 +1395,8 @@ console.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 _______________________________________________________________________________________________________________________
+
+
 Given an array of numbers, write a function to find the largest and smallest numbers in the array. 
 ```javascript
 
@@ -1403,6 +1417,8 @@ console.log(result); // Output: { smallest: 1, largest: 9 }
 ```
 
  _______________________________________________________________________________________________________________________________________
+
+ 
  Write a function that takes an array of integers as input and returns a new array with only the unique elements. 
 ```javascript
 
@@ -1447,6 +1463,8 @@ console.log(sum); // Output: 15
 
 
 ______________________________________________________________________________________________________________________________________
+
+
 Given a string, write a function to count the occurrences of each character in the string. 
 ```javascript
 
@@ -1483,6 +1501,8 @@ console.log(arrayWithoutDuplicates);
 ```
 
  __________________________________________________________________________________________________________________________
+
+ 
 10. Write a function that sorts an array of numbers in ascending order. 
 Inbuild method
 ```javascript
@@ -1498,6 +1518,7 @@ const sortedArray = sortArrayAscending(unsortedArray);
 console.log(sortedArray);
 ```
 _______________________________________________________________________________________________________________________________________________
+
 without inbuild method
 ```javascript
 
@@ -1526,6 +1547,8 @@ console.log(sortedArray);
 ```
 
 _____________________________________________________________________________________________________________________________________________
+
+
 Implement a function that finds the second smallest element in an array of integers. 
 ```javascript
 
@@ -1582,6 +1605,8 @@ console.log("Second Smallest Element:", secondSmallest);
 
 
 ______________________________________________________________________________________________________________________________
+
+
 Implement a function that returns the average value of numbers in an array. 
 
 ```javascript
@@ -1601,6 +1626,8 @@ const average = calculateAverage(numbersArray);
 console.log(average);
 ```
 ______________________________________________________________________________________________
+
+
 Write a function that sorts an array of strings in alphabetical order. 
 ```javascript
 
@@ -1615,6 +1642,8 @@ console.log(sortedArray);
 ```
 
 __________________________________________________________________________________________
+
+
 without inbuild function
 ```javascript
 
@@ -1719,6 +1748,8 @@ if (resultIndex !== -1) {
 }
 ```
 ______________________________________________________________________________________________________________
+
+
 short code
 ```javascript
 
@@ -1744,6 +1775,8 @@ console.log(resultIndex !== -1 ? `Element ${targetElement} found at index ${resu
 ```
 
 _________________________________________________________________________________________________________
+
+
 Fibonacci Series js
 ```javascript
 
@@ -1764,6 +1797,8 @@ console.log(result); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 ```
 ___________________________________________________________________________
+
+
 Fibonacci Series js
 
 input - 10
@@ -1830,6 +1865,8 @@ op:
 
 
 ________________________________________________________________________
+
+
 Filter
 ```javascript
 
@@ -1849,6 +1886,8 @@ function isodd(element){
 ```
 
 _____________________________________________________________________________________________
+
+
 reduce
 ```javascript
 
@@ -1860,6 +1899,8 @@ function sum(acc,e){
 }
 ```
 _____________________________________________________________________________________________
+
+
 ```javascript
 
 function func2(){
@@ -1879,6 +1920,7 @@ op:
 ____________________________________________________________________________________________________________________
 ```javascript
 
+
 function func1(){
  setTimeout(()=>{
   console.log(x);
@@ -1895,6 +1937,8 @@ op:
 2-22
 
 _____________________________________________________________________________________________________________________________________________________________________
+
+
 This
 ```javascript
 
@@ -2032,6 +2076,8 @@ Max Numbers: 500 and 400
 Sum of Max Numbers: 900
 
 ______________________________________________________________________________________________________________________________
+
+
 ```javascript
 
 // Example variable
@@ -2047,6 +2093,8 @@ if (myVariable === null || myVariable === undefined) {
 console.log(myVariable);
 ```
 ______________________________________________________________________________________________________________________________________________
+
+
 Class
 ```javascript
 
@@ -2114,6 +2162,7 @@ console.log(fluffy.meow());     // Output: Meow!
 ```
 
 __________________________________________________________________________________________________________________________________________________________
+
 Encapsulation in js
 ```javascript
 
@@ -2376,6 +2425,8 @@ console.log(result); // Output: 15
 
 
 _________________________________________________________________________________________________________________________________________
+
+
 add(2)(4)(5);
 output
 total 11 
@@ -2539,10 +2590,15 @@ Count the occurrence of keys and convert the result into array of objects where 
 ]
 
 SHOULD BE CONVERTED TO =
+
 [
+
 { language: 'JavaScript', count: 2 },
+
 { language: 'GoLang', count: 3 },
+
 { language: 'TypeScript', count: 1 },
+
 ]
 ```javascript
 
@@ -2577,6 +2633,7 @@ console.log(resultArr);
 
 
 op:
+
 node /tmp/rXE6MjKX2A.js
 [
   { language: 'JavaScript', count: 2 },
@@ -2601,8 +2658,10 @@ console.log(duplicate);
 ```
 
 op
+
 { '1': 1, '2': 2, '3': 2, '4': 2, '5': 2, '6': 1 }
 _________________________________________________________________________________________
+
 inbuild method
 ```javascript
 
@@ -2687,6 +2746,8 @@ console.log('Array with unique elements:', uniqueArray);
 
 
 _____________________________________________________________________________________________________________________________________
+
+
 How to Check the No of Occurrence of Character in String| in js
 ```javascript
 
@@ -2755,6 +2816,8 @@ console.log(`After swapping: a = ${a}, b = ${b}`);
 
 
 _________________________________________________________________________________________________
+
+
 how to find even or odd numbers in array in javascript 
 ```javascript
 
@@ -2785,6 +2848,7 @@ if(a % 2 == 0) {
 ```
 
 ___________________________________________________________________________________________________
+
 How to Find missing elements in a given Array 1 to 10
 ```javascript
 
@@ -2823,6 +2887,8 @@ node /tmp/pO4kziiDQU.js
 
 
 _______________________________________________________________________________________________________________________________________________
+
+
 input strs = ["eat","tea","tan","ate","nat","bat"] 
 output [["bat"],["nat","tan"],["ate","eat","tea"]]
 group anagrams together.
@@ -2862,6 +2928,8 @@ op
 
 
 __________________________________________________________________________________________________
+
+
 ```javascript
 
 s = "A man, a plan, a canal: 
@@ -2956,6 +3024,8 @@ console.log(getAdminEmployeeIds(employees)); // Output: [1002, 1003]
 ```
 
 _____________________________________________________________________________________________________________________________________________________________
+
+
 write a function which will return an array of empty functions and accept an input as length. Use es5.
 -> input -> 4 , output -> [f,f,f,f]
 ```javascript
@@ -3038,6 +3108,8 @@ console.log("Outside function: ", person); // Output: Outside function: { name: 
 
 
 ____________________________________________________________________________________________________________________________________________________________________________________________
+
+
 arr = [6,,2,4,8,7,3]
 target = 10;
 show index number
@@ -3065,7 +3137,11 @@ console.log(output); // Output: [0, 2]
 
 
 _____________________________________________________________________________________________________________________________________________________________________________________________
+
+
 inpupt [3, 30, 34, 5, 9]
+
+
 output 9534330
 
 create the largest number by sorting the array in a custom way. Here's how you can implement it in JavaScript:
@@ -3135,7 +3211,10 @@ console.log(newArr[index]);
 ```
 
 
-________________________________________________________________________________________________________________________________________Reverse Integer
+________________________________________________________________________________________________________________________________________
+
+
+Reverse Integer
 
 Input: x = 123
 Output: 321
@@ -3230,6 +3309,7 @@ console.log(result);
 ```
 
 __________________________________________________________________________________________________________________________________________________
+
 ```javascript
 let jsonData = {
   object1: {
@@ -3280,6 +3360,8 @@ console.log(Math.max(...arr))
 op
 6
 ______________________________________________________________________________________________________________
+
+
 Multiply Strings
 
 Input: num1 = "2", num2 = "3"
@@ -3296,15 +3378,21 @@ console.log(result);
 op
 6
 _______________________________________________________________________________________________________________________
+
 Merge k Sorted Lists
+
 Input: lists = [[1,4,5],[1,3,4],[2,6]]
+
 Output: [1,1,2,3,4,4,5,6]
+
 Explanation: The linked-lists are:
+
 [
   1->4->5,
   1->3->4,
   2->6
 ]
+
 merging them into one sorted list:
 1->1->2->3->4->4->5->6
 
@@ -3326,6 +3414,7 @@ node /tmp/vTvtkdPEeu.js
   4, 4, 5, 6
 ]
 _______________________________________________________________________
+
 ```javascript
 function multiply(i, j) {
   console.log("i = " + i);
@@ -3339,10 +3428,15 @@ multiply(30, 40);
 _____________________________________________________________
 
 Input
+
 Flatten Deeply Nested Array
+
 arr = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]]
+
 n = 1
+
 Output
+
 [1, 2, 3, 4, 5, 6, 7, 8, [9, 10, 11], 12, 13, 14, 15]
 
 ```javascript
@@ -3358,11 +3452,19 @@ console.log(flattenedArr);
 
 _________________________________________________________________________
 Combination Sum
-Input: candidates = [2,3,6,7], target = 7
+
+Input: candidates = [2,3,6,7],
+
+target = 7
+
 Output: [[2,2,3],[7]]
+
 Explanation:
+
 2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+
 7 is a candidate, and 7 = 7.
+
 These are the only two combinations.
 
 ```javascript
@@ -3409,6 +3511,7 @@ res.send({result : fact});
 app.listen(8080);
 ```
 ____________________________________________________________________________________________________________________
+
  Longest Common Prefix
 
  Input: strs = ["flower","flow","flight"]
@@ -3490,8 +3593,11 @@ console.log(romanToInt("III")); // Output: 3
 _______________________________________________________________________________________________________
 
 Valid Parentheses
+
 Input: s = "()"
+
 Output: true
+
 ```javascript
 
 var isValid = function(s) {
@@ -3521,10 +3627,15 @@ console.log(isValid("()")); // Output: true
 
 ```
 ______________________________________________________________________________________________
+
  Length of Last Word
+ 
 Input: s = "Hello World"
+
 Output: 5
+
 Explanation: The last word is "World" with length 5. js 
+
 ```javascript
 
 var lengthOfLastWord = function(s) {
@@ -3573,10 +3684,15 @@ console.log(lengthOfLastWord("Hello World")); // Output: 5
 
 ____________________________________________________________________________________________________
 yt link - https://www.youtube.com/watch?v=C5u_hvbq1qQ&ab_channel=NikhilLohia
-, here's a JavaScript code snippet that takes an array nums as input and returns an array where each element represents the number of elements smaller than the current element:
+
+here's a JavaScript code snippet that takes an array nums as input and returns an array where each element represents the number of elements smaller than the current element:
+
 // Input: nums = [8,1,2,2,3]
+
 // Output: [4,0,1,1,3]
+
 // 1<=nums[i]<=100
+
 ```javascript
 
 function smallerNumbersThanCurrent(nums) {
@@ -3598,10 +3714,15 @@ console.log(smallerNumbersThanCurrent(nums)); // Output: [4, 0, 1, 1, 3]
 
 ```
 _______________________________________________________________________________________________________________________________
+
 Count Elements With Strictly Smaller and Greater Elements 
+
 Input: nums = [11,7,2,15]
+
 Output: 2
+
 make a short inbuild code js
+
 ```javascript
 
 function countElements(nums) {
@@ -3627,15 +3748,23 @@ console.log(countElements(nums)); // Output: 2
 ```
 
 __________________________________________________________________________________________________________
+
 Count Pairs Whose Sum is Less than Target
 
 Input: nums = [-1,1,2,3,1], target = 2
+
 Output: 3
+
 Explanation: There are 3 pairs of indices that satisfy the conditions in the statement:
+
 - (0, 1) since 0 < 1 and nums[0] + nums[1] = 0 < target
-- (0, 2) since 0 < 2 and nums[0] + nums[2] = 1 < target 
+- 
+- (0, 2) since 0 < 2 and nums[0] + nums[2] = 1 < target
+- 
 - (0, 4) since 0 < 4 and nums[0] + nums[4] = 0 < target
+- 
 Note that (0, 3) is not counted since nums[0] + nums[3] is not strictly less than the target.]
+
 ```javascript
 
 
@@ -3659,12 +3788,19 @@ console.log(countPairs(nums, target)); // Output: 3
 ```
 
 ______________________________________________________________________________________________________
+
  Replace Elements in an Array
+ 
 Input: nums = [1,2,4,6], operations = [[1,3],[4,7],[6,1]]
+
 Output: [3,2,7,1]
+
 Explanation: We perform the following operations on nums:
+
 - Replace the number 1 with 3. nums becomes [3,2,4,6].
+- 
 - Replace the number 4 with 7. nums becomes [3,2,7,6].
+- 
 - Replace the number 6 with 1. nums becomes [3,2,7,1].
 We return the final array [3,2,7,1].
 
@@ -3686,8 +3822,11 @@ const operations = [[1, 3], [4, 7], [6, 1]];
 console.log(replaceElements(nums, operations)); // Output: [3, 2, 7, 1]
 ```
 _________________________________________________________________________________
+
 Find the Maximum Divisibility Score
+
 Input: nums = [4,7,9,3,9], divisors = [5,2,3]
+
 Output: 3
 
 ```javascript
@@ -3716,9 +3855,13 @@ console.log(maxDivScore(nums, divisors));
 
 // Output: 5
 _________________________________________________________________________________________________________________________
+
 const input = [1, 0, 3, 0, -1, 0, 6];
+
 const output = [1, 3, -1, 6, 0, 0, 0];
+
 js code sfht all 0 left
+
 ```javascript
 
 const input = [1, 0, 3, 0, -1, 0, 6];
@@ -3748,8 +3891,11 @@ const output = shiftZerosToLeft(input);
 console.log(output); // Output: [1, 3, -1, 6, 0, 0, 0]
 ```
 ___________________________________________________________________________________________________________
+
 const input = [9, 9, 9];
+
 output = [1, 0, 0, 0];
+
 ```javascript
 
 function plusOne(digits) {
@@ -3771,6 +3917,7 @@ const output = plusOne(input);
 console.log(output); // Output: [1, 0, 0, 0]
 ```
 without inbuilt
+
 ```javascript
 function plusOne(digits) {
     let carry = 1;
@@ -3793,7 +3940,9 @@ const output = plusOne(input);
 console.log(output); // Output: [1, 0, 0, 0]
 ```
 _______________________________________________________________________________________________________________
+
 const input = "I Love Coding"
+
 const output = "I evoL gnidoC"
 
 ```javascript
@@ -3839,7 +3988,9 @@ console.log(output); // Output: "I evoL gnidoC"
 
 ```
 _____________________________________________________________________________
+
 shallowcopy
+
 ```javascript
 
 const person = {
@@ -3862,7 +4013,9 @@ mounts: [ 1000, 1001, 1002 ]
 }
 
 _____________________________________________________________________
+
 deepcopy
+
 ```javascript
 const person = {
   name: "Akshay",
@@ -3968,6 +4121,7 @@ console.log(words);
 
  ```
 ______________________________________________________________________________________________________________________________________________________
+
 without inbuild method
 
  ```javascript
@@ -4081,7 +4235,9 @@ op
 _______________________________________________________________________________________
 
 const c = "hello world"
+
 show  "h" in upper case and "w" in uppercase in js use map  in js
+
 ```javascript
 
 const c = "hello world";
@@ -4103,6 +4259,7 @@ console.log(result);
 ________________________________________________________________________________________________________________
 
 curring in js (1)(2)...(n)
+
 ```javascript
 
 function generateSequence(n) {
@@ -4187,7 +4344,9 @@ foo();
 TypeError: foo is not a function
     at Object.<anonymous> (/tmp/main.js:4:1)
 _____________________________________________________________________________________________
+
 SUM OF ALL NATURAL NUMBER FROM 1 TO N
+
 ```javascript
 
 function mysums(num){
@@ -4227,6 +4386,7 @@ console.log(uniqueArray); // Output: [1, 2, 3, 4, 5]
 
 
 _______________________________________________________________________________________________
+
 sum of digits of a number
 
 ```javascript
@@ -4243,6 +4403,7 @@ console.log(sumdigit(1287));
 ```
 
 _____________________________________________________________________________________________
+
 count the number of digits
 
 ```javascript
@@ -4259,6 +4420,7 @@ function countDigits(num) {
 console.log(countDigits(12345)); // Output: The number of digits in 12345 is: 5
 ```
 _____________________________________________________________________________________________________
+
 missing number
 
 ```javascript
@@ -4289,6 +4451,7 @@ console.log("Missing number:", findMissingNumber(array)); // Output: 3
 0p
 2
 ____________________________________________________________________________________________________
+
 ```javascript
 
 function myFunction(num) {
@@ -4305,6 +4468,7 @@ op
 
 
 ______________________________________________________________________________________________________________
+
 ```javascript
 
 let a = 1, b = 0, c =4; 
@@ -4480,6 +4644,7 @@ let output = reverseWords(input);
 console.log(output); // Output: "na emosewa boJ"
 ```
 ___________________________________________________________________________________
+
 without inbuild
 ```javascript
 
@@ -4634,6 +4799,7 @@ op
 
 
 _______________________________________________________________________________________________________________________________________________
+
 https://leetcode.com/problems/longest-palindromic-substring/
 
 ```javascript
@@ -4812,6 +4978,7 @@ false
 ____________________________________________________________________________
 
 var arr = [2, 3,4,6, 5, 7, 9, 81, 343, 77, 34234]
+
 find a prime number using js
 
 ```javascript
