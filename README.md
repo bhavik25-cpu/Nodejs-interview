@@ -944,7 +944,9 @@ Sorted Array: [
 ]
 
 ____________________________________________________________________________________________________________________________________
+
 Inbuild method  for sort
+
 ```javascript
 
 // Example usage:
@@ -3230,8 +3232,8 @@ output 9534330
 
 create the largest number by sorting the array in a custom way. Here's how you can implement it in JavaScript:
 ```javascript
-let arr=[3, 30, 34, 5, 9]
- arr= arr.join("").split("");
+function sort(arr){
+  arr= arr.join("").split("");
 for(let i=0; i< arr.length; i++) {
     for(let j=i; j< arr.length; j++) {
         if(arr[i] < arr[j]) {
@@ -3241,8 +3243,13 @@ for(let i=0; i< arr.length; i++) {
         }
     }
 }
-arr=arr.join('')
-console.log(arr)
+return arr.join('')
+}
+
+let arr=[3, 30, 34, 5, 9]
+let result = sort(arr)
+console.log(result)
+
 ```
 
 
