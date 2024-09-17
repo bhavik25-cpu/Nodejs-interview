@@ -1236,13 +1236,21 @@ console.log(sevenBoom([2, 55, 60, 97, 86]));    // Output: "Boom!"
 _____________________________________________________________________________________________________________________________________________________________________
 
 const arr1 = [
+
 { "score": 0, "text": "pizza" },
+
 { "score": 0, "text": "burger" },
+
 { "score": 0, "text": "paratha" },
+
 { "score": 0, "text": "samosa" },
+
 { "score": 0, "text": "other" }
+
 ]
+
 const arr2 = ["pizza", "burger", "paratha", "samosa","paneer"];
+
 Result paneer
 Return elements of arr2 which are not present in arr1.text
 
@@ -1251,15 +1259,21 @@ Return elements of arr2 which are not present in arr1.text
 
 const arr1 = [
   { "score": 0, "text": "pizza" },
+
   { "score": 0, "text": "burger" },
+
   { "score": 0, "text": "paratha" },
+
   { "score": 0, "text": "samosa" },
+
   { "score": 0, "text": "other" }
+
 ];
 
 const arr2 = ["pizza", "burger", "paratha", "samosa", "paneer"];
 
 // Filter elements in arr2 that are not present in arr1.text
+
 const result = arr2.filter(item => !arr1.some(obj => obj.text === item));
 
 console.log(result);
