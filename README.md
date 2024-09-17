@@ -1167,6 +1167,7 @@ console.log(allLessThanTen);
 
 
 ______________________________________________________________________________________________________
+
 Create a function that takes an array of numbers and return "Boom!" if the digit
 7 appears in the array. Otherwise, return "there is no 7 in the
 array".
@@ -1204,7 +1205,33 @@ Boom!
 there is no 7 in the array
 Boom!
 
+______________________________________
+without inbuild
 
+
+```javascript
+// Example usage:
+
+
+function sevenBoom(arr){
+    for(let i = 0; i < arr.length; i++){
+        let num =arr[i]
+        
+        
+        while(num > 0){
+        if(num % 10 === 7){
+            return "Boom"
+        }
+        num = Math.floor(num / 10)
+    }
+    }
+    return 'there is no 7 in the array'
+}
+console.log(sevenBoom([1, 2, 3, 4, 5, 6, 7])); // Output: "Boom!"
+console.log(sevenBoom([8, 6, 33, 100,7]));       // Output: "there is no 7 in the array"
+console.log(sevenBoom([2, 55, 60, 97, 86]));    // Output: "Boom!"
+
+```
 
 _____________________________________________________________________________________________________________________________________________________________________
 
@@ -1239,6 +1266,49 @@ console.log(result);
 ```
 
 // Output: ["paneer"]
+
+
+
+without inbuild method
+```javascript
+
+const arr1 = [
+  { "score": 0, "text": "pizza" },
+  { "score": 0, "text": "burger" },
+  { "score": 0, "text": "paratha" },
+  { "score": 0, "text": "samosa" },
+  { "score": 0, "text": "other" }
+];
+
+const arr2 = ["pizza", "burger", "paratha", "samosa", "paneer"];
+
+function filterManual(arr1, arr2) {
+  const result = [];
+
+  // Loop through each item in arr2
+  for (let i = 0; i < arr2.length; i++) {
+    let found = false;
+
+    // Check if arr2[i] exists in any obj.text in arr1
+    for (let j = 0; j < arr1.length; j++) {
+      if (arr2[i] === arr1[j].text) {
+        found = true;
+        break;
+      }
+    }
+
+    // If not found in arr1, add to result
+    if (!found) {
+      result.push(arr2[i]);
+    }
+  }
+
+  return result;
+}
+
+const result = filterManual(arr1, arr2);
+console.log(result); // Output: ["paneer"]
+```
 
 
 
