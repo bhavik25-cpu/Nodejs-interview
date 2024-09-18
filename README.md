@@ -5135,4 +5135,52 @@ op
 
 {'a'=>2, 'b'=>3, 'c'=>2, 'd'=>2, 'e'=>2, 'f'=>1, 'g'=>1, 'h'=>3}
 
+_______________________________________________________________________________
+
+
+const data = [
+
+  { id: 1, value: [1, 3, 4, 6] },
+  { id: 2, value: [4, 3, 10, 9] },
+  { id: 3, value: [8, 7, 6, 5] },
+  { id: 4, value: [12, 11, 8, 6] }
+  
+];
+
+ output : [
+
+  { id: 4, value: [12, 11, 8, 6] },
+  { id: 2, value: [4, 3, 10, 9] },
+ { id: 3, value: [8, 7, 6, 5] },
+ { id: 1, value: [1, 3, 4, 6] }
+
+ ]
+
+```javascript
+
+const data = [
+  { id: 1, value: [1, 3, 4, 6] },
+  { id: 2, value: [4, 3, 10, 9] },
+  { id: 3, value: [8, 7, 6, 5] },
+  { id: 4, value: [12, 11, 8, 6] }
+];
+
+// Sort the array based on the sum of the `value` array in descending order
+const sortedData = data.sort((a, b) => {
+  const sumA = a.value.reduce((sum, num) => sum + num, 0);
+  const sumB = b.value.reduce((sum, num) => sum + num, 0);
+  return sumB - sumA; // Sort in descending order
+});
+
+console.log(sortedData);
+```
+
+// Output:
+// [
+//   { id: 4, value: [12, 11, 8, 6] },
+//   { id: 2, value: [4, 3, 10, 9] },
+//   { id: 3, value: [8, 7, 6, 5] },
+//   { id: 1, value: [1, 3, 4, 6] }
+// ]
+
 
