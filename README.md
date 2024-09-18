@@ -5093,6 +5093,46 @@ var arr = [2, 3, 4, 6, 5, 7, 9, 81, 343, 77, 34234];
 var primes = arr.filter(isPrime);
 console.log(primes); // Output: [2, 3, 5, 7]
 ```
+____________________________________________________________________________
 
+```javascript
+
+let a =5;
+let b = 8;
+let y=a || b;
+let x=a && b;
+console.log(x,y);
+
+```
+op
+8 5
+
+________________________________________________________________________________________________________
+ input [“a”,”b”,”c”,”d”,”d”,’e’,”b”,”b”,”c”,”f”,”g”,”h”,”h”,”h”,”e”,”a”]
+
+output  {'a'=>3, 'b'=>2,'c'=>2, 'd'=>2,'e'=>2,'f'=>1,'g'=>1,'h'=>3}
+
+```javascript
+
+
+const input = ["a", "b", "c", "d", "d", "e", "b", "b", "c", "f", "g", "h", "h", "h", "e", "a"];
+
+const frequency = input.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1;
+  return acc;
+}, {});
+
+// Format the output as a string with '=>' instead of ':'
+const formattedOutput = Object.entries(frequency)
+  .map(([key, value]) => `'${key}'=>${value}`)
+  .join(', ');
+
+console.log(`{${formattedOutput}}`);
+
+```
+
+op
+
+{'a'=>2, 'b'=>3, 'c'=>2, 'd'=>2, 'e'=>2, 'f'=>1, 'g'=>1, 'h'=>3}
 
 
