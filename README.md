@@ -4364,6 +4364,27 @@ function generateSequence(n) {
 console.log(generateSequence(5)); // Output: [1, 2, 3, 4, 5]
 ```
 
+_____________________________________________________________
+
+```javascript
+
+function mul(a){
+
+  return  function inner1(b){
+
+     return   function inner2(c){
+
+            return a*b*c;
+
+        }
+
+    }
+
+}
+
+console.log(mul(2)(3)(4))
+```
+
 __________________________________________________________________________________________________________________________
 ```javascript
 
