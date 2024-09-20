@@ -5204,4 +5204,53 @@ console.log(sortedData);
 //   { id: 1, value: [1, 3, 4, 6] }
 // ]
 
+_______________________________________________________________________________________________
+
+Array => ["testA", "testB", "testC", "abc"]
+
+SearchString => tes
+
+Output => ["testA","testB","testC"]
+
+
+```javascript
+const array = ["testA", "testB", "testC", "abc"];
+
+const searchString = "tes";
+
+const result = array.filter(item => item.includes(searchString));
+
+console.log(result); // Output: ["testA", "testB", "testC"]
+
+```
+
+___________________________________________________________________________________
+
+without inbild function
+
+```javascript
+const array = ["testA", "testB", "testC", "abc"];
+const searchString = "tes";
+const result = [];
+
+for (let i = 0; i < array.length; i++) {
+    const item = array[i];
+    let found = true;
+
+    // Check if the item contains the searchString
+    for (let j = 0; j < searchString.length; j++) {
+        if (item[j] !== searchString[j]) {
+            found = false;
+            break;
+        }
+    }
+
+    // If the searchString is found, add the item to the result
+    if (found) {
+        result.push(item);
+    }
+}
+
+console.log(result); // Output: ["testA", "testB", "testC"]
+```javascript
 
