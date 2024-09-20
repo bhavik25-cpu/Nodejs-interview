@@ -5229,28 +5229,25 @@ ________________________________________________________________________________
 without inbild function
 
 ```javascript
-const array = ["testA", "testB", "testC", "abc"];
-const searchString = "tes";
-const result = [];
+function strings(array, searchString) {
+    const result = [];
 
-for (let i = 0; i < array.length; i++) {
-    const item = array[i];
-    let found = true;
+    for (let i = 0; i < array.length; i++) {
+        const item = array[i];
 
-    // Check if the item contains the searchString
-    for (let j = 0; j < searchString.length; j++) {
-        if (item[j] !== searchString[j]) {
-            found = false;
-            break;
+        // Check if the item contains the searchString
+        if (item.indexOf(searchString) !== -1) {
+            result.push(item);
         }
     }
 
-    // If the searchString is found, add the item to the result
-    if (found) {
-        result.push(item);
-    }
+    return result; // Return the result array
 }
 
-console.log(result); // Output: ["testA", "testB", "testC"]
+const array = ["testA", "testB", "testC", "abc"];
+const searchString = "tes";
+const output = strings(array, searchString);
+console.log(output); // Output: ["testA", "testB", "testC"]
+
 ```
 
