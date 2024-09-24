@@ -5261,8 +5261,9 @@ ________________________________________________________________________________
 
 ```javascript
 
+ 
  let array = [1,2,3,4,5] 
- let mynewarr = 3
+ let mynewarr = 2
  let newres = array.slice(-mynewarr)
  let newkey = array.slice(0, -mynewarr)
  arr = newres.concat(newkey)
