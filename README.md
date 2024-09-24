@@ -5251,3 +5251,20 @@ console.log(output); // Output: ["testA", "testB", "testC"]
 
 ```
 
+
+
+_______________________________________________________________________________________
+
+
+// i/p = [1,2,3,4,5] and o/p = [4,5,1,2,3]
+
+
+```javascript
+
+ let array = [1,2,3,4,5] 
+ let mynewarr = 3
+ let newres = array.slice(-mynewarr)
+ let newkey = array.slice(0, -mynewarr)
+ arr = newres.concat(newkey)
+ console.log(arr)
+```
