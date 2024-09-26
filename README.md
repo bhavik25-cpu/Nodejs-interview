@@ -57,8 +57,56 @@ asyncFunction('Hello')
   });
 
  ```
+
+
+___________________________________________________________________________
+
+Promise.all
+
+ ```javascript
+
+
+const fetchData = async () => {
+  try {
+    const apiUrls = [
+      'https://api.example.com/endpoint1',
+      'https://api.example.com/endpoint2',
+      'https://api.example.com/endpoint3'
+    ];
+
+    // Map over the URLs and create an array of fetch promises
+    const requests = apiUrls.map((url) => fetch(url));
+
+    // Use Promise.all to resolve all promises concurrently
+    const responses = await Promise.all(requests);
+
+    // Check for errors in responses and process the data
+    const dataPromises = responses.map((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to fetch from ${response.url}`);
+      }
+      return response.json();
+    });
+
+    // Resolve data promises to get the final data
+    const data = await Promise.all(dataPromises);
+
+    console.log(data); // Logs an array of resolved API data
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+
+fetchData();
+ ```
+
 ________________________________________________________________________________________________________________________________________
+
+
+
 asynchronous code
+
+
 ```javascript
 
 // Function that returns a Promise to simulate an asynchronous operation
