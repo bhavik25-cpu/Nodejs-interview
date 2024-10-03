@@ -5338,6 +5338,28 @@ op
 4
 3
 2
+________________________________________________________________________
+
+Write a function that checks if a given string is an anagram of another string (contains the same characters in a different order).
+
+```javascript
+function areAnagrams(str1, str2) {
+    return str1.replace().toLowerCase().split().sort().join('') ===
+           str2.replace().toLowerCase().split().sort().join('');
+}
+
+// Example usage:
+console.log(areAnagrams("ABCD", "silent")); 
+console.log(areAnagrams("ABCD", "world"));    
+
+
+```
+
+OP
+
+true 
+false
+
 
 ___________________________________________________________________________
 ```javascript
@@ -5420,7 +5442,9 @@ x.sort();
 console.log(x);
 
 ```
+op
 
+[ 2, 31, 8 ]
 _________________________________________________________________
 
 ```javascript
@@ -5432,6 +5456,9 @@ a.b.c = 3;
 console.log(b.b.c);
 
 ```
+op
+
+3
 
 __________________________________________________________________
 
