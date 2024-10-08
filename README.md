@@ -5541,28 +5541,29 @@ ________________________________________________________________________________
 ```javascript
 
 
-function removeDuplicatesFromArray(obj) {
+let input1 = { data: [2, 10, 10, 100, 2, 10, 11, 2, 11, 2] };
+let input2 = { data: [5, 40, 1, 40, 100000, 1, 5, 1] };
+
+function removeDuplicatesAndLimitThree(obj) {
   const seen = new Set();
   const result = [];
-  
-  obj.data.forEach(item => {
+
+  for (const item of obj.data) {
     if (!seen.has(item)) {
       seen.add(item);
       result.push(item);
     }
-  });
+    if (result.length === 3) break; // Stop after 3 unique items
+  }
 
-  // Limit the array to the first 3 unique elements
-  return result.slice(0, 3);
+  return result.join(' ');
 }
 
-let inputObj = { data: [5, 40, 1, 40, 100000, 1, 5, 1] };
+let output1 = removeDuplicatesAndLimitThree(input1);
+let output2 = removeDuplicatesAndLimitThree(input2);
 
-let output = removeDuplicatesFromArray(inputObj);
-console.log(output.join(' ')); // "5 40 1"
-
+console.log(output1); // "2 10 11"
+console.log(output2); // "5 40 1"
 
 ```
-op
 
-5 40 1
