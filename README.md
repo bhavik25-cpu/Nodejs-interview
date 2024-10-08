@@ -5541,8 +5541,6 @@ ________________________________________________________________________________
 ```javascript
 
 
-let input1 = { data: [2, 10, 10, 100, 2, 10, 11, 2, 11, 2] };
-let input2 = { data: [5, 40, 1, 40, 100000, 1, 5, 1] };
 
 function removeDuplicatesAndLimitThree(obj) {
   const seen = new Set();
@@ -5558,6 +5556,10 @@ function removeDuplicatesAndLimitThree(obj) {
 
   return result.join(' ');
 }
+
+
+let input1 = { data: [2, 10, 10, 100, 2, 10, 11, 2, 11, 2] };
+let input2 = { data: [5, 40, 1, 40, 100000, 1, 5, 1] };
 
 let output1 = removeDuplicatesAndLimitThree(input1);
 let output2 = removeDuplicatesAndLimitThree(input2);
