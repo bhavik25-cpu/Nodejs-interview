@@ -5531,13 +5531,15 @@ ________________________________________________________________________________
 
 
 // Input: {2, 10,10, 100, 2, 10, 11,2,11,2}
+
 // Output: 2 10 11
+
 // Input: {5, 40, 1, 40, 100000, 1, 5, 1}
+
 // Output: 5 40 1
 
 ```javascript
 
-let inputObj = { data: [5, 40, 1, 40, 100000, 1, 5, 1] };
 
 function removeDuplicatesFromArray(obj) {
   const seen = new Set();
@@ -5553,6 +5555,8 @@ function removeDuplicatesFromArray(obj) {
   // Limit the array to the first 3 unique elements
   return result.slice(0, 3);
 }
+
+let inputObj = { data: [5, 40, 1, 40, 100000, 1, 5, 1] };
 
 let output = removeDuplicatesFromArray(inputObj);
 console.log(output.join(' ')); // "5 40 1"
