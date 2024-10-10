@@ -5568,4 +5568,47 @@ console.log(output1); // "2 10 11"
 console.log(output2); // "5 40 1"
 
 ```
+_________________________________________________________________________________________________
+
+
+Write a code to bundle array elements into set of n elements
+  
+  Example 1:
+
+  input Array: [1,2,3,4,5,6,7,8,9]
+
+  n = 2
+  
+  Output: [[1,2],[3,4],[5,6],[7,8],[9]]
+  
+  Example 2:
+
+  input Array: [1,2,3,4,5,6,7,8,9,10]
+
+  n = 3
+  
+  Output: [[1,2,3],[4,5,6],[7,8,9],[10]]
+
+```javascript
+
+function bundleArray(arr, n) {
+    const result = [];
+     for (let i = 0; i < arr.length; i += n) {
+    result.push(arr.slice(i, i + n));  
+  }
+  
+  return result;
+}
+// Example 1
+const inputArray1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const n1 = 2;
+console.log(bundleArray(inputArray1, n1)); // Output: [[1, 2], [3, 4], [5, 6], [7, 8], [9]]
+
+// Example 2
+const inputArray2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const n2 = 3;
+console.log(bundleArray(inputArray2, n2)); // Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
+
+```
+
 
