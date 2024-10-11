@@ -5611,4 +5611,37 @@ console.log(bundleArray(inputArray2, n2)); // Output: [[1, 2, 3], [4, 5, 6], [7,
 
 ```
 
+___________________________________________________________________________
+
+To find the first non-repeated character in a string (like 'swiss'), you can iterate over the string and track the frequency of each character. Then, you can check for the first character that appears only once.
+
+const myStr = 'swiss';
+Output  w
+Non repeated char str
+
+```javascript
+
+const findFirstNonRepeatedChar = (str) => {
+  const charCount = {};
+
+  // Count frequency of each character
+  for (let char of str) {
+    charCount[char] = (charCount[char] || 0) + 1;
+  }
+
+  // Find the first character that occurs only once
+  for (let char of str) {
+    if (charCount[char] === 1) {
+      return char;
+    }
+  }
+
+  return null; // Return null if no non-repeated character found
+}
+
+const myStr = 'swiss';
+const result = findFirstNonRepeatedChar(myStr);
+console.log(result);  // Output: 'w'
+```
+
 
