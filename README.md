@@ -244,6 +244,27 @@ const arr = [1, 2, [3, 4], 5, [6, 7], 8];
 console.log(flatArray(arr)); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
+_________________________________________________________________________
+
+flat
+
+```javascript
+
+function mynewarr(arr){
+    return arr.reduce((one , two) => 
+        Array.isArray(two) ? one.concat(mynewarr(two)) : one.concat(two)
+    ,[])
+    
+}
+
+const arr = [1,[2,[3,4],5]]
+const result = mynewarr(arr)
+console.log(result)
+
+```
+
+[ 1, 2, 3, 4, 5 ]
+
 ______________________________________________________________________________________________________________________
 ```javascript
 
