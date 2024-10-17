@@ -5665,4 +5665,35 @@ const result = findFirstNonRepeatedChar(myStr);
 console.log(result);  // Output: 'w'
 ```
 
+__________________________________________________________
+```javascript
+
+const x = {
+ a: '1',
+ b: '2'
+};
+const y = {
+ a: '1',
+ b: '2'
+}
+const z = x;
+ 
+console.log('1' == 1)
+console.log('1' === 1)
+console.log(x == y)
+console.log(x === y)
+console.log(z == x)
+console.log(z === x)
+
+
+```
+
+
+true
+false
+false
+false
+true
+true
+
 
