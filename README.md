@@ -5697,3 +5697,36 @@ true
 true
 
 
+__________________________________________________________________
+
+
+uppercase
+
+ {
+  category1: ['shirt', 'pant'],
+  category2: ['shoe', 'slides']
+};
+
+
+```javascript
+const categories = {
+  category1: ['shirt', 'pant'],
+  category2: ['shoe', 'slides']
+};
+
+// Transforming the values to uppercase
+const category = Object.fromEntries(
+  Object.entries(categories).map(([key, value]) => {
+    return [key, value.map(e => e.toUpperCase())];
+  })
+);
+
+console.log(category);
+
+```
+
+op
+{ category1: [ 'SHIRT', 'PANT' ], category2: [ 'SHOE', 'SLIDES' ] }
+
+
+
