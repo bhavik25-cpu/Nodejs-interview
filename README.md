@@ -5729,4 +5729,148 @@ op
 { category1: [ 'SHIRT', 'PANT' ], category2: [ 'SHOE', 'SLIDES' ] }
 
 
+_________________________________________________________________________________
+
+```javascript
+
+console.log(a); 
+var a = 5;
+console.log(a);
+ 
+console.log(b); 
+let b = 10;
+```
+
+OP
+
+undefined
+5
+ERROR!
+/tmp/XizQinximy.js:5
+console.log(b); 
+            ^
+ReferenceError: Cannot access 'b' before initialization
+
+____________________________________________________________________________________________
+
+```javascript
+
+foo(); 
+function foo() {
+console.log("Hello");
+}
+
+```
+
+op
+
+Hello
+
+______________________________________________________________________________________________
+```javascript
+
+bar();  
+var bar = function() {
+console.log("World");
+};
+```
+
+OP
+
+ERROR!
+bar();  
+^
+TypeError: bar is not a function
+
+______________________________________________________________________________________
+
+```javascript
+
+console.log(x); 
+var x = 2;
+console.log(x); 
+```
+
+op
+undefined
+2
+__________________________________________________________________________
+
+```javascript
+
+console.log(a);
+console.log(b); 
+var a = 1;
+let b = 2;
+
+```
+
+op
+
+undefined
+ERROR!
+console.log(b); 
+            ^
+ReferenceError: Cannot access 'b' before initialization
+______________________________________________________________
+```javascript
+
+
+function example() {
+ console.log(c); 
+ var c = 3;
+ console.log(d); 
+ let d = 4;
+}
+
+```
+op
+
+undefined
+ReferenceError: Cannot access 'd' before initialization
+
+_________________________________________________________
+
+```javascript
+
+function outerFunction() {
+ console.log(a); 
+ var a = 1;
+ function innerFunction() {
+   console.log(a);
+   var a = 2;
+ }
+ innerFunction();
+}
+```
+
+op
+
+undefined
+undefined
+
+__________________________________________________________________________
+
+```javascript
+
+
+if (true) {
+ console.log(x);
+ let x = 10;
+}
+
+
+```
+op
+
+ERROR!
+/tmp/ahyHp17wk7.js:2
+ console.log(x);
+             ^
+
+ReferenceError: Cannot access 'x' before initialization
+
+
+
+
 
