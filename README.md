@@ -5870,6 +5870,47 @@ ERROR!
 
 ReferenceError: Cannot access 'x' before initialization
 
+____________________________________________________
+
+To compare the two arrays of objects (ArrObj1 and ArrObj2) based on the id property and add a new property match with the value true if the id matches, you can achieve this by iterating over the two arrays and checking for matches.
+
+```javascript
+
+ const ArrObj1 = [
+    { book: "Wellness", author: "Joanne Rowling", id:1001},
+    { book: "Health", author: "Marie Lu", id:1002 },
+    { book: "fitness", author: "Suzanne Collins", id:1003 },
+]
+ 
+ const Arrobj2 = [
+    { price: "$110", author: "Joanne Rowling", id:1004},
+    { price: "$110", author: "Marie Lu", id:1002 },
+    { price: "$130", author: "Suzanne Collins", id:1005 },
+]
+ArrObj1.forEach(obj1 =>{
+    const matcharrayobj = Arrobj2.find(obj2 => obj2.id === obj1.id)
+    if(matcharrayobj){
+        obj1.match =true
+        matcharrayobj.match = true
+    }
+})
+console.log(ArrObj1)
+console.log(Arrobj2)
+
+```
+op
+
+node /tmp/ztTt2zgx3E.js
+[
+  { book: 'Wellness', author: 'Joanne Rowling', id: 1001 },
+  { book: 'Health', author: 'Marie Lu', id: 1002, match: true },
+  { book: 'fitness', author: 'Suzanne Collins', id: 1003 }
+]
+[
+  { price: '$110', author: 'Joanne Rowling', id: 1004 },
+  { price: '$110', author: 'Marie Lu', id: 1002, match: true },
+  { price: '$130', author: 'Suzanne Collins', id: 1005 }
+]
 
 
 
