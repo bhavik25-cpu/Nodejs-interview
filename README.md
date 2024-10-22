@@ -5912,6 +5912,17 @@ node /tmp/ztTt2zgx3E.js
   { price: '$130', author: 'Suzanne Collins', id: 1005 }
 ]
 
+______________________________________________________________________________________________
+```javascript
 
+let arr = [2, 4, 3, 1];
 
+let output = arr.map((_, i) => {
+  return arr.reduce((acc, val, j) => {
+    return i !== j ? acc * val : acc;
+  }, 1);
+});
+
+console.log(output); // [12, 6, 8, 24]
+```
 
