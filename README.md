@@ -5923,6 +5923,56 @@ let output = arr.map((_, i) => {
   }, 1);
 });
 
-console.log(output); // [12, 6, 8, 24]
+console.log(output); 
 ```
+
+op
+ [12, 6, 8, 24]
+
+
+____________________________________________________________________________________________
+To find all possible combinations of elements from the array [10, 20, 30, 40, 50, 60, -10, 0] that sum to 50, we can use a nested loop to check every pair, trio, etc., of numbers. Here's a JavaScript implementation for this task:
+
+
+```javascript
+
+const arr = [10, 20, 30, 40, 50, 60, -10, 0];
+const targetSum = 50;
+let result = [];
+
+// Helper function to find combinations that sum to the target
+function findCombinations(currentCombo, currentIndex, currentSum) {
+  // Base case: if currentSum equals targetSum, add combination to result
+  if (currentSum === targetSum) {
+    result.push([...currentCombo]);
+    return;
+  }
+
+  // Iterate over the array from currentIndex onwards
+  for (let i = currentIndex; i < arr.length; i++) {
+    currentCombo.push(arr[i]);  // Add current element to the combination
+    findCombinations(currentCombo, i + 1, currentSum + arr[i]);  // Recursive call
+    currentCombo.pop();  // Backtrack and remove the element
+  }
+}
+
+// Start finding combinations
+findCombinations([], 0, 0);
+
+console.log("Combinations that sum to", targetSum, ":", result);
+```
+
+op
+
+Combinations that sum to 50 : [
+  [ 10, 20, 30, -10 ],
+  [ 10, 40 ],
+  [ 10, 50, -10 ],
+  [ 20, 30 ],
+  [ 20, 40, -10 ],
+  [ 50 ],
+  [ 60, -10 ]
+]
+
+
 
