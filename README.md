@@ -5975,4 +5975,118 @@ Combinations that sum to 50 : [
 ]
 
 
+__________________________________________________________________________
+
+Not repat without in-built 
+
+```javascript
+const array = [2, 4, 1, 0, 10, 8, 12, 9, 8, 1];
+
+// Step 1: Find the largest number
+let largest = array[0];
+for (let i = 1; i < array.length; i++) {
+  if (array[i] > largest) {
+    largest = array[i];
+  }
+}
+
+// Step 2: Find the second largest number
+let secondLargest = -Infinity; // Start with a very small number
+for (let i = 0; i < array.length; i++) {
+  if (array[i] !== largest && array[i] > secondLargest) {
+    secondLargest = array[i];
+  }
+}
+
+console.log(secondLargest);
+
+
+
+```
+
+op 
+10
+
+
+______________________________________________________
+
+```javascript
+
+
+
+const array = [10, 20, 30, 40];
+
+const result = array
+  .map((num) => num * 2) // Fix: num * 2 to multiply each element by 2
+  .filter((num) => num >= 15); // Filter the elements that are greater than or equal to 15
+
+console.log(result); // Output the result
+
+```
+
+
+op
+[20, 40, 60, 80]
+
+
+_________________________________________________________________________
+
+```javascript
+
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.greet = function() {
+  return "Hello, my name is " + this.name; // Fix: use this.name
+};
+
+var person1 = new Person("Lokesh Pra"); // Fix: complete the string and parentheses
+var person2 = new Person("Lucky");
+
+console.log(person1.greet === person2.greet); // Compare the greet methods
+```
+
+Op
+
+true
+
+____________________________________________________________________
+
+
+First number not repeat js
+
+[2, 4, 1, 0, 10, 8, 12, 9, 8, 1]
+
+```
+
+
+function firstNonRepeating(arr) {
+    // Create an object to store the frequency of each number
+    const frequency = {};
+
+    // Count the frequency of each number in the array
+    arr.forEach(num => {
+        frequency[num] = (frequency[num] || 0) + 1;
+    });
+
+    // Find the first number with a frequency of 1
+    for (let i = 0; i < arr.length; i++) {
+        if (frequency[arr[i]] === 1) {
+            return arr[i];
+        }
+    }
+
+    // If no non-repeating number is found, return null
+    return null;
+}
+
+const numbers = [2, 4, 1, 0, 10, 8, 12, 9, 8, 1];
+console.log(firstNonRepeating(numbers)); 
+```
+
+op 2
+ 
+
+
 
