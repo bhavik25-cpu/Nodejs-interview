@@ -6012,8 +6012,6 @@ ______________________________________________________
 
 ```javascript
 
-
-
 const array = [10, 20, 30, 40];
 
 const result = array
@@ -6088,5 +6086,84 @@ console.log(firstNonRepeating(numbers));
 op 2
  
 
+_________________________________________________________
 
+i/p= [10,20,40,10,30,40] 
+o/p = [10,40]
+
+
+```javascript
+
+const input = [10, 20, 40, 10, 30, 40];
+
+const output = input.filter((value, index, array) => {
+  // Check if the element occurs more than once
+  return array.indexOf(value) !== index && array.indexOf(value) === index;
+});
+
+// Use Set to remove duplicates from the output
+const result = [...new Set(output)];
+
+console.log(result); 
+
+```
+op
+
+[10, 40]
+
+_______________________________________________________________________
+```javascript
+
+console.log(myVar); 
+let myVar = 20;
+```
+Op
+
+console.log(myVar);
+^
+
+ReferenceError: Cannot access 'myVar' before initialization
+
+_____________________________________________________________
+```javascript
+
+
+console.log(myVar);
+
+var myVar = 20;
+```
+
+op
+undefined
+
+____________________________________________
+
+i/p   AyUsh 
+
+o/p   aYuSH
+```javascript
+
+
+function dynamicCaseChange(str) {
+  let result = '';
+  
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
+      result += str[i].toLowerCase(); // Even index: lower case
+    } else {
+      result += str[i].toUpperCase(); // Odd index: upper case
+    }
+  }
+  
+  return result;
+}
+
+const result = dynamicCaseChange('aYuSh');
+console.log(result); // Output: "dYnSaYuSh"
+
+```
+
+op
+
+aYuSh
 
