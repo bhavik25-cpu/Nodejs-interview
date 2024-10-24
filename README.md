@@ -6167,3 +6167,39 @@ op
 
 aYuSh
 
+
+__________________________________________________________________________________________
+```javascript
+
+let a={};
+let b= {key:"b"};
+let c= {key:"c"};
+a[b] =123;
+a[c] =456;
+console.log(a[b]);
+```
+
+
+op
+
+456
+
+___________________________________________________________________________________
+```javascript
+
+
+let x= [1,2,3]
+let y= [1,2,3]
+let z=y;
+console.log(x==y);
+console.log(x===y);
+console.log(z==y);
+console.log(z==x);
+```
+
+op
+
+false
+false
+true
+false
