@@ -6386,3 +6386,20 @@ console.log(a.name)
 op
 
 bhavik
+
+____________________________________________
+```javascript
+function test(){
+  salary = 1200
+  console.log(salary)
+  
+}
+test()
+```
+op
+1200
+
+
+
+
+
