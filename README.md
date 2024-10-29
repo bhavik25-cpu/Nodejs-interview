@@ -6095,16 +6095,10 @@ o/p = [10,40]
 ```javascript
 
 const input = [10, 20, 40, 10, 30, 40];
+const output = input.filter((value, index, arr) => arr.indexOf(value) !== index)
+                    .filter((value, index, arr) => arr.indexOf(value) === index);
 
-const output = input.filter((value, index, array) => {
-  // Check if the element occurs more than once
-  return array.indexOf(value) !== index && array.indexOf(value) === index;
-});
-
-// Use Set to remove duplicates from the output
-const result = [...new Set(output)];
-
-console.log(result); 
+console.log(output); 
 
 ```
 op
@@ -6112,6 +6106,40 @@ op
 [10, 40]
 
 _______________________________________________________________________
+without inbuild
+```javascript
+
+
+const input = [10, 20, 40, 10, 30, 40];
+const output = [];
+const duplicates = {};
+
+// Loop through the input array to count occurrences
+for (let i = 0; i < input.length; i++) {
+    const value = input[i];
+
+    // Check if the value is already in the duplicates object
+    if (duplicates[value]) {
+        duplicates[value] += 1;
+    } else {
+        duplicates[value] = 1;
+    }
+}
+
+// Loop through the duplicates object to find values that appear more than once
+for (let key in duplicates) {
+    if (duplicates[key] > 1) {
+        output.push(parseInt(key));
+    }
+}
+
+console.log(output); 
+
+
+```
+
+ Output: [10, 40]
+_____________________________________________________________________
 ```javascript
 
 console.log(myVar); 
