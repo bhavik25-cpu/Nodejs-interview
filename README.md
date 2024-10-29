@@ -6231,3 +6231,144 @@ false
 false
 true
 false
+
+
+
+___________________________________________________________________
+
+```javascript
+
+a = [1]
+
+b = a
+
+b.push(2)
+
+console.log(a,b)
+```
+
+op
+[ 1, 2 ] [ 1, 2 ]
+
+
+_______________________________________________
+```javascript
+
+a = [1]
+
+b=a
+
+b.push(2)
+
+a.push(3)
+
+console.log(a,b)
+
+```
+
+op
+[ 1, 2, 3 ] [ 1, 2, 3 ]
+
+
+__________________________________________________________________________________
+There are some particles in an array : [+5,+10,-5]
+
+the number is showing the mass/size of the particle 
+no zero values , either positive / negative 
+
+
+the sign is the direction in which the particle is moving
++ moving towards right ( 5 ----> )
+- moving towards left  (<----- -5 )
+
+
++5 ---> ,+10 ----> ,<------- -5
+all the particles are having same speed 
+
+Rules for collision: 
+
+If A and B collides and A is greater in mass A will destroy B completely [5 ---->,<---- -10] -> [-10] , [5,-2] -> [5]
+If A and B collides and both have same mass they will destroy each other [5 --->,<---- -5] -> []
+
++10 ---> <----- -12
+-12 
+
+```javascript
+
+TEST CASE : 
+[5 --> ,<--- -5] => []
+[<--- -5,5 ---> ] => [-5,5]
+[5 ---> ,<--- -10] => [-10]
+[5 ----> ,<---- -3] => [5]
+[1 ---> ,2 ---> ,3 ---> ,<--- -4] => [-4]
+[-1,3,2 ---> ,<--- -3,1] => [-1,1]
+-1,3,-3,1
+-1,1
+```
+
+```javascript
+
+TEST CASE :
+
+[5,-5] => []
+
+[-5,5] => [-5,5]
+
+[5,-10] => [-10]
+
+[5,-3] => [5]
+
+[1,2,3,-4] => [-4]
+
+[-1,3,2-------3,1] => [-1,1]
+
+[1,3,-3,1]
+
+[1,1]
+
+```
+
+
+```javascript
+
+function resolveCollisions(arr){
+return arr.reduce((stacks , arrs)=>{
+  while(stacks.length > 0 && stacks[stacks.length - 1] > 0 && arrs < 0){
+    
+     const last = stacks.pop()
+     if(Math.abs(last) > Math.abs(arrs)){
+       stacks.push(last)
+       return stacks
+     } else if (Math.abs(last) === Math.abs(arrs)) {
+        return stacks; 
+      }
+  }
+  stacks.push(arrs);
+  return stacks
+},[])
+}
+
+console.log(resolveCollisions([5, -5]));             
+console.log(resolveCollisions([-5, 5]));             
+console.log(resolveCollisions([5, -10]));            
+console.log(resolveCollisions([5, -3]));            
+console.log(resolveCollisions([1, 2, 3, -4]));
+console.log(resolveCollisions([-1, 3, 2, -3, 1]));   
+console.log(resolveCollisions([-1, 1]));        
+
+
+```
+
+op
+
+[]
+[ -5, 5 ]
+[ -10 ]
+[ 5 ]
+[ -4 ]
+[ -1, 1 ]
+[ -1, 1 ]
+
+_______________________________________________________________________________________
+
+
