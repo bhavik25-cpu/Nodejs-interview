@@ -6436,13 +6436,14 @@ function lengthOfLongestSubstring(s) {
 }
 
 // Example usage:
-console.log(lengthOfLongestSubstring("baabaabbbaaa"));  // Output: 1
-console.log(lengthOfLongestSubstring("pwwkeweeee")); // Output: 3
+console.log(lengthOfLongestSubstring("bbbbb"));  // Output: 1
+console.log(lengthOfLongestSubstring("pwwkew")); // Output: 3
+
 
 ```
 
 op 
-2
+1
 3
 
 
