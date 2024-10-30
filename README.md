@@ -6400,6 +6400,53 @@ op
 1200
 
 
+____________________________________________________
+
+
+ finding the length of the longest substring without repeating characters.
+
+
+Example 2
+Input: s = "bbbbb"
+Output: 1
+Explanation: The longest substring without repeating characters is "b" (only one unique character in the entire string).
+
+Example 3
+Input: s = "pwwkew"
+Output: 3
+Explanation: The longest substring without repeating characters is "wke", which has a length of 3.
+
+
+```javascript
+function lengthOfLongestSubstring(s) {
+    let charSet = new Set();
+    let left = 0;
+    let maxLength = 0;
+
+    for (let right = 0; right < s.length; right++) {
+        while (charSet.has(s[right])) {
+            charSet.delete(s[left]);
+            left++;
+        }
+        charSet.add(s[right]);
+        maxLength = Math.max(maxLength, right - left + 1);
+    }
+
+    return maxLength;
+}
+
+// Example usage:
+console.log(lengthOfLongestSubstring("baabaabbbaaa"));  // Output: 1
+console.log(lengthOfLongestSubstring("pwwkeweeee")); // Output: 3
+
+```
+
+op 
+2
+3
+
+
+
 
 
 
