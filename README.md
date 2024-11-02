@@ -25,8 +25,31 @@ function callbackFunction() {
 doSomethingAsync(callbackFunction);
 ```
 
-________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________
 
+
+Provide an example of closure in JavaScript.
+```javascript
+
+function outerFunction() {
+  let outerVariable = "I am from the outer function";
+
+  function innerFunction() {
+    console.log(outerVariable);
+  }
+
+  return innerFunction;
+}
+
+// Create a closure by calling outerFunction and assigning the result to a variable
+let closureExample = outerFunction();
+
+// Call the inner function, which still has access to outerVariable
+closureExample();
+ // Output: "I am from the outer function"
+```
+
+_________________________________________________________________________________
 
 2  promises
  ```javascript
@@ -1183,27 +1206,7 @@ console.log(uniqueArr);
 
 ```
 
-_______________________________________________________________________________________________________________________________
-Provide an example of closure in JavaScript.
-```javascript
 
-function outerFunction() {
-  let outerVariable = "I am from the outer function";
-
-  function innerFunction() {
-    console.log(outerVariable);
-  }
-
-  return innerFunction;
-}
-
-// Create a closure by calling outerFunction and assigning the result to a variable
-let closureExample = outerFunction();
-
-// Call the inner function, which still has access to outerVariable
-closureExample();
- // Output: "I am from the outer function"
-```
 
 _____________________________________________________________________________________________________________
 
