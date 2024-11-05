@@ -6518,7 +6518,49 @@ op
   }
 ]
 
+_____________________________________________
 
+
+Node js express js api 
+
+Method type: GET Input: [1,2,3,4,5,6,7,8,9]
+
+output: product of numbers in given array
+{
+  "newarray": 362880
+}
+ server.js
+
+```javascript
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+
+app.get('/newarray', (req,res)=>{
+    const numbers = req.query.numbers;
+
+    if (!numbers) {
+        return res.status(400).send('Array numbers are required');
+    }
+
+const newone = numbers.split(',').map(Number);
+const newarray = newone.reduce((one, two) => one * two)
+console.log(newarray)
+
+res.json({newarray})
+
+})
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+})
+
+```
+
+run 
+http://localhost:3000/newarray?numbers=1,2,3,4,5,6,7,8,9
 
 
 
