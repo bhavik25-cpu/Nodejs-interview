@@ -1,5 +1,7 @@
 # javascript-interview-coding
 
+https://codesandbox.io/p/devbox/express-js-forked-rfn7q9
+
 https://github.com/lydiahallie/javascript-questions
 
 1 Call back code 
@@ -6449,6 +6451,72 @@ op
 1
 3
 
+____________________________________________________
+
+the data structure and show how to set up an Express API to filter and display entries with a roll_no greater than 14.
+
+```javascript
+
+const express = require('express');
+const app = express();
+
+// Sample data
+const data = [
+    { "name": "Arjun Tripathi", "course": "MCA", "roll_no": "14", "id": 1 },
+    { "name": "Rahul Durgapal", "course": "MCA", "roll_no": "36", "id": 2 },
+    { "name": "Aman Yadav", "course": "MCA", "roll_no": "08", "id": 3 }
+];
+
+// Route to filter students with roll_no greater than 14
+app.get('/students/roll_no/greater_than_14', (req, res) => {
+  const filteredData = data.filter(student => parseInt(student.roll_no, 10) > 14);
+  res.json(filteredData);
+});
+
+
+// Start the server
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
+const express = require('express');
+const app = express();
+
+// Sample data
+const data = [
+    { "name": "Arjun Tripathi", "course": "MCA", "roll_no": "14", "id": 1 },
+    { "name": "Rahul Durgapal", "course": "MCA", "roll_no": "36", "id": 2 },
+    { "name": "Aman Yadav", "course": "MCA", "roll_no": "08", "id": 3 }
+];
+
+// Route to filter students with roll_no greater than 14
+app.get('/students/roll_no/greater_than_14', (req, res) => {
+  const filteredData = data.filter(student => parseInt(student.roll_no, 10) > 14);
+  res.json(filteredData);
+});
+
+
+// Start the server
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
+```
+
+op
+
+[
+  {
+    "name": "Rahul Durgapal",
+    "course": "MCA",
+    "roll_no": "36",
+    "id": 2
+  }
+]
 
 
 
