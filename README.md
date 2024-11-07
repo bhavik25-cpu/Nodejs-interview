@@ -6489,6 +6489,103 @@ Output: 2
 
 ________________________________________
 
+```javascript
+
+
+function demo() {
+    console.log(a); // Output 1: undefined, because `a` is hoisted (var is hoisted but not initialized).
+    console.log(b); // Output 2: ReferenceError, because `b` is not hoisted (let and const are not hoisted like var).
+    console.log(c); // Output 3: ReferenceError, because `c` is not hoisted.
+
+    var a = 5;
+    let b = 10;
+    const c = 15;
+
+    if (true) {
+        var a = 50; // This reassigns `a` in the function scope, since var is function-scoped.
+        let b = 100; // This `b` is block-scoped and won't affect the outer `b`.
+        const c = 150; // This `c` is also block-scoped.
+
+        console.log(a); // Output 4: 50, as `a` is reassigned in the function scope.
+        console.log(b); // Output 5: 100, the block-scoped `b` inside the `if` block.
+        console.log(c); // Output 6: 150, the block-scoped `c` inside the `if` block.
+    }
+
+    console.log(a); // Output 7: 50, as `a` was reassigned to 50 in the function scope.
+    console.log(b); // Output 8: 10, as the outer `b` was never modified.
+    console.log(c); // Output 9: 15, as the outer `c` was never modified.
+}
+
+demo();
+```
+
+
+______________________________________
+
+
+1. sort the array from mid element in opposite direction
+ Given -> [5,6,2, 7, 8, 7, 31]
+ Output => [2, 5,6, 7, 31, 8, 7]
+```javascript
+function sortFromMiddle(arr) {
+    const midIndex = Math.floor(arr.length / 2);
+    const middle = arr[midIndex];
+
+    // Custom sorting function for ascending order
+    function sortAscending(array) {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    let temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array;
+    }
+
+    // Custom sorting function for descending order
+    function sortDescending(array) {
+        for (let i = 0; i < array.length; i++) {
+            for (let j = i + 1; j < array.length; j++) {
+                if (array[i] < array[j]) {
+                    let temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array;
+    }
+
+    // Extract left and right parts
+    let left = [];
+    let right = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i < midIndex) {
+            left.push(arr[i]);
+        } else if (i > midIndex) {
+            right.push(arr[i]);
+        }
+    }
+
+    // Sort left in ascending order and right in descending order
+    left = sortAscending(left);
+    right = sortDescending(right);
+
+    // Combine left, middle, and right
+    return [...left, middle, ...right];
+}
+
+// Test case
+const arr = [5, 6, 2, 7, 8, 7, 31];
+console.log(sortFromMiddle(arr)); // Output: [2, 5, 6, 7, 31, 8, 7]
+
+```
+
+________________________________________
+
 the data structure and show how to set up an Express API to filter and display entries with a roll_no greater than 14.
 
 ```javascript
