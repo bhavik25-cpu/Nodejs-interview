@@ -6528,54 +6528,53 @@ ______________________________________
  Output => [2, 5,6, 7, 31, 8, 7]
 ```javascript
 function sortFromMiddle(arr) {
-    const midIndex = Math.floor(arr.length / 2);
-    const middle = arr[midIndex];
-
-    // Custom sorting function for ascending order
-    function sortAscending(array) {
-        for (let i = 0; i < array.length; i++) {
-            for (let j = i + 1; j < array.length; j++) {
-                if (array[i] > array[j]) {
-                    let temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-            }
-        }
-        return array;
-    }
-
-    // Custom sorting function for descending order
-    function sortDescending(array) {
-        for (let i = 0; i < array.length; i++) {
-            for (let j = i + 1; j < array.length; j++) {
-                if (array[i] < array[j]) {
-                    let temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-            }
-        }
-        return array;
-    }
-
-    // Extract left and right parts
+    const mid = Math.floor(arr.length / 2);
+    const middle = arr[mid];
+    
+    // Separate left and right parts
     let left = [];
     let right = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (i < midIndex) {
-            left.push(arr[i]);
-        } else if (i > midIndex) {
-            right.push(arr[i]);
+    
+    for (let i = 0; i < mid; i++) {
+        left.push(arr[i]);
+    }
+    for (let i = mid + 1; i < arr.length; i++) {
+        right.push(arr[i]);
+    }
+
+    // Sort left in ascending order
+    for (let i = 0; i < left.length - 1; i++) {
+        for (let j = i + 1; j < left.length; j++) {
+            if (left[i] > left[j]) {
+                let temp = left[i];
+                left[i] = left[j];
+                left[j] = temp;
+            }
         }
     }
 
-    // Sort left in ascending order and right in descending order
-    left = sortAscending(left);
-    right = sortDescending(right);
+    // Sort right in descending order
+    for (let i = 0; i < right.length - 1; i++) {
+        for (let j = i + 1; j < right.length; j++) {
+            if (right[i] < right[j]) {
+                let temp = right[i];
+                right[i] = right[j];
+                right[j] = temp;
+            }
+        }
+    }
 
     // Combine left, middle, and right
-    return [...left, middle, ...right];
+    let result = [];
+    for (let i = 0; i < left.length; i++) {
+        result.push(left[i]);
+    }
+    result.push(middle);
+    for (let i = 0; i < right.length; i++) {
+        result.push(right[i]);
+    }
+
+    return result;
 }
 
 // Test case
