@@ -6582,8 +6582,95 @@ const arr = [5, 6, 2, 7, 8, 7, 31];
 console.log(sortFromMiddle(arr)); // Output: [2, 5, 6, 7, 31, 8, 7]
 
 ```
+___________________________________________
 
-________________________________________
+
+Input = [ 
+        [0,1,2,2,3,4,5,6,1,1,1], 
+        [0,1,2,2,3,4,5,6,1,1,13,14],
+        [0,1,2,2,3,4,5,6,1,1,12], 
+
+] 
+
+Write a function where the input are provided. It will return the nested array's index number which have highest number of 1 repeted. js code
+```javascript
+
+function findIndexWithMostOnes(arr) {
+  let maxCount = 0;
+  let indexWithMostOnes = -1;
+
+  arr.forEach((subArray, index) => {
+    const count = subArray.reduce((acc, val) => val === 1 ? acc + 1 : acc, 0);
+    if (count > maxCount) {
+      maxCount = count;
+      indexWithMostOnes = index;
+    }
+  });
+
+  return indexWithMostOnes;
+}
+
+// Example usage:
+const input = [
+  [0,1,2,2,3,4,5,6,1,1,1],
+  [0,1,2,2,3,4,5,6,1,1,13,14],
+  [0,1,2,2,3,4,5,6,1,1,12],
+];
+
+console.log(findIndexWithMostOnes(input)); // Output: 0
+```
+_________________________________________________________________________________
+
+
+write a function where some products are in warehouse. Some new request types are coming. If type is "add", products units will be increase with the existing units and if the products type is 'sell', products units will be decrease. After the operation need final products which are in warehouse now.
+
+const products = [
+    { name: 'product1', units: 100 },
+    { name: 'product2', units: 100 },
+    { name: 'product3', units: 100 }
+];
+
+const requestTypes = [
+    { name: 'product1', units: 100, type: 'add' },
+    { name: 'product1', units: 50, type: 'sell' },
+    { name: 'product2', units: 30, type: 'add' },
+    { name: 'product3', units: 120, type: 'sell' }
+];
+
+```javascript
+
+function updateWarehouse(products, requests) {
+    const productMap = new Map(products.map(p => [p.name, p.units]));
+
+    requests.forEach(({ name, units, type }) => {
+        if (productMap.has(name)) {
+            const currentUnits = productMap.get(name);
+            productMap.set(name, type === 'add' ? currentUnits + units : Math.max(currentUnits - units, 0));
+        }
+    });
+
+    return Array.from(productMap, ([name, units]) => ({ name, units }));
+}
+
+// Example input
+const products = [
+    { name: 'product1', units: 100 },
+    { name: 'product2', units: 100 },
+    { name: 'product3', units: 100 }
+];
+
+const requestTypes = [
+    { name: 'product1', units: 100, type: 'add' },
+    { name: 'product1', units: 50, type: 'sell' },
+    { name: 'product2', units: 30, type: 'add' },
+    { name: 'product3', units: 120, type: 'sell' }
+];
+
+console.log(updateWarehouse(products, requestTypes));
+
+```
+
+_____________________________________________________________________________________
 
 the data structure and show how to set up an Express API to filter and display entries with a roll_no greater than 14.
 
