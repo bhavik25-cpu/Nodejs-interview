@@ -6739,7 +6739,27 @@ op
 
 _____________________________________________
 
+"my name is sun"
+all this first word capital letter 
+output - My Name Is Sun
+```javascript
+let myname = "my name is sun";
 
+// Capitalize the first letter of each word
+let capitalizedName = myname.split(' ').map(word => {
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+}).join(' ');
+
+console.log(capitalizedName); 
+
+
+```
+
+output
+
+
+My Name Is Sun
+_________________________________________________
 Node js express js api 
 
 Method type: GET Input: [1,2,3,4,5,6,7,8,9]
