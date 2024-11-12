@@ -6800,6 +6800,19 @@ app.listen(port, () => {
 
 run 
 http://localhost:3000/newarray?numbers=1,2,3,4,5,6,7,8,9
+_____________________________________
+typeof [1,2,3,4]
+
+"object"
+
+
+___________________________
+
+typeof (function(){})
+
+"function"
+
+
 
 
 
