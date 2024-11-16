@@ -6811,7 +6811,87 @@ ___________________________
 typeof (function(){})
 
 "function"
+__________________________________________________
+```javascript
 
+console.log('Start');
+
+setTimeout(() => {  
+  console.log('Set Timeout - 1');
+  
+  Promise.resolve().then(() => {
+    console.log('Promise - 1');
+  }).then(() => {
+    console.log('Promise - 2');
+  });
+
+}, 0);
+
+setImmediate(() => {
+  console.log('Set Immediate');
+});
+
+Promise.resolve().then(() => {
+  console.log('Promise - 3');
+});
+
+process.nextTick(() => {
+  console.log('Next Tick');
+  process.nextTick(() => console.log('Next Tick - nested'));
+});
+
+console.log('End');
+```
+
+
+op
+
+Start
+End
+Next Tick
+Next Tick - nested
+Promise - 3
+Set Timeout - 1
+Promise - 1
+Promise - 2
+Set Immediate
+
+____________________________________________________________________________
+
+You are given an array cardPoints where each element represents the points on a card, and an integer k. You are allowed to pick exactly k cards from either end of the array (left or right) to maximize your score. Write a function
+
+input [1, 2, 3, 4, 5, 6, 1];
+target k = 3;
+output  11
+
+```javascript
+
+function scores(cardPoints, k) {
+  const n = cardPoints.length;
+  const totalSum = cardPoints.reduce((a, b) => a + b, 0);
+  
+  if (k === n) return totalSum; // If k equals the length, take all cards
+  
+  // Find the minimum sum of any subarray of length `n - k`
+  const windowSize = n - k;
+  let minWindowSum = cardPoints.slice(0, windowSize).reduce((a, b) => a + b, 0);
+  let currentWindowSum = minWindowSum;
+
+  for (let i = windowSize; i < n; i++) {
+    currentWindowSum += cardPoints[i] - cardPoints[i - windowSize];
+    minWindowSum = Math.min(minWindowSum, currentWindowSum);
+  }
+
+  // Maximum score by picking `k` cards from both ends
+  return totalSum - minWindowSum;
+}
+
+const cardPoints = [1, 2, 3, 4, 5, 6, 1];
+const k = 3;
+
+console.log(scores(cardPoints, k)); // Expected output: 12
+
+```
 
 
 
