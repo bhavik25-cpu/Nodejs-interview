@@ -6922,5 +6922,112 @@ function FirstOccurrence(indexs,twoindexs){
 console.log(FirstOccurrence("sadbutsad", "sad"))
 console.log(FirstOccurrence("leetcode", "leeto"))
 ```
+_______________________________________________________
 
+
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+Example 1:
+Input: x = 123
+Output: 321
+
+Example 2:
+Input: x = -123
+Output: -321
+
+Example 3:
+Input: x = 120
+Output: 21
+
+
+```javascript
+
+function reverseInteger(x) {
+    const isNegative = x < 0; // Check if the number is negative
+    const reversed = parseInt(Math.abs(x).toString().split('').reverse().join('')); // Reverse the digits
+
+    // Handle signed 32-bit integer overflow
+    if (reversed > Math.pow(2, 31) - 1) {
+        return 0;
+    }
+
+    return isNegative ? -reversed : reversed; // Return with the appropriate sign
+}
+
+// Example usage:
+console.log(reverseInteger(123));  // Output: 321
+console.log(reverseInteger(-123)); // Output: -321
+console.log(reverseInteger(120));  // Output: 21
+
+```
+
+diff method
+
+
+```javascript
+
+function reversed(num){
+  let rev = 0
+  let newrange = num < 0 ? -1 : 1;
+  num = Math.abs(num)
+  
+  while(num !==0){
+    rev = rev * 10 + (num % 10);
+    num = Math.floor(num/ 10)
+  }
+  
+  rev *= newrange
+  
+return(rev >= -(2**31) && rev <= (2**31-1)) ? rev:0
+}
+
+  console.log(reversed(-123))
+    console.log(reversed(123))
+        console.log(reversed(120))
+```
+
+
+without inbuild method
+
+```javascript
+
+
+function reverseInteger(x) {
+    let reversed = 0;
+    let isNegative = x < 0;
+
+    // Work with the positive value of x
+    if (isNegative) {
+        x = -x;
+    }
+
+    while (x !== 0) {
+        // Extract the last digit
+        let digit = x % 10;
+
+        // Build the reversed number
+        reversed = reversed * 10 + digit;
+
+        // Remove the last digit
+        x = (x - digit) / 10;
+    }
+
+    // Restore the sign
+    if (isNegative) {
+        reversed = -reversed;
+    }
+
+    // Handle overflow for 32-bit signed integers
+    if (reversed > 2147483647 || reversed < -2147483648) {
+        return 0;
+    }
+
+    return reversed;
+}
+
+// Example usage:
+console.log(reverseInteger(123));  // Output: 321
+console.log(reverseInteger(-123)); // Output: -321
+console.log(reverseInteger(120));  // Output: 21
+
+```
 
