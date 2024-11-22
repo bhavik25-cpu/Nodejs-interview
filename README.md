@@ -7031,3 +7031,41 @@ console.log(reverseInteger(120));  // Output: 21
 
 ```
 
+__________________________________________________
+
+
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
+//Create an event handler:
+var myEventHandler = function () {
+  console.log('I hear a scream!');
+}
+
+//Assign the event handler to an event:
+__________________
+
+//Fire the 'event_name' event:
+_______________________
+
+write a full code
+
+```javascript
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
+// Create an event handler:
+var myEventHandler = function () {
+  console.log('I hear a scream!');
+};
+
+// Assign the event handler to an event:
+eventEmitter.on('scream', myEventHandler);
+
+// Fire the 'scream' event:
+eventEmitter.emit('scream');
+
+
+```
+
+
