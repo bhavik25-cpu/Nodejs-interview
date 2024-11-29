@@ -7067,5 +7067,22 @@ eventEmitter.emit('scream');
 
 
 ```
+___________________________________
+Anagram with two strings
 
+```javascript
+function Anagram(str1, str2){
+  if(typeof str1 !== 'string' || typeof str2 !== 'string'){
+
+  return false
+}
+const anagrams = str => str.toLowerCase().replace('').split('').sort().join('')
+
+return anagrams(str1) === anagrams(str2)
+
+}
+console.log(Anagram("race", "care"));  // Should return true
+console.log(Anagram("race", "hello")); // Should return false```
+
+```
 
