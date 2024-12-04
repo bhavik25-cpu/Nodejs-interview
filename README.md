@@ -4607,6 +4607,20 @@ console.log(countDigits(12345)); // Output: The number of digits in 12345 is: 5
 ```
 _____________________________________________________________________________________________________
 
+```javascript
+
+const numbers = [1, 2, 4, 6, 3, 7, 8];
+
+const findMissingNumber = (arr) => {
+  const n = Math.max(...arr); // Find the maximum number
+  const fullSet = Array.from({ length: n }, (_, i) => i + 1); // Create a complete range
+  return fullSet.filter(num => !arr.includes(num)); // Find missing numbers
+};
+
+console.log(findMissingNumber(numbers));
+```
+
+_________________________________________________
 missing number
 
 ```javascript
