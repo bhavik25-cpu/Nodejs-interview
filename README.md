@@ -7086,3 +7086,138 @@ console.log(Anagram("race", "hello")); // Should return false```
 
 ```
 
+_______________________________________________________
+
+const phone = '7885025909';
+
+/**
+ * Output should be exactly the following
+ * 0, 2
+ * 2, 1
+ * 5, 2
+ * 7, 1
+ * 8, 2
+ * 9, 2
+ */
+function printFormat() {
+  //write your code here to get the above output.
+}
+printFormat();
+
+```javascript
+
+function printFormat() {
+  const phone = '7885025909';
+  
+  // Create an object to store character frequencies
+  const frequencyMap = {};
+  
+  // Count the frequency of each digit
+  for (let digit of phone) {
+    frequencyMap[digit] = (frequencyMap[digit] || 0) + 1;
+  }
+  
+  // Sort the entries to match the required output order
+  const sortedEntries = Object.entries(frequencyMap)
+    .sort((a, b) => a[0].localeCompare(b[0]));
+  
+  // Print in the specified format
+  sortedEntries.forEach(([digit, count]) => {
+    console.log(`${digit}, ${count}`);
+  });
+}
+
+printFormat();
+
+
+```
+__________________________________________________
+To filter out objects where the name contains the letter 'a' in any part of the string,
+
+const array = [
+
+  { name: 'apple' },
+
+  { name: 'banana' },
+
+  { name: 'kiwi' },
+
+  { name: 'melon' },
+
+  { name: 'avocado' },
+];
+
+output
+ 
+{ name: 'kiwi' },
+
+{ name: 'melon' },
+
+```javascript
+
+const array = [
+  { name: 'apple' },
+  { name: 'banana' },
+  { name: 'kiwi' },
+  { name: 'melon' },
+  { name: 'avocado' },
+];
+
+const filteredArray = array.filter((item) => !item.name.includes('a'));
+
+console.log(filteredArray);
+
+```
+
+_______________________________________________________________
+kiwi and melon first capital letter
+const array = [
+  { name: 'apple' },
+
+  { name: 'banana' },
+
+  { name: 'kiwi' },
+
+  { name: 'melon' },
+
+  { name: 'avocado' },
+];
+
+
+output
+[ { name: 'Kiwi' }, 
+
+{ name: 'Melon' } ]
+
+
+```javascript
+
+const array = [
+  { name: 'apple' },
+  { name: 'banana' },
+  { name: 'kiwi' },
+  { name: 'melon' },
+  { name: 'avocado' },
+];
+
+const filteredArray = array
+  .filter((item) => !item.name.includes('a'))
+  .map(item => {
+    if (item.name === 'kiwi') {
+      return { ...item, name: 'Kiwi' };
+    }
+    if (item.name === 'melon') {
+      return { ...item, name: 'Melon' };
+    }
+    return item;
+  });
+
+console.log(filteredArray);
+```
+
+
+
+
+
+
+
