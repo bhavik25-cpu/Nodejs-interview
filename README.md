@@ -7268,6 +7268,7 @@ console.log(filteredArray);
 __________________________________________
 
 
+
 calculate the sum of all numeric digits in the string "abc6hki9", you can loop through the string, identify the digits, and add them together. 
 ```javascript
 
@@ -7323,6 +7324,83 @@ console.log("Positions:", positions);
 
 op
 Positions: [ 7, 17, 27 ]
+
+_________________________________________________________________
+
+let a = 5;
+let b = 10;
+
+value of a & b without using third variable, it Id work for both interger and string values.
+
+```javascript
+
+let a = "test1";
+let b = "test2";
+
+// Swap without a third variable using template literals
+a = [b, b = a][0];  // swap values using destructuring
+
+console.log("a:", a);  // "test2"
+console.log("b:", b);  // "test1"
+
+```
+
+_____________________________________________________________________
+
+
+const data = [3,5,6,1,9,7,8,4],
+
+// find second smallest
+
+// find second largest
+
+// dont use sort method.
+
+Js code without in-built 
+
+
+```javascript
+
+const data = [3, 5, 6, 1, 9, 7, 8, 4];
+
+// Find second smallest
+let smallest = Infinity;
+let secondSmallest = Infinity;
+
+for (let i = 0; i < data.length; i++) {
+  if (data[i] < smallest) {
+    secondSmallest = smallest;
+    smallest = data[i];
+  } else if (data[i] < secondSmallest && data[i] !== smallest) {
+    secondSmallest = data[i];
+  }
+}
+
+// Find second largest
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let i = 0; i < data.length; i++) {
+  if (data[i] > largest) {
+    secondLargest = largest;
+    largest = data[i];
+  } else if (data[i] > secondLargest && data[i] !== largest) {
+    secondLargest = data[i];
+  }
+}
+
+console.log("Second Smallest:", secondSmallest);
+console.log("Second Largest:", secondLargest);
+
+
+
+
+```
+op
+3
+8
+
+____________________________________________________________________
 
 
 
