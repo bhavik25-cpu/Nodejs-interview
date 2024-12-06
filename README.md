@@ -7289,5 +7289,40 @@ console.log(sum);  // Output: 15
 ```
 
 
+____________________________________________________
+
+/Write a program which returns all start position of input substring occurs in a string.
+
+// e.g. str = 'As sly as a fox, as strong as an ox,
+
+
+```javascript
+
+function findSubstringPositions(str, subStr) {
+  let positions = [];
+  let index = str.indexOf(subStr);  // Start from the first occurrence of the substring
+
+  while (index !== -1) {
+    positions.push(index);         // Store the position
+    index = str.indexOf(subStr, index + 1);  // Search for the next occurrence
+  }
+
+  return positions;
+}
+
+// Example usage
+const str = 'As sly as a fox, as strong as an ox,';
+const subStr = 'as';
+const positions = findSubstringPositions(str, subStr);
+
+console.log("Positions:", positions);
+
+
+
+```
+
+op
+Positions: [ 7, 17, 27 ]
+
 
 
