@@ -269,7 +269,42 @@ const arr = [1, 2, [3, 4], 5, [6, 7], 8];
 console.log(flatArray(arr)); // Output: [1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
-_________________________________________________________________________
+__________________________________________________________________________
+
+
+let arr = [1,2,4,[2,4,[67,7]]]
+output = [1,2, 4, 2,4,67,7]
+```javascript
+function flattenArray(arr) {
+    let result = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'object' && arr[i] !== null) {
+            // If it's an array, call flattenArray recursively
+            let flattenedSubArray = flattenArray(arr[i]);
+            for (let j = 0; j < flattenedSubArray.length; j++) {
+                result[result.length] = flattenedSubArray[j];  // Directly set the value in the result array
+            }
+        } else {
+            // If it's not an array, directly push the value to the result array
+            result[result.length] = arr[i];
+        }
+    }
+
+    return result;
+}
+
+// Example usage:
+let arr = [1, 2, 4, [2, 4, [67, 7]]];
+let flattened = flattenArray(arr);
+console.log(flattened);  // Output: [1, 2, 4, 2, 4, 67, 7]
+
+
+
+```
+
+
+_______________________________________________________________________
 
 flat
 
@@ -7230,7 +7265,28 @@ console.log(filteredArray);
 ```
 
 
+__________________________________________
 
+
+calculate the sum of all numeric digits in the string "abc6hki9", you can loop through the string, identify the digits, and add them together. 
+```javascript
+
+let str = "abc6hki9";
+let sum = 0;
+
+// Loop through the string to find digits
+for (let i = 0; i < str.length; i++) {
+  let char = str[i];
+
+  // Check if the character is a digit
+  if (!isNaN(char) && char !== ' ') {
+    sum += parseInt(char);
+  }
+}
+
+console.log(sum);  // Output: 15
+
+```
 
 
 
