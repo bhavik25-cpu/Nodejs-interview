@@ -7460,6 +7460,13 @@ ____________________________________________________________________
 find the missing numbers between the smallest and largest numbers in an array of 10 numbers,
 ```javascript
 
+let arr = [5, 3, 8, 10, 14, 5, 7, 15, 17, 12];
+Missing numbers: [4, 6, 9, 11, 13, 16]
+
+
+```javascript
+
+
 
 function findMissingNumbers(arr) {
   // Find the smallest and largest numbers in the array
