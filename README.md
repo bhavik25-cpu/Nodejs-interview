@@ -7404,3 +7404,88 @@ ____________________________________________________________________
 
 
 
+which checks for all brackets are balanced or not. 
+   Similarly write a function that will check if the given string is having all the brackets are closed.
+Example:
+a.
+Input: "function sample (args) { const arr=[]; return arr; }"
+Output: TRUE
+b.
+Input: "function sample(args)) { const arr=[]; return arr; }"
+Output: FALSE
+c.
+Input: "function sample(args) { const arr=[]; return arr;"
+Output: FALSE
+d.
+Input: "function sample(args) { const arr=[[[]; return arr; }"
+Output: FALSE
+
+
+
+```javascript
+function areBracketsClosed(args){
+    const mysample = []
+    const bracks ={
+        ')' : '(',
+        '}': '{',
+        ']': '['
+    }
+    for(let i = 0; i < args.length;i++){
+        const char = args[i]
+        
+        
+        if(char === '(' || char === '{' || char === '['){
+            mysample.push(char)
+        }
+        else if(char === ')' || char === '}' ||  char === ']'){
+            if(mysample.length === 0 || mysample.pop() !== bracks[char]){
+                return false
+            }
+        }
+    }
+    return mysample.length === 0
+}
+
+console.log(areBracketsClosed("function sample (args) { const arr=[]; return arr; }"));   // Output: "TRUE"
+console.log(areBracketsClosed("function sample(args)) { const arr=[]; return arr; }"));  // Output: "FALSE"
+console.log(areBracketsClosed("function sample(args) { const arr=[]; return arr;"));    // Output: "FALSE"
+console.log(areBracketsClosed("function sample(args) { const arr=[[[]; return arr; }")); // Output: "FALSE"
+ 
+
+
+
+```
+____________________________________________________________________
+
+find the missing numbers between the smallest and largest numbers in an array of 10 numbers,
+```javascript
+
+
+function findMissingNumbers(arr) {
+  // Find the smallest and largest numbers in the array
+  let min = Math.min(...arr);
+  let max = Math.max(...arr);
+  
+  // Create an array for the full range of numbers
+  let fullRange = [];
+  for (let i = min; i <= max; i++) {
+    fullRange.push(i);
+  }
+
+  // Filter the full range to find numbers not in the original array
+  let missingNumbers = fullRange.filter(num => !arr.includes(num));
+
+  return missingNumbers;
+}
+
+// Example input
+let arr = [3, 7, 1, 9, 5, 4, 8, 6, 2];
+let missing = findMissingNumbers(arr);
+
+console.log("Missing numbers:", missing);
+
+
+
+```
+
+
