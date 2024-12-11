@@ -7491,8 +7491,168 @@ let missing = findMissingNumbers(arr);
 
 console.log("Missing numbers:", missing);
 
+```
 
+
+____________________________________________
+let arr = [1, 2, 3, 1, 2, 2, 4, 3];
+OUTPUT { '1': 2, '2': 3, '3': 2, '4': 1 }
+
+
+```javascript
+
+let arr = [1, 2, 3, 1, 2, 2, 4, 3];
+
+function countOccurrences(array) {
+  let counts = {}; // Object to store element frequencies
+
+  for (let i = 0; i < array.length; i++) {
+    let currentElement = array[i];
+    if (counts[currentElement] === undefined) {
+      counts[currentElement] = 1; // First occurrence of the element
+    } else {
+      counts[currentElement]++; // Increment the count for repeated element
+    }
+  }
+
+  return counts; // Return the counts object
+}
+
+let result = countOccurrences(arr);
+console.log(result);
+```
+
+OP
+
+
+{ '1': 2, '2': 3, '3': 2, '4': 1 }
+_________________________________________________________________
+
+Function outer(){
+
+function inner() {
+
+return "hello"
+
+5
+
+}
+
+return inner
+
+}
+
+How can we return hello how we call
+
+
+```javascript
+
+function outer() {
+  function inner() {
+    return "hello";
+  }
+  return inner;  // outer returns the inner function
+}
+
+const returnedFunction = outer();  // Call outer to get the inner function
+console.log(returnedFunction());   // Call the inner function to get "hello"
 
 ```
 
+___________________________________________________________
+```javascript
+
+x = 10
+
+console.log(x)
+
+var x
+```
+
+
+OP 
+10
+____________________________________________________
+
+```javascript
+
+function* myGenFunc() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+var myGenObj = myGenFunc();  // Call the generator function directly
+
+console.log(myGenObj.next().value);  
+
+
+```
+OP
+1
+______________________________________________________
+```javascript
+
+console.log("🙂" === "🙂");
+```
+
+OP 
+
+TRUE
+
+_________________________________________________________________________
+
+```javascript
+
+const squareObj = new Square(10);
+console.log(squareObj.area);
+
+class Square {
+  constructor(length) {
+    this.length = length;
+  }
+
+  get area() {
+    return this.length * this.length;
+  }
+
+  set area(value) {
+    this.area = value;
+  }
+}
+
+```
+
+OP
+
+const squareObj = new Square(10);
+                  ^
+
+ReferenceError: Cannot access 'Square' before initialization
+
+FIX
+
+```javascript
+
+
+class Square {
+  constructor(length) {
+    this.length = length;
+  }
+
+  get area() {
+    return this.length * this.length;
+  }
+
+  set area(value) {
+    this.area = value;
+  }
+}
+const squareObj = new Square(10);
+console.log(squareObj.area);
+
+```
+op
+
+10
 
