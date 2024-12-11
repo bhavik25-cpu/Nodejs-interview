@@ -7653,3 +7653,116 @@ op
 
 10
 
+_______________________________________________
+
+```javascript
+
+let arr1 = [1,2,3]
+
+delete arr1[2]
+
+console.log(arr1.length)
+
+```
+op
+3
+_________________________________________________
+
+```javascript
+
+let obj = {name: "saurabh", location: "noida"};
+
+let user = obj;  // user and obj now refer to the same object in memory
+
+user.name = "sameer";  // Modifying the object via 'user'
+
+console.log(obj);  // Output the object
+
+```
+
+op
+
+{ name: 'sameer', location: 'noida' }
+
+__________________________________________________________________
+
+
+let arr = [1, 5, 3, 4, 9, 7, 10];
+Sort with without in-built in descending 
+
+```javascript
+
+
+let arr = [1, 5, 3, 4, 9, 7, 10];
+
+function bubbleSortDescending(array) {
+  let n = array.length;
+
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      // Compare and swap if the current element is smaller than the next
+      if (array[j] < array[j + 1]) {
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  }
+
+  return array;
+}
+
+let sortedArray = bubbleSortDescending(arr);
+console.log("Sorted Array in Descending Order:", sortedArray);
+
+```
+
+op
+
+Sorted Array in Descending Order: [ 10, 9, 7, 5, 4, 3, 1 ]
+
+
+________________________________________________________________
+
+
+let arr = [1, 3, 24, [5, 4, 7, [56, 7, 8], 2], 5]
+
+
+output [1, 3, 24, 5, 4, 7, 56, 7, 8, 2, 5]
+
+Without in-built 
+```javascript
+let arr = [1, 3, 24, [5, 4, 7, [56, 7, 8], 2], 5];
+
+function flattenArray(array) {
+  let result = []; // This will store the flattened array
+
+  for (let i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      // If the current element is an array, recursively flatten it
+      let flattenedSubArray = flattenArray(array[i]);
+      for (let j = 0; j < flattenedSubArray.length; j++) {
+        result.push(flattenedSubArray[j]);
+      }
+    } else {
+      // If the current element is not an array, push it directly
+      result.push(array[i]);
+    }
+  }
+
+  return result;
+}
+
+let flattenedArr = flattenArray(arr);
+console.log(flattenedArr);
+
+
+
+```
+
+op
+ [1, 3, 24, 5, 4, 7, 56, 7, 8, 2, 5]
+
+
+
+
