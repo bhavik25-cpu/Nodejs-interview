@@ -7763,6 +7763,47 @@ console.log(flattenedArr);
 op
  [1, 3, 24, 5, 4, 7, 56, 7, 8, 2, 5]
 
+__________________________________________________________________
+
+```javascript
+
+var a
+
+console.log(a)
+
+a = 10
+```
+undefined
 
 
+_______________
 
+```javascript
+
+let a
+
+console.log(a)
+
+a = 10
+```
+
+undefined
+
+____________________
+
+```javascript
+
+const a
+
+console.log(a)
+
+a = 10
+
+```
+
+const a
+      ^
+
+SyntaxError: Missing initializer in const declaration
+
+________________________________
