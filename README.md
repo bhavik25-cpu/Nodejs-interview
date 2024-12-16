@@ -7807,3 +7807,58 @@ const a
 SyntaxError: Missing initializer in const declaration
 
 ________________________________
+
+
+template literals join this two name
+
+
+```javascript
+let a = "hello";
+let b = "bhavik";
+let sum = `${a}   ${b}`; 
+console.log(sum);
+
+```
+op
+hello  bhavik
+
+__________________________________________
+```javascript
+
+var a ;
+
+console.log(a);
+
+```
+op
+undefined
+___________________________
+```javascript
+
+let a ;
+
+console.log(a);
+
+```
+op
+undefined
+
+________________________________
+
+
+```javascript
+
+const a ;
+
+console.log(a);
+
+```
+op
+RROR!
+/tmp/IYmX4N9MFf/main.js:1
+const a ;
+      ^
+
+SyntaxError: Missing initializer in const declaration
+   
+
