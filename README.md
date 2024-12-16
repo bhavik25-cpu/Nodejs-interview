@@ -7860,5 +7860,29 @@ const a ;
       ^
 
 SyntaxError: Missing initializer in const declaration
+
+__________________________________________________
+
+in prints the table of three (3, 6, 9, 12, 15, 18, 21, 24, 27, 30). js code and write a code in one for loop
+
+```javascript
+for (let i = 1; i <= 10; i++) {
+  console.log(3 * i);
+}
+
+
+```
+op
+3
+6
+9
+12
+15
+18
+21
+24
+27
+30
+
    
 
