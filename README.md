@@ -7884,5 +7884,28 @@ op
 27
 30
 
-   
+________________________________________________________________________
 
+   ```javascript
+
+function transformArray(input) {
+    // Check if input is a valid 2D array with two nested arrays of equal length
+    if (!Array.isArray(input) || input.length !== 2 || 
+        !Array.isArray(input[0]) || !Array.isArray(input[1]) ||
+        input[0].length !== input[1].length) {
+        throw new Error('Invalid input format');
+    }
+
+    // Create an object using the first array as keys and second array as values
+    return Object.fromEntries(
+        input[0].map((key, index) => [key, input[1][index]])
+    );
+}
+
+// Example usage
+const input = [['a', 'b', 'd'], [1, 2, 3]];
+console.log(transformArray(input));
+
+```
+
+// Output: { a: 1, b: 2, d: 3 }
