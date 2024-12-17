@@ -7889,9 +7889,7 @@ I/P: [[a,b,d],[1,2,3]]
 
 O/P:
 
-{a: 1, b: 2, d: 3
-
-}
+{a: 1, b: 2, d: 3}
    ```javascript
 
 function transformArray(input) {
