@@ -7892,23 +7892,24 @@ O/P:
 {a: 1, b: 2, d: 3}
    ```javascript
 
-function transformArray(input) {
-    // Check if input is a valid 2D array with two nested arrays of equal length
-    if (!Array.isArray(input) || input.length !== 2 || 
-        !Array.isArray(input[0]) || !Array.isArray(input[1]) ||
-        input[0].length !== input[1].length) {
-        throw new Error('Invalid input format');
-    }
+function createObjectFromArrays(input) {
+  const keys = input[0]; // First array: ['a', 'b', 'd']
+  const values = input[1]; // Second array: [1, 2, 3]
+  const result = {}; // Initialize empty object
 
-    // Create an object using the first array as keys and second array as values
-    return Object.fromEntries(
-        input[0].map((key, index) => [key, input[1][index]])
-    );
+  for (let i = 0; i < keys.length; i++) {
+    result[keys[i]] = values[i]; // Map key to the corresponding value
+  }
+
+  return result;
 }
 
-// Example usage
+// Input
 const input = [['a', 'b', 'd'], [1, 2, 3]];
-console.log(transformArray(input));
+
+// Output
+const output = createObjectFromArrays(input);
+console.log(output);
 
 ```
 
