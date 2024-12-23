@@ -7963,7 +7963,8 @@ console.log(str, str.length);
 _______________________________________________
 
 input = [8, 0, 9, 4, 2, 1, 1, 2, 3, 6, 5, 7, 5];
-         [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  output      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 remove duplicate elements and create a unique sorted array without using built-in methods.
 
