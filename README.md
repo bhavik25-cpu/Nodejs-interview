@@ -7960,3 +7960,50 @@ console.log(str, str.length);
 
    ```
 
+_______________________________________________
+
+input = [8, 0, 9, 4, 2, 1, 1, 2, 3, 6, 5, 7, 5];
+         [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+remove duplicate elements and create a unique sorted array without using built-in methods.
+
+   ```javascript
+
+const customSortUnique = (arr) => {
+    const n = arr.length;
+    
+    // First do bubble sort
+    for(let i = 0; i < n - 1; i++) {
+        for(let j = 0; j < n - i - 1; j++) {
+            if(arr[j] > arr[j + 1]) {
+                // Swap elements
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    
+    // Remove duplicates while preserving order
+    let uniqueArr = [];
+    for(let i = 0; i < n; i++) {
+        // Only add if current element is different from the previous one
+        if(i === 0 || arr[i] !== arr[i-1]) {
+            uniqueArr.push(arr[i]);
+        }
+    }
+    
+    return uniqueArr;
+}
+
+// Test the function
+const input = [8, 0, 9, 4, 2, 1, 1, 2, 3, 6, 5, 7, 5];
+const output = customSortUnique(input);
+console.log(output); 
+
+
+   ```
+op
+
+ [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
