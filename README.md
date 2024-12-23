@@ -7914,3 +7914,49 @@ console.log(output);
 ```
 
 // Output: { a: 1, b: 2, d: 3 }
+
+_______________________________________________
+
+
+Write a code to merge two arrays and return an array with unique values.
+
+const array1 = [1, 6, 3, 9] , array2 = [3,8,1];
+
+
+
+   ```javascript
+
+const array1 = [1, 6, 3, 9];
+const array2 = [3, 8, 1];
+
+// Merge arrays and remove duplicates
+function mergeUnique(arr1, arr2) {
+  return Array.from(new Set([...arr1, ...arr2]));
+}
+
+// Example usage
+const result = mergeUnique(array1, array2);
+console.log(result);
+
+
+
+   ```
+
+op
+
+[1, 6, 3, 9, 8]
+________________________________________________________
+
+
+find length of string randomly generated with the maximum length of 8 characters
+
+
+   ```javascript
+
+const str = Math.random().toString(36).substring(2, 10); 
+console.log(str, str.length);
+
+
+
+   ```
+
