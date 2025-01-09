@@ -8008,3 +8008,26 @@ op
 
  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+_______________________________________________________________
+
+
+
+// Write a function that takes n as parameter and prints each number from 1 to n (comma separated).
+// For each multiple of 3, print "Fizz" instead of the number.
+// For each multiple of 5, print "Buzz" instead of the number.
+// For numbers which are multiples of both 3 and 5, print "FizzBuzz" instead of the number.
+
+// Example input: 16
+// Example output: 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz, 16
+
+
+   ```javascript
+
+const fizzBuzz = n => Array.from({length: n}, (_, i) => (i + 1) % 15 === 0 ? 'FizzBuzz' : (i + 1) % 3 === 0 ? 'Fizz' : (i + 1) % 5 === 0 ? 'Buzz' : i + 1).join(', ');
+
+console.log(fizzBuzz(16));
+
+
+   ```
+
+
