@@ -8030,4 +8030,49 @@ console.log(fizzBuzz(16));
 
    ```
 
+_____________________________________________________
+
+   ```javascript
+
+
+function mysteryFunction() {
+    let x = 10;
+
+    setTimeout(() => {
+        console.log(`Timeout 1:', ${x}`); 
+    }, 1000);
+
+    x = 20;
+
+    return function innerFunction(y) {
+        x += y;
+        console.log(`Inner Function:, ${x}`)
+    };
+}
+
+const fn = mysteryFunction();
+
+setTimeout(() => {
+        console.log("TimeOut 2 :Excuting inner function")
+    fn(5);  // (3)
+}, 2000);
+
+fn(3);  // (4)
+
+
+   ```
+
+op
+Inner Function:, 23
+Timeout 1:', 23
+TimeOut 2 :Excuting inner function
+Inner Function:, 28
+__________________
+
+
+
+
+
+
+
 
