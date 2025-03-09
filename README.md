@@ -8069,6 +8069,112 @@ TimeOut 2 :Excuting inner function
 Inner Function:, 28
 __________________
 
+Complete implementation of EventEmitter Class
+expected 2 methods: 
+a. on to register and listen to event
+b. emit : to trigger event
+
+```javascript
+
+class EventEmitter {
+ 
+ 
+}
+ 
+const eventEmitter = new EventEmitter();
+const hello = () => console.log('hello')
+const hello1 = () => console.log('hello1')
+const world = () => console.log('world')
+ 
+eventEmitter.on('hello', hello)
+eventEmitter.on('world', world)
+eventEmitter.on('hello1', hello1)
+ 
+eventEmiitter.emit('hello')
+eventEmiitter.emit('hello1')
+
+```
+
+```javascript
+class EventEmitter {
+  constructor() {
+    this.events = {};
+  }
+
+  // Register and listen to an event
+  on(eventName, listener) {
+    if (!this.events[eventName]) {
+      this.events[eventName] = [];
+    }
+    this.events[eventName].push(listener);
+  }
+
+  // Trigger an event
+  emit(eventName, ...
+  ) {
+    if (this.events[eventName]) {
+      this.events[eventName].forEach(listener => listener(...args));
+    }
+  }
+}
+
+// Create an instance of EventEmitter
+const eventEmitter = new EventEmitter();
+
+// Event listeners
+const hello = () => console.log('hello');
+const hello1 = () => console.log('hello1');
+const world = () => console.log('world');
+
+// Register events
+eventEmitter.on('hello', hello);
+eventEmitter.on('world', world);
+eventEmitter.on('hello1', hello1);
+
+// Trigger events
+eventEmitter.emit('hello');  // Outputs: hello
+eventEmitter.emit('world');  // Outputs: world
+eventEmitter.emit('hello1'); // Outputs: hello1
+
+```
+
+____________________________________________________________________________
+
+show output
+
+```javascript
+
+function varScoping() {
+  var x = 3;
+
+  function varScope() {
+    var x = 4; // This `x` is local to `varScope`
+    console.log(x); // Outputs 4
+  }
+
+  varScope();
+  console.log(x); // Outputs 3 because `x` in `varScoping` remains unchanged
+}
+
+function letScoping() {
+  let x = 0;
+
+  function letScope() {
+    let x = 1; // This `x` is local to `letScope`
+    console.log(x); // Outputs 1
+  }
+
+  letScope();
+  console.log(x); // Outputs 0 because `x` in `letScoping` remains unchanged
+}
+
+// Call the functions
+varScoping();
+letScoping();
+
+
+```
+
 
 
 
