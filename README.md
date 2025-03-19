@@ -8176,4 +8176,51 @@ letScoping();
 ```
 
 
+___________________________________________________________________________________
+implementation to find the Next Greater Element (NGE) for each element in an array:
+```javascript
+
+
+Input: [4, 5, 2, 25]
+4 -> 5
+5 -> 25
+2 -> 25
+25 -> None
+
+Input: [13, 7, 6, 12]
+13 -> None
+7 -> 12
+6 -> 12
+12 -> None
+
+```
+```javascript
+
+
+function nextGreaterElement(arr) {
+    let stack = [];
+    let result = new Array(arr.length).fill(null);
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        while (stack.length > 0 && stack[stack.length - 1] <= arr[i]) {
+            stack.pop();
+        }
+
+        result[i] = stack.length === 0 ? "None" : stack[stack.length - 1];
+        stack.push(arr[i]);
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        console.log(`${arr[i]} -> ${result[i]}`);
+    }
+}
+
+// Test cases
+console.log("Input: [4, 5, 2, 25]");
+nextGreaterElement([4, 5, 2, 25]);
+
+console.log("\nInput: [13, 7, 6, 12]");
+nextGreaterElement([13, 7, 6, 12]);
+
+```
 
