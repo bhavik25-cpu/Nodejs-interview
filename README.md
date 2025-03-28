@@ -8224,3 +8224,50 @@ nextGreaterElement([13, 7, 6, 12]);
 
 ```
 
+_________________________________________________________
+
+
+Write a single function that returns:
+
+1. An object that contains user information
+
+2. A dummy function that encrypts a given object with a given key, and returns the encrypted value
+
+3. A function that return the second element of a given array. (Use only spread operators inside the functions)
+
+
+```javascript
+const createUtilities = () => {
+    return {
+        userInfo: { name: "John Doe", age: 30, email: "john@example.com" },
+
+        encrypt: (obj, key) => {
+            const objStr = JSON.stringify({ ...obj }); // Using spread
+            return `${objStr}::${key}`;
+        },
+
+        getSecondElement: (arr) => {
+            const [ , second, ...rest] = [...arr]; // Using spread
+            return second;
+        }
+    };
+};
+
+// Example usage:
+const utils = createUtilities();
+
+console.log(utils.userInfo); 
+// { name: 'John Doe', age: 30, email: 'john@example.com' }
+
+console.log(utils.encrypt({ data: "Hello" }, "mySecretKey"));
+// {"data":"Hello"}::mySecretKey
+
+console.log(utils.getSecondElement([10, 20, 30, 40]));
+// 20
+
+
+
+
+```
+
+
