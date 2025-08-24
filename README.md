@@ -661,7 +661,7 @@ const { max, min } = findLargest(myArray);
 console.log("Largest Element:", max);
 console.log("Smallest Element:", min);
 ```
-Op
+```javascript
 function findLargest(arr) {
   if (arr.length === 0) {
     return "Array is empty";
@@ -689,6 +689,7 @@ const { max, min } = findLargest(myArray);
 console.log("Largest Element:", max);
 console.log("Smallest Element:", min);
 
+```
 
 _____________________________________________________________________________________________________________________________________________________
 ```javascript
